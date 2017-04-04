@@ -1,4 +1,3 @@
-<script type="text/javascript">
 function PasswordConfirm(){
              var password=document.getElementById("reg-password").value;
 			 var passwordconfirm=document.getElementById("reg-confirmpassword").value;
@@ -47,5 +46,3 @@ function GivennameCheck(){
 			 $("#reg-givenname").attr('style','');
 			 }
         }
-		
-</script>
