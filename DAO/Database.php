@@ -42,6 +42,7 @@ class Database
     public function get($where = null){
         $sql = "select * from ".$this->_table;
         $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
         return $this->query($sql);
     }
 
@@ -53,7 +54,7 @@ class Database
         $vals = $this->_getParamValString($params);
         $sql = "insert into ".$this->_table."(".$keys.") values(".$vals.")";
         //echo "[insert]".$sql."<br>";
-        $result = mysqli_query($sql);
+        $result = mysqli_query($this->_con,$sql);
         if (! $result) {
             return -1;
         }
@@ -68,7 +69,7 @@ class Database
         $wheres = $this->_getWhereString($where);
         $sql = "update ".$this->_table." set ".$upvals." ".$wheres;
         //echo "[update]".$sql."<br>";
-        $result = mysqli_query($sql);
+        $result = mysqli_query($this->_con,$sql);
         if (! $result) {
             return -1;
         }
@@ -79,7 +80,7 @@ class Database
         $wheres = $this->_getWhereString($where);
         $sql = "delete from ".$this->_table.$wheres;
         //echo "[delete]".$sql."<br>";
-        $result = imysql_query($sql);
+        $result = mysqli_query($this->_con,$sql);
         if (! $result) {
             return -1;
         }
