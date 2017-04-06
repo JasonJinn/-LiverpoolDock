@@ -5,9 +5,35 @@
  * Date: 06/04/2017
  * Time: 9:42 PM
  */
-include "../DAO/Database.php";
+include "method/smtp.php";
 
-$dao = getQuery("User");
-$result = $dao->get(array("email"=>213,"password"=>123123));
-echo json_encode($result);
+$smtpserver = "ssl://smtp.gmail.com";
+
+$smtpserverport = 465;
+
+$smtpusermail = "LiverpoolDock@gmail.com";
+
+$smtpemailto = "xxx@xx.com";
+
+$smtpuser = "LiverpoolDock@gmail.com";
+$smtppass = "tricycle15";
+
+$isauth = true;
+
+$mailtype = "TXT";
+
+$mailsubject = "hello";
+
+$mailbody = "I am jeffer";
+
+
+$smtp = new smtp($smtpserver, $smtpserverport, $isauth, $smtpuser, $smtppass);
+
+
+$smtp->debug = false;
+
+
+$smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
+
+echo "mail sent";
 ?>

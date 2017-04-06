@@ -6,7 +6,7 @@
  * Time: 下午7:55
  */
 include_once '../DAO/Database.php';
-include_once "token.php";
+include_once "method/token.php";
 
 $mail = $_POST["loginemail"];                                        //need change to post in the final
 $password =$_POST["loginpassword"];

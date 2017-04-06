@@ -6,7 +6,7 @@
  * Time: 下午7:56
  */
 include "DES.php";
-include_once "../DAO/Database.php";
+include_once "../../DAO/Database.php";
 
 function generateToken($mail){
     $str = $mail.".".time();
