@@ -26,7 +26,16 @@
   
   
   </head>
-
+  <script>
+	  function login(){
+	      document.form1.action = "../Controller/login.php";
+	      document.form1.submit();
+	  }
+	  function register(){
+	      document.form1.action = "../Controller/register.php";
+	      document.form1.submit();
+	  }
+  </script>
   <body>
 
       <!-- **********************************************************************************************************************************************************
@@ -36,7 +45,7 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" method="post" action="../Controller/login.php"><!-- Add PHP code here -->
+		      <form class="form-login" name="form1" method="post" action="../Controller/login.php"><!-- Add PHP code here -->
 			  
 		        <h2 class="form-login-heading">sign in now</h2>
 		        <div class="login-wrap">
@@ -49,7 +58,7 @@
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block" id="login" value="123" href="index.html" onclick="login();"><i class="fa fa-lock"></i> SIGN IN</button>
 		            <br />
 					<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-GUEST"></i> VIEW AS A GUEST</button>
 					<hr>
@@ -98,20 +107,20 @@
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Please enter your given name</p>
-		                          <input type="text" id="reg-givenname" placeholder="Given name" autocomplete="off" class="form-control placeholder-no-fix" onblur="GivennameCheck()" style="">
+		                          <input type="text" id="reg-givenname" name="givenname" placeholder="Given name" autocomplete="off" class="form-control placeholder-no-fix" onblur="GivennameCheck()" style="">
 								  <p>Please enter your surn name</p>
-		                          <input type="text" id="reg-surnname" placeholder="Surn name" autocomplete="off" class="form-control placeholder-no-fix" onblur="SurnnameCheck()" style="">
+		                          <input type="text" id="reg-surnname" name="surname" placeholder="Surn name" autocomplete="off" class="form-control placeholder-no-fix" onblur="SurnnameCheck()" style="">
 								  <p>Please enter your e-mail address</p>
-		                          <input type="text" id="reg-email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix" onblur="EmailCheck()" style="">
+		                          <input type="text" id="reg-email" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix" onblur="EmailCheck()" style="">
 								  <p>Please enter your password </p>
-		                          <input type="text" id="reg-password" placeholder="password" autocomplete="off" class="form-control placeholder-no-fix" onblur="PasswordCheck()" style="">
+		                          <input type="text" id="reg-password" name="password" placeholder="password" autocomplete="off" class="form-control placeholder-no-fix" onblur="PasswordCheck()" style="">
 		                          <p>Please comfirme your password</p>
 		                          <input type="text"  id="reg-confirmpassword" placeholder="re-enter password" autocomplete="off" class="form-control placeholder-no-fix" onblur="PasswordConfirm()" style="">
 		                      					  
 							  </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button class="btn btn-theme" onclick="register();">Submit</button>
 		                      </div>
 		                  </div>
 		              </div>

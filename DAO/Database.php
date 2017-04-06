@@ -30,10 +30,10 @@ class Database
 
     public function query($sql){
         $result = $this->_con->query($sql);
-        $retrive = [];
+        $ret = [];
         if($result){
             while($row = mysqli_fetch_array($result)){
-                $ret = $row;
+                $ret[] = $row;
             }
         }
         return $ret;
