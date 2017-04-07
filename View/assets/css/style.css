@@ -1,13 +1,3 @@
-/*
-Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
-Template Version: 1.0
-Author: Carlos Alvarez
-Website: http://blacktie.co
-Premium: http://www.gridgum.com
-*/
-
-/* Import fonts */
-@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
 
 /* BASIC THEME CONFIGURATION */
 body {
@@ -186,6 +176,9 @@ hr {
 .mt {
 	margin-top: 25px;
 }
+.singlemt {
+	margin-top: 5px;
+}
 
 .mb {
 	margin-bottom: 25px;
@@ -215,7 +208,7 @@ hr {
 
 ul.top-menu > li > .logout {
 	color: #f2f2f2;
-	font-size: 12px;
+	font-size: 15px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border: 1px solid #64c3c2 !important;
@@ -552,6 +545,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .dropdown-menu.tasks-bar .task-info .desc {
     font-size: 13px;
     font-weight: normal;
+	
 }
 
 .dropdown-menu.tasks-bar .task-info .percent {
@@ -795,6 +789,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 	display: inline-block;
 	padding: 15px 0;
 	width: 100%;
+	text-align: left;
 }
 
 .ds .desc:hover {
@@ -831,7 +826,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* LINE ICONS CONFIGURATION */
 
 .mtbox {
-	margin-top: 80px;
+	margin-top: 0px;
 	margin-bottom: 40px;
 }
 
@@ -985,9 +980,20 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
+	height: 350px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+.secondrowpn{
+	height: 280px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.thirdrowpn{
+	height: 380px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 
 .pn:hover {
 	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
@@ -1661,7 +1667,7 @@ PANELS CONFIGURATIONS
 }
 
 .fc-state-default, .fc-state-default .fc-button-inner {
-	background: #f2f2f2;
+	background: #ddd;
 }
 
 .fc-state-active .fc-button-inner {
@@ -2241,3 +2247,46 @@ label {
 }
 
 
+
+
+div.search {padding: 15px 0px 0px 0px}
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.d7:after {content:""; clear:both; display:table}
+.d7 form {
+  width: auto;
+  float: right;
+  margin-right: 30px;
+}
+.d7 input {
+  width: 170px;
+  height: 33px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #324b4e;
+  background: #F9F0DA;
+  outline: none;
+  position: relative;
+  transition: .3s linear;
+}
+.d7 input:focus {
+  width: 220px;
+}
+.d7 button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+.d7 button:before{
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #324b4e;
+}
