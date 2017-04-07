@@ -16,7 +16,7 @@ $result = $dao->get(array("email"=>$mail,"password"=>$password));
 //print_r(array_values($result));
 
 if($result && $result[0]["is_active"]){
-    header("Location: ../View/homepage.html?token=".generateToken($mail));
+    header("Location: ../View/homepage.html?token=".urlencode(generateToken($mail)));
     exit();
 }else if($result && !$result[0]["is_active"]){
     header("Location: ../View/login.html?email=false");

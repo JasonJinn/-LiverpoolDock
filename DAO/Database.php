@@ -58,7 +58,7 @@ class Database
         if (! $result) {
             return -1;
         }
-        return mysqli_insert_id();
+        return mysqli_insert_id($this->_con);
     }
 
     public function update($params, $where = null) {
@@ -73,7 +73,7 @@ class Database
         if (! $result) {
             return -1;
         }
-        return mysqli_affected_rows();
+        return mysqli_affected_rows($this->_con);
     }
 
     public function delete($where) {
@@ -84,7 +84,7 @@ class Database
         if (! $result) {
             return -1;
         }
-        return mysqli_affected_rows();
+        return mysqli_affected_rows($this->_con);
     }
 
     protected function _getParamKeyString($params) {

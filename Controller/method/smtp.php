@@ -282,4 +282,36 @@ class smtp
     }
 
 }
+
+function sendMail($mailaddr,$subject,$body){
+    $smtpserver = "mail.csc.liv.ac.uk"; //ssl://smtp.gmail.com
+
+    $smtpserverport = 25;  //465
+
+    $smtpusermail = "LiverpoolDock@yahoo.com";
+
+    $smtpemailto = $mailaddr;
+
+    $smtpuser = "LiverpoolDock@yahoo.com";
+    $smtppass = "tricycle15";
+
+    $isauth = false;  //true
+
+    $mailtype = "TXT";
+
+    $mailsubject = $subject;
+
+    $mailbody = $body;
+
+
+    $smtp = new smtp($smtpserver, $smtpserverport, $isauth, $smtpuser, $smtppass);
+
+
+    $smtp->debug = false;
+
+
+    $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
+}
+
+
 ?>

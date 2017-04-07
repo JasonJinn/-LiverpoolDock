@@ -35,6 +35,10 @@
 	      document.form1.action = "../Controller/register.php";
 	      document.form1.submit();
 	  }
+	  function forgetpass(){
+          document.form1.action = "../Controller/reset.php";
+          document.form1.submit();
+	  }
   </script>
   <body>
 
@@ -83,12 +87,12 @@
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Enter your e-mail address below to reset your password.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		                          <input type="text" name="forget" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 		
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button class="btn btn-theme" id="forget" type="button" onclick="forgetpass();">Submit</button>
 		                      </div>
 		                  </div>
 		              </div>

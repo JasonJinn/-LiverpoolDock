@@ -5,7 +5,7 @@
  * Date: 2017/4/3
  * Time: 下午7:56
  */
-include "DES.php";
+include_once "DES.php";
 include_once "../../DAO/Database.php";
 
 function generateToken($mail){

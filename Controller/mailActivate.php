@@ -15,5 +15,11 @@ $dao = getQuery("User");
 
 $mail = $des->passport_decrypt($encrypt_mail);
 $result = $dao->update(array("is_active"=>1),array("email"=>$mail));
-echo $result;
+
+if($result){
+    echo "activate success";
+}else{
+    echo "The account has been activated";
+}
+
 ?>
