@@ -9,7 +9,7 @@ include_once "DES.php";
 include_once "../../DAO/Database.php";
 
 function generateToken($mail){
-    $str = $mail.".".time();
+    $str = $mail."^&*".time();
     $des = new DES("1996");
     $token = $des->passport_encrypt($str);
     $dao = getQuery("User");
