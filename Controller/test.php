@@ -36,8 +36,17 @@
 //$smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
 //
 //echo "mail sent";
-include 'method/DES.php';
+//include 'method/DES.php';
+//include '../DAO/Database.php';
+//
+//$dao = getQuery('User');
+//$result = $dao->get(array("token"=>"UmUMOVZhCwgHJwEoBTVVZVVoBmIGNlQzUm1SN19uDzM="));
+//
+//print_r(array_values($reuslt));
+$html = file_get_contents("https://news.liverpool.ac.uk/");
+preg_match("/<div id=\"container\">(.*?)<\/div>/s",$html,$qwe);
+print_r($qwe);
 
-$des = new DES("1996");
-echo $des->passport_decrypt("UGAHMQMzWD0CMlRgBTMBNVJnVEFXIF1+UXkDMgBoXT4=");
+preg_match_all("/<a href=\"(.*?)\" title=\"(.*?)\"/s",$qwe,$matches);
+print_r($matches);
 ?>
