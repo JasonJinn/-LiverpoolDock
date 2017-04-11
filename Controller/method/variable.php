@@ -6,4 +6,6 @@
  * Time: 10:02 PM
  */
 $baseUrl = "http://localhost/-liverpooldock/";
+$newsUrl = "https://news.liverpool.ac.uk/";
+$repositoryUrl = "/Library/WebServer/Documents/-LiverpoolDock/Resource/repository";
 ?>
