@@ -97,5 +97,18 @@
 //echo $name;
 //echo copy($name,"hello/".$fname);
 
-echo mkdir("/Users/shoujiafeng/desktop/repository/"."524867701/"."private",0777,true);
+//echo mkdir("/Users/shoujiafeng/desktop/repository/"."524867701/"."private",0777,true);
+//include "../DAO/Database.php";
+//
+//$dao = getQuery("User");
+//$cnt = $dao->getMax("level_of_security");
+//
+//print_r($cnt);
+//print_r(json_decode(file_get_contents("http://localhost/-liverpooldock/API/moduleList.php?token=UGdTZlNkXF9VdQ4nUWEGNlZrUjZSbQZmBTIAagc0CDY%3D"),true));
+include 'method/DES.php';
+$des = new DES("1996");
+echo $des->passport_decrypt("UmJWYFNjAGVSYgUxUGYFMVBlAxZXIF1+DCRVZFQ8DG8=");
+echo $des->passport_decrypt("UmJTZVdnDWhQYFdjVmBVYVNmABVQJwckUXkDMlA4Cmk=");
+echo $des->passport_encrypt("524867701@qq.com");
+
 ?>

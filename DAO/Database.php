@@ -49,6 +49,28 @@ class Database
         return $this->query($sql);
     }
 
+    public function getCount($where = null){
+        $sql = "select count(*) from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        return $this->query($sql);
+    }
+
+    public function getMax($max,$where = null){
+        $sql = "select max($max) from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        return $this->query($sql);
+    }
+
+    public function getByOrder($order,$where = null){
+        $sql = "select * from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        $sql = $sql."order by $order";
+        return $this->query($sql);
+    }
+
     public function insert($params) {
         if ($params == null || !is_array($params)) {
             return -1;

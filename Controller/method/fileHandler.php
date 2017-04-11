@@ -6,8 +6,10 @@
  * Time: 12:36 AM
  */
 //unfinished
+
 function makedir($mail,$repositoryUrl){
     mkdir($repositoryUrl."/".$mail."/"."private",0777,true);
     mkdir($repositoryUrl."/".$mail."/"."public",0777,true);
+    mkdir($repositoryUrl."/../".md5(md5($mail).md5($mail)),0777,true); //need configure
 }
 ?>
