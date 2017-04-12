@@ -983,9 +983,8 @@ PANELS CONFIGURATIONS
 	height: 350px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-.prifliepn {
-	height: 300px;
+.profilepn {
+	height: 250px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -1104,6 +1103,32 @@ PANELS CONFIGURATIONS
 	margin-bottom: 15px;
 	color: #c6c6c6;
 }
+.white-panel .blue-header {
+	background-color:#68dff0;
+	padding: 3px;
+	margin-bottom: 15px;
+	color: white;
+}
+.white-panel .blue-header a{
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	font-size:20px;
+}
+.white-panel .social-icons {
+
+margin-left:5px;
+ text-align: left;
+ line-height:50px;
+
+}
+
+.white-panel .social-icons a{
+font-size:20px;
+color:#797979;
+}
+
+
 .white-panel .small {
 	font-size: 10px;
 	color: #ccd1d9;
@@ -1933,6 +1958,7 @@ label {
 }
 
 
+
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
 	max-width: 330px;
@@ -2294,3 +2320,27 @@ form {
   font-family: FontAwesome;
   color: #324b4e;
 }
+
+#modulefeedbacktext{
+	height:100px;
+	width:75%;
+}
+
+.applicationstars{
+display:inline;
+width:15px;	
+}
+
+.classesdescription{
+padding-top:10px;
+font-size:20px;
+color:#6797979;
+}
+
+
+
+
+
+
+
+
