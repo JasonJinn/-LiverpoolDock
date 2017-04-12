@@ -8,6 +8,7 @@
 include '../DAO/Database.php';
 include_once 'method/DES.php';
 include 'method/smtp.php';
+include 'method/variable.php';
 
 
 $email=$_POST["email"];
@@ -22,7 +23,7 @@ $cnt = $dao->insert(array("surname"=>$sur,"username"=>$give." ".$sur,"email"=>$e
 if($cnt==0){
     $des = new DES("1996");
     $encrypt_mail = $des->passport_encrypt($email);
-    sendMail($email,"Liverpool Dock account activate","http://localhost/-liverpooldock/Controller/mailActivate.php?secret=".urlencode($encrypt_mail));
+    sendMail($email,"Liverpool Dock account activate",$baseUrl."Controller/mailActivate.php?secret=".urlencode($encrypt_mail));
     header("Location: ../View/registerSuccess.html");
 }else{
     header("Location: ../View/login.html?registered=true");

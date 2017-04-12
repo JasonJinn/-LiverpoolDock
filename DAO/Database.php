@@ -30,12 +30,15 @@ class Database
 
     public function query($sql){
         $result = $this->_con->query($sql);
-        $ret = [];
+        $ret = array();
+        //echo $sql;
         if($result){
             while($row = mysqli_fetch_array($result)){
                 $ret[] = $row;
+                //print_r(array_values($row));
             }
         }
+        //print_r(array_values($ret));
         return $ret;
     }
     //unfinished
@@ -43,6 +46,28 @@ class Database
         $sql = "select * from ".$this->_table;
         $sql = $sql.$this->_getWhereString($where);
         //echo $sql;
+        return $this->query($sql);
+    }
+
+    public function getCount($where = null){
+        $sql = "select count(*) from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        return $this->query($sql);
+    }
+
+    public function getMax($max,$where = null){
+        $sql = "select max($max) from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        return $this->query($sql);
+    }
+
+    public function getByOrder($order,$where = null){
+        $sql = "select * from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        $sql = $sql."order by $order";
         return $this->query($sql);
     }
 

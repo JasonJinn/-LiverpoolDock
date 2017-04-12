@@ -8,6 +8,8 @@
 include "method/DES.php";
 require "method/smtp.php";
 include "../DAO/Database.php";
+require_once "method/fileHandler.php";
+require_once "method/variable.php";
 
 $encrypt_mail = $_GET["secret"];
 $des = new DES("1996");
@@ -18,6 +20,7 @@ $result = $dao->update(array("is_active"=>1),array("email"=>$mail));
 
 if($result){
     echo "activate success";
+    makedir($mail,$repositoryUrl);
 }else{
     echo "The account has been activated";
 }
