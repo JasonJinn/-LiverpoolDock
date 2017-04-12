@@ -105,10 +105,10 @@
 //
 //print_r($cnt);
 //print_r(json_decode(file_get_contents("http://localhost/-liverpooldock/API/moduleList.php?token=UGdTZlNkXF9VdQ4nUWEGNlZrUjZSbQZmBTIAagc0CDY%3D"),true));
-include 'method/DES.php';
-$des = new DES("1996");
-echo $des->passport_decrypt("UmJWYFNjAGVSYgUxUGYFMVBlAxZXIF1+DCRVZFQ8DG8=");
-echo $des->passport_decrypt("UmJTZVdnDWhQYFdjVmBVYVNmABVQJwckUXkDMlA4Cmk=");
-echo $des->passport_encrypt("524867701@qq.com");
+include "../DAO/Database.php";
+
+$dao = getQuery("User");
+$result = $dao->getLike("username","3");
+print_r($result);
 
 ?>

@@ -12,10 +12,10 @@ include "../Controller/method/variable.php";
 
     $code = $_GET["code"];
     $type = $_GET["type"];
-    $page = $_GET["p"];
+    $page = $_GET["p"]||10;
 
-    $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList/moduleList.php?token=".urlencode($token)),true);
-
+    $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList.php?token=".urlencode($token)),true);
+//print_r($moduleList);
 if(isset($moduleList["$code"])) {
     $dao = getQuery("topic");
     $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type));

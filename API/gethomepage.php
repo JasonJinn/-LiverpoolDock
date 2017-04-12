@@ -13,12 +13,15 @@ include_once '../Controller/method/variable.php';
 
 $des = new DES("1996");
 $token = $_GET["token"];
+$email = $_GET["email"];
 
-if(verifyToken($token)=="false"){
+if(isset($token) && verifyToken($token)=="false"){
     echo "token invalid";
 }else {
-    $arr = explode('^&*', ($des->passport_decrypt($token)));
-    $email = $arr[0];
+    if(isset($token)){
+        $arr = explode('^&*', ($des->passport_decrypt($token)));
+        $email = $arr[0];
+    }
     $dao = getQuery("User");
     $cnt = $dao->get(array("email"=>$email));
     $name = $cnt[0]["username"];
@@ -26,9 +29,12 @@ if(verifyToken($token)=="false"){
     $dao->table("User_profile");
     $cnt = $dao->get(array("email"=>$email));
     $path = $cnt[0]["photoname"];
-    $path = $repositoryUrl."/../".md5(md5($email).md5($email))."/".$path;
-
-    $hash = array("name"=>$name,"path"=>$path);
+    if(isset($path))
+        $path = $repositoryUrl."/../".md5(md5($email).md5($email))."/".$path;
+    else if(isset($name))
+        $path = $repositoryUrl."/../default.jpg";
+    if(isset($name))
+        $hash = array("name"=>$name,"path"=>$path);
     echo json_encode($hash,JSON_UNESCAPED_SLASHES);
 }
 

@@ -12,5 +12,8 @@ $type=$_GET["type"];
 $dao = getQuery("topic");
 $cnt = $dao->getMax("topic_id",array("module_code"=>$code,"forum"=>$type));
 
-print_r($cnt);
+if(isset($cnt[0][0])){
+    echo $cnt[0][0];
+}else
+    echo 0;
 ?>

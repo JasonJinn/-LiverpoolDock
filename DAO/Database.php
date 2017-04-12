@@ -49,6 +49,12 @@ class Database
         return $this->query($sql);
     }
 
+    public function getLike($where,$like){
+        $sql = "select * from ".$this->_table;
+        $sql = $sql." where ".$where." like '%".$like."%';";
+        //echo $sql;
+        return $this->query($sql);
+    }
     public function getCount($where = null){
         $sql = "select count(*) from ".$this->_table;
         $sql = $sql.$this->_getWhereString($where);

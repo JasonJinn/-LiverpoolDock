@@ -12,18 +12,21 @@ include_once '../Controller/method/tokenVerify.php';
 
 $des = new DES('1996');
 $token = $_GET['token'];
+$email = $_GET['email'];
 
-if(verifyToken($token)=="false"){
+if(isset($token)&&verifyToken($token)=="false"){
     echo "token invalid";
 }else {
 //echo $token.'<br>';
+    if(isset($token)){
+        $arr = explode('^&*', ($des->passport_decrypt($token)));
+        $email = $arr[0];
+    }
     $dao = getQuery('User_profile');
-    $arr = explode('^&*', ($des->passport_decrypt($token)));
-    $email = $arr[0];
     //echo $token;
     $result = $dao->get(array("email" => $email));
     //print_r($result);
-    if(isset($result)){
+    if(isset($result[0])){
         $hash = array("profile"=>$result[0]["profile"],
             "facebook"=>$result[0]["facebook"],
             "google"=>$result[0]["google"],
