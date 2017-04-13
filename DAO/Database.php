@@ -49,6 +49,13 @@ class Database
         return $this->query($sql);
     }
 
+    public function getDistinct($distinct,$where = null){
+        $sql = "select DISTINCT $distinct from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
+        //echo $sql;
+        return $this->query($sql);
+    }
+
     public function getLike($where,$like){
         $sql = "select * from ".$this->_table;
         $sql = $sql." where ".$where." like '%".$like."%';";
@@ -89,6 +96,7 @@ class Database
         if (! $result) {
             return -1;
         }
+        //echo $sql;
         return mysqli_insert_id($this->_con);
     }
 

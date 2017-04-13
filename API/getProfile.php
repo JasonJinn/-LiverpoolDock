@@ -28,6 +28,7 @@ if(isset($token)&&verifyToken($token)=="false"){
     //print_r($result);
     if(isset($result[0])){
         $hash = array("profile"=>$result[0]["profile"],
+            "email"=>$result[0]["email"],
             "facebook"=>$result[0]["facebook"],
             "google"=>$result[0]["google"],
             "twitter"=>$result[0]["twitter"],
