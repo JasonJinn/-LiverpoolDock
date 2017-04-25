@@ -1,0 +1,26 @@
+1.	Logo(Yuan Gao)
+2.	Characters check at login page. (Yuan)
+3.	Verify teacher and student to backend. (Yuan)
+4.	Teacher view with action of uploading lecture, lab, assignment and new database (requirement). (back: Jeffer, front: Yuan)
+5.	Finish registerSuccess.html page.(Yuan)
+6.	Mail activate page.(Yuan)
+7.	Solve login.php return parameter to login.html.(Yuan)
+8.	Solve register.php return parameter to login.html. (Yuan)
+9.	Forget password function (Jeffer)
+10.	Forget password page. (Yuan)
+11.	3D login page (Jason).
+12.	iFrame picture. (Jason).
+13.	Password encrypted in both back end and front end. (Jeffer, Yuan)
+14.	Token pass in the front end (ps. Use urlEcode ). (Jason)
+15.	Insert and delete module code in the homepage, with search function. (Jeffer, Yuan)
+16.	Notifications API, someone response to creator. (Jeffer).
+17.	Calendar event insert and delete. (Jeffer)
+18.	DDL function and database and backend. (Jeffer)
+19.	Message function: online-user API. (OPTIONAL)
+20.	Not found page. (Yuan)
+21.	Marks function, with database. (Jeffer, Yuan)
+22.	Cloud (drop, breakpoint continuingly (optional), process bar, multiple file upload, preview).
+23.	Delete response or topic by himself or manager. (Jeffer)
+24.	Application feedback. (Jeffer)
+25.	Voting poll delete function (Jeffer).
+26.	Change isReport.
