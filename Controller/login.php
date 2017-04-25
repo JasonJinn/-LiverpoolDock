@@ -12,17 +12,21 @@ $mail = $_POST["loginemail"];                                        //need chan
 $password =$_POST["loginpassword"];
 
 $dao = getQuery("User");
-$result = $dao->get(array("email"=>$mail,"password"=>$password));
-//print_r(array_values($result));
+$result = $dao->get(array("email"=>$mail));
+//print_r(array_values($result));                                        //need test.
 
-if($result && $result[0]["is_active"]){
-    header("Location: ../View/homepage.html?token=".urlencode(generateToken($mail)));
-    exit();
-}else if($result && !$result[0]["is_active"]){
-    header("Location: ../View/login.html?email=false");
-    exit();
-} else{
+if($password==md5(md5($result[0]["password"]).md5($result[0]["password"]))) {
+    if ($result && $result[0]["is_active"]) {
+        header("Location: ../View/homepage.html?token=" . urlencode(generateToken($mail)));
+        exit();
+    } else if ($result && !$result[0]["is_active"]) {
+        header("Location: ../View/login.html?email=false");
+        exit();
+    } else {
+        header("Location: ../View/login.html?pass=false");
+        exit();
+    }
+}else{
     header("Location: ../View/login.html?pass=false");
-    exit();
 }
 ?>

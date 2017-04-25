@@ -24,20 +24,24 @@ if(isset($moduleList["$code"])) {
     $from = ($page - 1) * $forumPage;
     $end = $page * $forumPage - 1;
     $hash = array();
+    $total = array();
     if ($num < $from) {
         $hash = null;
     } else {
         $num = $num < $end ? $num : $end;
         for ($i = $from; $i < $num; $i++) {
-            $id = $result[$i]["topic_id"];
-            $hash[$id]["time"] = $result[$i]["time"];
-            $hash[$id]["name"] = $result[$i]["topic_name"];
-            $hash[$id]["content"] = $result[$i]["topic_content"];
-            $hash[$id]["floor"] = $result[$i]["floor"];
-            $hash[$id]["user"] = $result[$i]["Username"];
+            $hash["topic_id"] = $result[$i]["topic_id"];
+            $hash["time"] = $result[$i]["time"];
+            $hash["name"] = $result[$i]["topic_name"];
+            $hash["content"] = $result[$i]["topic_content"];
+            $hash["floor"] = $result[$i]["floor"];
+            $hash["user"] = $result[$i]["Username"];
+
+            $total[]=$hash;
         }
+
     }
-    echo json_encode($hash);
+    echo json_encode($total);
 }else{
     echo "token invalid or no module access";
 }

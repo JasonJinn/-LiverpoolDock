@@ -26,8 +26,11 @@
   
   
   </head>
+  <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
   <script>
-	  function login(){
+	  function login1(){
+	      var temp = document.getElementById("loginpassword").value;
+	      document.getElementById("loginpassword").value = md5(md5(temp)+md5(temp));
 	      document.form1.action = "../Controller/login.php";
 	      document.form1.submit();
 	  }
@@ -55,14 +58,14 @@
 		        <div class="login-wrap">
 		            <input type="text" name ="loginemail" class="form-control" placeholder="Email" autofocus>
 		            <br>
-		            <input type="password" name="loginpassword"class="form-control" placeholder="Password">
+		            <input type="password" id="loginpassword" name="loginpassword"class="form-control" placeholder="Password">
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#forgetpassword"> Forgot Password?</a>
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" id="login" value="123" href="index.html" onclick="login();"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <button class="btn btn-theme btn-block" id="login" value="123" href="index.html" onclick="login1();"><i class="fa fa-lock"></i> SIGN IN</button>
 		            <br />
 					<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-GUEST"></i> VIEW AS A GUEST</button>
 					<hr>
