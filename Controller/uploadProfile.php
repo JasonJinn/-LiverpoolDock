@@ -33,23 +33,23 @@ if(isset($_POST["profile"])){
     print_r($cnt);
 }
 if(isset($_POST["facebook"])){
-    $cnt =  $dao->update(array("profile"=>$_POST["facebook"]),array("email"=>$mail));
+    $cnt =  $dao->update(array("facebook"=>$_POST["facebook"]),array("email"=>$mail));
     print_r($cnt);
 }
 if(isset($_POST["goole"])){
-    $cnt =  $dao->update(array("profile"=>$_POST["google"]),array("email"=>$mail));
+    $cnt =  $dao->update(array("google"=>$_POST["google"]),array("email"=>$mail));
     print_r($cnt);
 }
 if(isset($_POST["twitter"])){
-    $cnt =  $dao->update(array("profile"=>$_POST["twitter"]),array("email"=>$mail));
+    $cnt =  $dao->update(array("twitter"=>$_POST["twitter"]),array("email"=>$mail));
     print_r($cnt);
 }
 if(isset($_POST["education"])){
-    $cnt =  $dao->update(array("profile"=>$_POST["education"]),array("email"=>$mail));
+    $cnt =  $dao->update(array("education"=>$_POST["education"]),array("email"=>$mail));
     print_r($cnt);
 }
 if(isset($_POST["experience"])){
-    $cnt =  $dao->update(array("profile"=>$_POST["experience"]),array("email"=>$mail));
+    $cnt =  $dao->update(array("experience"=>$_POST["experience"]),array("email"=>$mail));
     print_r($cnt);
 }
 ?>

@@ -3,38 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0942c862-50e1-4345-afd1-d508efab31a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getOption.php" afterPath="$PROJECT_DIR$/API/getOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getProfile.php" afterPath="$PROJECT_DIR$/API/getProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/gethomepage.php" afterPath="$PROJECT_DIR$/API/gethomepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/module.php" afterPath="$PROJECT_DIR$/API/module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/moduleList.php" afterPath="$PROJECT_DIR$/API/moduleList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/response.php" afterPath="$PROJECT_DIR$/API/response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/search.php" afterPath="$PROJECT_DIR$/API/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/searchModule.php" afterPath="$PROJECT_DIR$/API/searchModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/topic.php" afterPath="$PROJECT_DIR$/API/topic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/topicMax.php" afterPath="$PROJECT_DIR$/API/topicMax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/verifyToken.php" afterPath="$PROJECT_DIR$/API/verifyToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/votingOption.php" afterPath="$PROJECT_DIR$/API/votingOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/votingpoll.php" afterPath="$PROJECT_DIR$/API/votingpoll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/wholeModule.php" afterPath="$PROJECT_DIR$/API/wholeModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createResponse.php" afterPath="$PROJECT_DIR$/Controller/createResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createTopic.php" afterPath="$PROJECT_DIR$/Controller/createTopic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createpoll.php" afterPath="$PROJECT_DIR$/Controller/createpoll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/login.php" afterPath="$PROJECT_DIR$/Controller/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/logout.php" afterPath="$PROJECT_DIR$/Controller/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/mailActivate.php" afterPath="$PROJECT_DIR$/Controller/mailActivate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/token.php" afterPath="$PROJECT_DIR$/Controller/method/token.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/variable.php" afterPath="$PROJECT_DIR$/Controller/method/variable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/moduleOperation.php" afterPath="$PROJECT_DIR$/Controller/moduleOperation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/passwordForget.php" afterPath="$PROJECT_DIR$/Controller/passwordForget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/postFeedback.php" afterPath="$PROJECT_DIR$/Controller/postFeedback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/register.php" afterPath="$PROJECT_DIR$/Controller/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/reset.php" afterPath="$PROJECT_DIR$/Controller/reset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/test.php" afterPath="$PROJECT_DIR$/Controller/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/upload.php" afterPath="$PROJECT_DIR$/Controller/upload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/uploadProfile.php" afterPath="$PROJECT_DIR$/Controller/uploadProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/voting.php" afterPath="$PROJECT_DIR$/Controller/voting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/Database.php" afterPath="$PROJECT_DIR$/DAO/Database.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,12 +15,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="uploadProfile.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="uploadProfile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/uploadProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="275">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <folding>
+                <element signature="e#6#96#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createResponse.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createResponse.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/createResponse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="225">
               <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
               <folding />
             </state>
@@ -204,7 +175,6 @@
         <option value="$PROJECT_DIR$/API/wholeModule.php" />
         <option value="$PROJECT_DIR$/Controller/calendarOperation.php" />
         <option value="$PROJECT_DIR$/Controller/createpoll.php" />
-        <option value="$PROJECT_DIR$/Controller/createResponse.php" />
         <option value="$PROJECT_DIR$/Controller/createTopic.php" />
         <option value="$PROJECT_DIR$/API/gethomepage.php" />
         <option value="$PROJECT_DIR$/API/getProfile.php" />
@@ -223,8 +193,9 @@
         <option value="$PROJECT_DIR$/Controller/register.php" />
         <option value="$PROJECT_DIR$/Controller/reset.php" />
         <option value="$PROJECT_DIR$/Controller/test.php" />
-        <option value="$PROJECT_DIR$/Controller/uploadProfile.php" />
         <option value="$PROJECT_DIR$/Controller/voting.php" />
+        <option value="$PROJECT_DIR$/Controller/createResponse.php" />
+        <option value="$PROJECT_DIR$/Controller/uploadProfile.php" />
       </list>
     </option>
   </component>
@@ -236,8 +207,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="248" />
-    <option name="y" value="33" />
+    <option name="x" value="436" />
+    <option name="y" value="61" />
     <option name="width" value="1106" />
     <option name="height" value="785" />
   </component>
@@ -258,6 +229,16 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="-LiverpoolDock" />
@@ -495,15 +476,15 @@
       <workItem from="1493117674463" duration="1599000" />
       <workItem from="1493127442731" duration="8000" />
       <workItem from="1493140350420" duration="5262000" />
-      <workItem from="1493221917384" duration="7001000" />
+      <workItem from="1493221917384" duration="7492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131198000" />
+    <option name="totallyTimeSpent" value="131689000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="248" y="33" width="1106" height="785" extended-state="0" />
+    <frame x="436" y="61" width="1106" height="785" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22694394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -568,15 +549,15 @@
         <state relative-caret-position="973">
           <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
           <folding>
-            <marker date="1493142870000" expanded="true" signature="1031:1045" ph="select * fro... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="1251:1282" ph="select DISTI... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="1473:1487" ph="select * fro... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="1688:1709" ph="select count... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="1905:1927" ph="select max($... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="2129:2143" ph="select * fro... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="2390:2404" ph="select * fro... ${$this-&gt;_table}" />
-            <marker date="1493142870000" expanded="true" signature="2859:2917" ph="insert into ${$this-&gt;_table}... " />
-            <marker date="1493142870000" expanded="true" signature="3757:3769" ph="delete from " />
+            <marker date="1493243656000" expanded="true" signature="1031:1045" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="1251:1282" ph="select DISTI... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="1473:1487" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="1688:1709" ph="select count... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="1905:1927" ph="select max($... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="2129:2143" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="2390:2404" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493243656000" expanded="true" signature="2859:2917" ph="insert into ${$this-&gt;_table}... " />
+            <marker date="1493243656000" expanded="true" signature="3757:3769" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -650,10 +631,10 @@
         <state relative-caret-position="195">
           <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
-            <marker date="1493243622000" expanded="true" signature="995:1153" ph="select * fro... topic_response" />
-            <marker date="1493243622000" expanded="true" signature="995:1154" ph="select * fro... topic_response" />
-            <marker date="1493243622000" expanded="true" signature="995:1189" ph="select * fro... topic_response" />
-            <marker date="1493243622000" expanded="true" signature="1067:1134" ph="select * fro... topic" />
+            <marker date="1493243656000" expanded="true" signature="995:1153" ph="select * fro... topic_response" />
+            <marker date="1493243656000" expanded="true" signature="995:1154" ph="select * fro... topic_response" />
+            <marker date="1493243656000" expanded="true" signature="995:1189" ph="select * fro... topic_response" />
+            <marker date="1493243656000" expanded="true" signature="1067:1134" ph="select * fro... topic" />
           </folding>
         </state>
       </provider>
@@ -890,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/uploadProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/assets/js/jquery-ui-1.9.2.custom.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -956,9 +929,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/createResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="225">
           <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/uploadProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding>
+            <element signature="e#6#96#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
