@@ -28,7 +28,7 @@ if ($file->validateFile() && $file->save('../Repo/'.$_POST['flowFilename'])) {
 	
 	//Small chance to prune abandoned chunks, avoids using crontab, can be amended later
 	if (1 == mt_rand(1, 500)) {
-		\Flow\Uploader::pruneChunks('./chunks_folder');
+		\Flow\Uploader::pruneChunks('../Upload_Chunks');
 	}
 } else {
     // This is not a final chunk, continue to upload
