@@ -9,7 +9,7 @@ include "method/DES.php";
 include "../DAO/Database.php";
 require_once "method/variable.php";
 
-$encrypt_mail = $_GET["secret"];                    //ps. need urlencode for this parameter
+$encrypt_mail = $_REQUEST["secret"];                    //ps. need urlencode for this parameter
 //$old = $_REQUEST["old"];
 $new = $_REQUEST["new"];
 $des = new DES("1996");

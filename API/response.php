@@ -8,17 +8,17 @@
 include "../DAO/Database.php";
 include_once "../Controller/method/variable.php";
 
-$token = $_GET["token"];
+$token = $_COOKIE["token"];
 
-$code = $_GET["code"];
-$type = $_GET["type"];
-$topic = $_GET["topic"];
+$code = $_REQUEST["code"];
+$type = $_REQUEST["type"];
+$topic = $_REQUEST["topic"];
 
 $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList.php?token=".urlencode($token)),true);
 
 if(isset($moduleList["$code"])) {
     $dao = getQuery("topic_response");
-    $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type,"topic_id"=>$topic));
+    $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type,"topic_id"=>$topic,"isReport"=>'0'));
     $num=count($result);
     $hash=array();
     for($i=0;$i<$num;$i++)

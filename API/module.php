@@ -8,9 +8,9 @@
 include "../DAO/Database.php";
 include "../Controller/method/variable.php";
 
-$token = $_GET["token"];
+$token = $_COOKIE["token"];
 
-$code = $_GET["code"];
+$code = $_REQUEST["code"];
 
 $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList/moduleList.php?token=".urlencode($token)),true);
 //print_r($moduleList);

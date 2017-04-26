@@ -8,16 +8,18 @@
 include_once '../DAO/Database.php';
 include_once "method/token.php";
 
-$mail = $_POST["loginemail"];                                        //need change to post in the final
-$password =$_POST["loginpassword"];
+$mail = $_REQUEST["loginemail"];                                        //need change to post in the final
+$password =$_REQUEST["loginpassword"];
 
 $dao = getQuery("User");
 $result = $dao->get(array("email"=>$mail));
 //print_r(array_values($result));                                        //need test.
-
+//echo $password."<br/>";
+//echo md5(md5($result[0]["password"]).md5($result[0]["password"]));
 if($password==md5(md5($result[0]["password"]).md5($result[0]["password"]))) {
     if ($result && $result[0]["is_active"]) {
-        header("Location: ../View/homepage.html?token=" . urlencode(generateToken($mail)));
+        generateToken($mail);
+        header("Location: ../View/homepage.html");
         exit();
     } else if ($result && !$result[0]["is_active"]) {
         header("Location: ../View/login.html?email=false");

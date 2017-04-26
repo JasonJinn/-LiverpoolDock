@@ -11,7 +11,7 @@ include "../DAO/Database.php";
 require_once "method/fileHandler.php";
 require_once "method/variable.php";
 
-$encrypt_mail = $_GET["secret"];
+$encrypt_mail = $_REQUEST["secret"];
 $des = new DES("1996");
 $dao = getQuery("User");
 

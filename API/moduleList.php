@@ -12,7 +12,7 @@ include_once '../Controller/method/tokenVerify.php';
 
 $dao = getQuery('User_module');
 $des = new DES('1996');
-$token = $_GET['token'];
+$token = $_COOKIE['token'];
 
 if(verifyToken($token)=="false"){
     echo "token invalid";

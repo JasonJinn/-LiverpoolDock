@@ -13,11 +13,11 @@ include_once "method/fileHandler.php";
 include_once "method/variable.php";
 
 
-$email=$_POST["email"];
-$pass=$_POST["password"];
-$give=$_POST["givenname"];
-$sur=$_POST["surname"];
-$level=$_POST["level"];                           //teacher post 1, student post 0;
+$email=$_REQUEST["email"];
+$pass=$_REQUEST["password"];
+$give=$_REQUEST["givenname"];
+$sur=$_REQUEST["surname"];
+$level=$_REQUEST["level"];                           //teacher post 1, student post 0;
 if(!isset($level)){
     $level = 0;
 }

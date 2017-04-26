@@ -7,5 +7,5 @@
  */
 include_once '../Controller/method/tokenVerify.php';
 
-echo verifyToken($_GET['token']);
+echo verifyToken($_COOKIE['token']);
 ?>

@@ -9,7 +9,7 @@ include "method/DES.php";
 include_once "../DAO/Database.php";
 include_once "method/tokenVerify.php";
 
-$token=$_REQUEST["token"];
+$token=$_COOKIE["token"];
 $code=$_REQUEST["code"];
 $type=$_REQUEST["type"];
 $topic_name =$_REQUEST["topicname"];
@@ -36,7 +36,7 @@ if(verifyToken($token)=="true"){
         $result = $dao->getMax("topic_id", array("module_code" => $code, "forum" => $type));
         $max = $result[0][0] + 1;
 
-        $date = date("Y/m/d H:m:s", time());
+        $date = date("Y/m/d H:i:s", time());
         $result1 = $dao->insert(array("topic_id" => $max, "module_code" => $code, "forum" => $type, "topic_name" => $topic_name,
             "topic_content" => $topic_content, "Username" => $username, "email" => $email, "isReport" => 0,
             "time" => $date, "floor" => 1));

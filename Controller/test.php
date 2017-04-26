@@ -105,9 +105,10 @@
 //
 //print_r($cnt);
 //print_r(json_decode(file_get_contents("http://localhost/-liverpooldock/API/moduleList.php?token=UGdTZlNkXF9VdQ4nUWEGNlZrUjZSbQZmBTIAagc0CDY%3D"),true));
-include "../DAO/Database.php";
-
-$dao=getQuery("votingOption");
-$result = $dao->getDistinct("poll_option",array("poll_id"=>1));
-print_r($result);
+//include "../DAO/Database.php";
+//
+//$dao=getQuery("votingOption");
+//$result = $dao->getDistinct("poll_option",array("poll_id"=>1));
+//print_r($result);
+//echo date("Y-m-d H:i:s",time());
 ?>

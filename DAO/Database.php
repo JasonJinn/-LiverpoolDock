@@ -84,6 +84,15 @@ class Database
         return $this->query($sql);
     }
 
+//    public function getByReOrder($order,$where = null){
+//        $sql = "select * from ".$this->_table;
+//        $sql = $sql.$this->_getWhereString($where);
+//        //echo $sql;
+//        $sql = $sql."order by $order";
+//        $sql = $sql."desc";
+//        return $this->query($sql);
+//    }
+
     public function insert($params) {
         if ($params == null || !is_array($params)) {
             return -1;

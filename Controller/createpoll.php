@@ -9,7 +9,7 @@ include "method/DES.php";
 include_once "../DAO/Database.php";
 include_once "method/tokenVerify.php";
 
-$token=$_REQUEST["token"];
+$token=$_COOKIE["token"];
 $code=$_REQUEST["code"];
 $option_array =$_REQUEST["option"];
 $title =$_REQUEST["title"];
@@ -35,7 +35,7 @@ if(verifyToken($token)=="true"){
         $result = $dao->getMax("poll_id", array("module_code" => $code));
         $max = $result[0][0] + 1;
 
-        $date = date("Y/m/d H:m:s", time());
+        $date = date("Y/m/d H:i:s", time());
         $result1 = $dao->insert(array("poll_id" => $max, "poll_title" => $title,
                                     "name" => $username, "email" => $email,
                                      "module_code" => $code, "poll_date" =>$date));

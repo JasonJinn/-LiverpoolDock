@@ -7,6 +7,7 @@
  */
 include_once "DES.php";
 include_once "../../DAO/Database.php";
+include_once "variable.php";
 
 function generateToken($mail){
     $str = $mail."^&*".time();
@@ -14,6 +15,7 @@ function generateToken($mail){
     $token = $des->passport_encrypt($str);
     $dao = getQuery("User");
     $dao->update(array("token"=>$token),array("email"=>$mail));
+    setcookie("token",$token,time()+1800,"/",$domain);
     return $token;
 }
 

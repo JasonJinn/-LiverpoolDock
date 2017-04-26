@@ -8,18 +8,18 @@
 include "../DAO/Database.php";
 include "../Controller/method/variable.php";
 
-    $token = $_GET["token"];
+    $token = $_COOKIE["token"];
 
-    $code = $_GET["code"];
-    $type = $_GET["type"];
-    $page = $_GET["p"]||1;
+    $code = $_REQUEST["code"];
+    $type = $_REQUEST["type"];
+    $page = $_REQUEST["p"]||1;
 
     $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList.php?token=".urlencode($token)),true);
 //print_r($moduleList);
 if(isset($moduleList["$code"])) {
     $dao = getQuery("topic");
-    $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type));
-
+    $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type,"isReport"=>'0'));
+    //print_r($result);
     $num = count($result);
     $from = ($page - 1) * $forumPage;
     $end = $page * $forumPage - 1;
@@ -36,6 +36,11 @@ if(isset($moduleList["$code"])) {
             $hash["content"] = $result[$i]["topic_content"];
             $hash["floor"] = $result[$i]["floor"];
             $hash["user"] = $result[$i]["Username"];
+
+            $dao->table("topic_response");
+            $result2 = $dao->get(array("module_code"=>$code,"forum"=>$type,
+                "isReport"=>'0',"floor_number"=>$hash["floor"]));
+            $hash["lastUser"] = $result2[0]["Username"];
 
             $total[]=$hash;
         }

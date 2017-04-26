@@ -10,9 +10,10 @@ include_once "method/variable.php";
 include_once "method/DES.php";
 include "../DAO/Database.php";
 
-$token = $_REQUEST["token"];
+$token = $_COOKIE["token"];
 $des = new DES("1996");
 $arr = explode('^&*', ($des->passport_decrypt($token)));
+//print_r($arr);
 $mail = $arr[0];
 //$mail = "524867701@qq.com";
 $dao = getQuery("User_profile");

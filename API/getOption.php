@@ -9,7 +9,7 @@ include_once "../Controller/method/tokenVerify.php";
 include "../DAO/Database.php";
 include "../Controller/method/variable.php";
 
-$token = $_REQUEST["token"];
+$token = $_COOKIE["token"];
 $code = $_REQUEST["code"];
 $id=$_REQUEST["id"];
 

@@ -11,8 +11,8 @@ include_once '../Controller/method/tokenVerify.php';
 
 
 $des = new DES('1996');
-$token = $_GET['token'];
-$email = $_GET['email'];
+$token = $_COOKIE['token'];
+$email = $_REQUEST['email'];
 
 if(isset($token)&&verifyToken($token)=="false"){
     echo "token invalid";

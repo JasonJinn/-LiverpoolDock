@@ -9,7 +9,7 @@ include "method/DES.php";
 include_once "../DAO/Database.php";
 include_once "method/tokenVerify.php";
 
-$token=$_REQUEST["token"];                                                      //scale?
+$token=$_COOKIE["token"];                                                      //scale?
 $content =$_REQUEST["content"];
 
 if(verifyToken($token)=="true"){
@@ -22,7 +22,7 @@ if(verifyToken($token)=="true"){
     $result = $dao->getMax("feedback_id");
     $next_id = $result[0][0]+1;
     echo $next_id;
-    $time = date("Y/m/d H:m:s", time());
+    $time = date("Y/m/d H:i:s", time());
     $cnt = $dao->insert(array("feedback_id"=>$next_id,"email"=>$email,"feedback_content"=>$content,
         "feedback_date"=>$time));
     print_r($cnt);

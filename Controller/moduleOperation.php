@@ -11,7 +11,7 @@ include_once '../Controller/method/tokenVerify.php';
 
 
 $des = new DES('1996');
-$token = $_GET['token'];
+$token = $_COOKIE['token'];
 $code = $_REQUEST['code'];
 $operation = $_REQUEST["operate"];
 

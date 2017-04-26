@@ -8,7 +8,7 @@
 include '../DAO/Database.php';
 include 'method/DES.php';
 
-$token = $_GET["token"];
+$token = $_COOKIE["token"];
 $dao = getQuery("User");
 $des = new DES("1996");
 

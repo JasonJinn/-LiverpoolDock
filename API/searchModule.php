@@ -7,7 +7,7 @@
  */
 include "../DAO/Database.php";
 
-$input = $_GET["input"];
+$input = $_REQUEST["input"];
 if(isset($input)){
     $dao = getQuery("module");
 

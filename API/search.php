@@ -7,7 +7,7 @@
  */
 include "../DAO/Database.php";
 
-$user = $_GET["name"];
+$user = $_REQUEST["name"];
 if(isset($user)){
     $dao = getQuery("User");
 

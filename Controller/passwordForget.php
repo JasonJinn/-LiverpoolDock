@@ -9,7 +9,7 @@ include 'method/smtp.php';
 include 'method/variable.php';
 include_once 'method/DES.php';
 
-$mail = $_POST["email"];
+$mail = $_REQUEST["email"];
 $des = new DES("1996");
 
 $encrypt_mail = $des->passport_encrypt($mail);
