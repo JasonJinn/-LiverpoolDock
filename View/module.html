@@ -50,15 +50,15 @@
           "<table class='postcontent'>"+
                   "<tbody>"+
                      "<tr>"+
-                       "<td class='postreply'><img  class='postreplyicon' src='reply.png'></td>"+
+                       "<td class='postreply'><img  class='postreplyicon' src='assets/img/reply.png'></td>"+
                        "<td class='posttitle'><a href='#'>"+post[i].name+"</a></td>"+
-                       "<td class='postcreator'><img class='postcreatoricon' src='user.png'>    "+post[i].user+"</td>"+
+                       "<td class='postcreator'><img class='postcreatoricon' src='assets/img/user.png'>    "+post[i].user+"</td>"+
                        "<td class='postreplytime'></td>"+
                      "</tr>"+
                      "<tr>"+
                        "<td class='postreply-col-2'></td>"+
                        "<td class='posttitle-col-2'><div class='postbrief'>"+post[i].content+"</div></td>"+
-                       "<td class='postcreator-col-2'><img class='postreplyicon-2' src='reply2.png'>     Jason222</td>"+
+                       "<td class='postcreator-col-2'><img class='postreplyicon-2' src='assets/img/reply2.png'>     Jason222</td>"+
                        "<td class='postreplytime-col-2'>"+post[i].time+"</td>"+
                      "</tr>"+
                    "</tbody>"+
@@ -227,7 +227,7 @@
 
       $(document).ready(function(){
         $("#post-submit-botton").click(function(){
-          $.post("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: "COMP211", type: $('input[name="choose-forum"]:checked').val(), topic_name: $('input[name="post-title"]').val(), content: $("post-content-input").val()},function(status){
+          $.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/createTopic.php",{code: "COMP211", type: $('input[name="choose-forum"]:checked').val(), topicname: $('input[name="post-title"]').val(), content: $("#post-content-input").val()},function(status){
             alert(status);
           })
         })
@@ -595,9 +595,9 @@
            <div id="forumcontent" class="modulecontentblock">
            
              <ul id="forumicon">
-               <li><a href="#createpost"><img class="posticon" src="assets/img/post.png"/></a></li>
-               <li><a href="#"><img class="posticon" src="assets/img/refresh.png"/></a></li>
-               <li><a href="#moduleGeneral"><img class="posticon" src="assets/img/backtop.png"/></a></li>
+               <li><a href="#createpost"><img class="posticon" src="post.png"/></a></li>
+               <li><a href="#"><img class="posticon" src="refresh.png"/></a></li>
+               <li><a href="#moduleGeneral"><img class="posticon" src="backtop.png"/></a></li>
              </ul>           
              <table class="forumchoice">
                <tbody>
@@ -637,11 +637,9 @@
                 <p class="create-post-input"><input id="post-title-input" type="text" name="post-title" maxlength="80" value="Title" onfocus="if(this.value=='Title') this.value=''" onblur="if(this.value=='') this.value='Title'" /></p>
                 <p class="create-post-input"><center><textarea id="post-content-input" name="post-content" cols="150" rows="10"></textarea></center></p>
                 <center>
-                <div id="choose-forum">
-                <label class="forum-type"><input type="radio" name="choose-forum" value="g">General Forum</label>
+                <label class="forum-type"><input type="radio" name="choose-forum" value="G">General Forum</label>
 
-                <label class="forum-type"><input type="radio" name="choose-forum" value="a">Assessment Forum</label>
-                </div>
+                <label class="forum-type"><input type="radio" name="choose-forum" value="A">Assessment Forum</label>
                 </center>
               </form>
               <button id="post-submit-botton" type="button" class="btn btn-theme" name="post-submit">Submit</button>
