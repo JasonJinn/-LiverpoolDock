@@ -10,4 +10,5 @@ $newsUrl = "https://news.liverpool.ac.uk/";
 $repositoryUrl = "/Library/WebServer/Documents/-LiverpoolDock/Resource/repository";
 $forumPage = 10;
 $domain = "localhost";
+$repositoryUrl1 = "http://localhost/-liverpooldock/Resource/repository";
 ?>

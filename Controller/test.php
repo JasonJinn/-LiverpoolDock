@@ -111,5 +111,10 @@
 //$result = $dao->getDistinct("poll_option",array("poll_id"=>1));
 //print_r($result);
 //echo date("Y-m-d H:i:s",time());
-print_r($_COOKIE);
+include "../DAO/Database.php";
+
+$dao = getQuery("message");
+$cnt = $dao->insert(array("from_user"=>"Jeffer","to_user"=>"Je",
+    "content"=>"hello","time"=>date("Y-m-d H:i:s",time()),"isRead"=>"1"));
+print_r($cnt);
 ?>

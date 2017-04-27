@@ -5,7 +5,7 @@
  * Date: 08/04/2017
  * Time: 10:16 PM
  */
-include_once 'Database.php';
+include_once '../DAO/Database.php';
 include_once 'DES.php';
 
 function verifyToken($token)

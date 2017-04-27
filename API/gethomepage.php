@@ -30,9 +30,9 @@ if(isset($token) && verifyToken($token)=="false"){
     $cnt = $dao->get(array("email"=>$email));
     $path = $cnt[0]["photoname"];
     if(isset($path))
-        $path = $repositoryUrl."/../".md5(md5($email).md5($email))."/".$path;
+        $path = $repositoryUrl1."/../".md5(md5($email).md5($email))."/".$path;
     else if(isset($name))
-        $path = $repositoryUrl."/../default.jpg";
+        $path = $repositoryUrl1."/../default.jpg";
     if(isset($name))
         $hash = array("name"=>$name,"path"=>$path);
     echo json_encode($hash,JSON_UNESCAPED_SLASHES);

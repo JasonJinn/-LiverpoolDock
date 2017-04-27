@@ -25,13 +25,15 @@ if(verifyToken($token)=="false"){
     $result = $dao->get(array("email" => $email));
     //print_r(array_values($result));
     $hash = array();
-    //$total = array();
+    $total = array();
     $des_module_name = getQuery("module");
     for ($i = 0; $i < count($result); $i++) {
         $module_code = $result[$i]["module_code"];
-        $hash[$module_code] = $des_module_name->get(array("Module_code" => $module_code))[0]["module_name"];
-        //$hash["code"] = $module_code;
+        $hash["name"] = $des_module_name->get(array("Module_code" => $module_code))[0]["module_name"];
+        $hash["code"] = $module_code;
+
+        $total[] = $hash;
     }
-    echo json_encode($hash);
+    echo json_encode($total);
 }
 ?>

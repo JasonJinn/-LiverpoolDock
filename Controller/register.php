@@ -23,9 +23,11 @@ if(!isset($level)){
 }
 
 $dao = getQuery("User");
+$result = $dao->get(array("email"=>$email));
+$num = count($result);
 $cnt = $dao->insert(array("surname"=>$sur,"username"=>$give." ".$sur,"email"=>$email,"level_of_security"=>$level,"password"=>$pass));
 
-if($cnt==0){
+if($num==0){
     if($level==1){
         maketeacherdir($give." ".$sur,$repositoryUrl);
     }

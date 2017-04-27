@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 set_time_limit(0);// set time out
 date_default_timezone_set('Etc/GMT');
+include_once '../DAO/Database.php';
 
 class WebSocket {
     const LOG_PATH = '/';
@@ -18,6 +19,7 @@ class WebSocket {
     private $sockets = [];
     private $nameHash = array();
     private $master;
+    private $dao;
 
     public function __construct($host, $port) {
         try {
@@ -28,6 +30,7 @@ class WebSocket {
             socket_bind($this->master, $host, $port);
 
             socket_listen($this->master, self::LISTEN_SOCKET_NUM);
+            $this->dao = getQuery("message");
         } catch (\Exception $e) {
             $err_code = socket_last_error();
             $err_msg = socket_strerror($err_code);
@@ -282,7 +285,7 @@ class WebSocket {
                 break;
             case 'logout':
                 $user_list = array_column($this->sockets, 'uname');
-                //unset(nameHash[$msg_content]);
+                unset($this->nameHash[$msg_content]);
                 //print_r($recv_msg);
                 $response['type'] = 'logout';
                 $response['content'] = $msg_content;
@@ -296,12 +299,20 @@ class WebSocket {
                 $response['to'] = $msg_to;
                 $data = $this->build(json_encode($response));
                 $isToUser = true;
+                $dates = date("Y/m/d H:i:s", time());
+                $cnt = $this->dao->insert(array("from_user"=>$uname, "to_user"=>$msg_to,
+                    "content"=>$msg_content,"time"=>$dates,"isRead"=>0));
+                //echo "cnt:$cnt"."<br/>";
                 break;
         }
         $data = $this->build(json_encode($response));
         if($msg_type == 'user')
         {
-            socket_write($this->sockets[$this->nameHash[$msg_to]]['resource'],$data,strlen($data));
+            if(isset($this->nameHash[$msg_to]))
+            {
+                socket_write($this->sockets[$this->nameHash[$msg_to]]['resource'],$data,strlen($data));
+                $cnt2 = $this->dao->update(array("isRead"=>1),array("mid"=>$cnt));
+            }
             socket_write($this->sockets[$this->nameHash[$uname]]['resource'],$data,strlen($data));
         }
         return $isToUser?null:$data;
