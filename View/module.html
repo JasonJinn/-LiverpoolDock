@@ -1,10 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-</body>
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/module-style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+  <script src="assets/js/jquery-1.8.3.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>
+
+  $token = location.search;
+  reg = /token=(.+)/g;
+  //$token = reg.exec($token)[1];
+ 
+ 
+  var numPost;
+  var forumtype;
+  var numPostcurrent;
+
+
+   $(document).ready(function(){
+   
+            $.get("http://www.shoujiafeng.com/LiverpoolDock/API/topicMax.php",{code: "comp211", type: "G"},function(data){
+                numPost = data;
+       
+        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: "COMP211", type: "G", page: "1"},function(data){
+        var post = data;
+        numPostcurrent = getJsonLength(data)-1;
+ 
+        for(var i=numPostcurrent;i>=0;i--){
+          $("#g-forum").append("<li class='postblank'><span class='replynum'>"+post[i].floor+"</span>"+
+          "<table class='postcontent'>"+
+                  "<tbody>"+
+                     "<tr>"+
+                       "<td class='postreply'><img  class='postreplyicon' src='reply.png'></td>"+
+                       "<td class='posttitle'><a href='#'>"+post[i].name+"</a></td>"+
+                       "<td class='postcreator'><img class='postcreatoricon' src='user.png'>    "+post[i].user+"</td>"+
+                       "<td class='postreplytime'></td>"+
+                     "</tr>"+
+                     "<tr>"+
+                       "<td class='postreply-col-2'></td>"+
+                       "<td class='posttitle-col-2'><div class='postbrief'>"+post[i].content+"</div></td>"+
+                       "<td class='postcreator-col-2'><img class='postreplyicon-2' src='reply2.png'>     Jason222</td>"+
+                       "<td class='postreplytime-col-2'>"+post[i].time+"</td>"+
+                     "</tr>"+
+                   "</tbody>"+
+                 "</table></li>") 
+                
+
+        }
+        })
+            });     
+            
+        });
+        function getJsonLength(json){
+                var jsonLength=0;
+                for (var i in json) {
+                    jsonLength++;
+                }
+                return jsonLength;
+            }
+        
+        
+       
+
+
+
+        
+
+
+
+      $(document).ready(function(){
+           $("#modulelecture a").css("opacity",1);
+           $("#modulelecture").css("background-color","black");
+           $("#lecturecontent").css("display","block");
+});
+
+
+
+      $(document).ready(function(){
+           $(".moduleblank").click(function(){
+           $(".moduleblank").css("background-color","#ccc");
+           $(".moduleblank a").css("opacity",0.4);
+           $(this).css("background-color","black");
+           $('>a',this).css("opacity",1);
+           if($(this).attr("id")=="modulelecture"){
+            $("#modulecontent div").css("display","none");
+            $("#lecturecontent").css("display","block");
+           }
+           if($(this).attr("id")=="modulelab"){
+            $("#modulecontent div").css("display","none");
+            $("#labcontent").css("display","block");
+           }
+           if($(this).attr("id")=="moduleass"){
+            $("#modulecontent div").css("display","none");
+            $("#asscontent").css("display","block");
+           }
+           if($(this).attr("id")=="moduleforum"){
+            $("#modulecontent div").css("display","none");
+            $("#forumcontent").css("display","block");
+           }
+           if($(this).attr("id")=="modulepoll"){
+            $("#modulecontent div").css("display","none");
+            $("#pollcontent").css("display","block");
+           }
+           });
+});
+
+           
+
+      $(document).ready(function(){
+           $(".moduleblank").mouseenter(function(){
+            $('>a',this).css("opacity",1);
+           })
+
+           $(".moduleblank").mouseleave(function(){
+            if($(this).css("background-color")!="rgb(0, 0, 0)"){
+            $('>a',this).css("opacity",0.4);
+          }
+           })
+});
+
+
+
+      $(document).ready(function(){
+           $("#g-forumtxt").css("opacity",1);
+           $("#g-forumtxt").css("background-color","#ffd777");
+});
+
+
+
+      $(document).ready(function(){
+           $(".forumtablechoice").click(function(){
+           $(".forumtablechoice").css("opacity",0.5);
+           $(".forumtablechoice").css("background-color","#fcf8e3");
+           $(this).css("opacity",1);
+           $(this).css("background-color","#ffd777");
+           });
+});
+
+
+      $(document).ready(function(){
+           $("#g-forumtxt").mouseenter(function(){
+            $(this).css("opacity",1);
+           })
+
+           $("#g-forumtxt").mouseleave(function(){
+            if($(this).css("background-color")!="rgb(255, 215, 119)"){
+            $(this).css("opacity",0.5);
+          }
+           })
+
+           $("#a-forumtxt").mouseenter(function(){
+            $(this).css("opacity",1);
+           })
+
+           $("#a-forumtxt").mouseleave(function(){
+            if($(this).css("background-color")!="rgb(255, 215, 119)"){
+            $(this).css("opacity",0.5);
+          }
+           })
+});
+       
+
+       $(document).ready(function(){
+            $("#g-forum").css("display","block");
+});
+
+
+
+       $(document).ready(function(){
+           $("#g-forumtxt").click(function(){
+            $(".forumpost").css("display","none");
+            $("#g-forum").css("display","block");
+            forumtype ="G";
+           })
+
+           $("#a-forumtxt").click(function(){
+            $(".forumpost").css("display","none");
+            $("#a-forum").css("display","block");
+            forumtype ="A";
+           })
+});
+
+
+      $(document).ready(function(){
+           $(document).on('mouseenter','.postblank',function(){
+            $(this).css("background-color","#fcf8e3");
+            $(".posttitle a").css("text-decoration-color","#fefcf1");
+           })
+
+           $(document).on('mouseleave','.postblank',function(){
+            $(this).css("background-color","white");
+            $(".posttitle a").css("text-decoration-color","white");
+           })
+
+           $(document).on('mouseenter','.posttitle a',function(){
+            $(this).css("text-decoration","underline");
+            $(this).css("text-decoration-color","black");
+           })
+
+           $(document).on('mouseleave','.posttitle a',function(){
+            $(this).css("text-decoration","none");
+            $(this).css("text-decoration-color","#fefcf1");
+           })
+});
+
+
+
+      $(document).ready(function(){
+        $("#post-submit-botton").click(function(){
+          $.post("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: "COMP211", type: $('input[name="choose-forum"]:checked').val(), topic_name: $('input[name="post-title"]').val(), content: $("post-content-input").val()},function(status){
+            alert(status);
+          })
+        })
+      })
+
+ 
+
+
+
+  </script>
+  </head>
+
+  <body>
+
+  
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Liverpool Dock</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 4 pending tasks</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="percent">40%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Database Update</div>
+                                        <div class="percent">60%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Product Development</div>
+                                        <div class="percent">80%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Payments Sent</div>
+                                        <div class="percent">70%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">70% Complete (Important)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- settings end -->
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 5 new messages</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Dashboard.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+              <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+              </ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+                  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <h5 class="centered">Marcel Newman</h5>
+                    
+                  <li class="mt">
+                      <a href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>UI Elements</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">General</a></li>
+                          <li><a  href="buttons.html">Buttons</a></li>
+                          <li><a  href="panels.html">Panels</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Components</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="gallery.html">Gallery</a></li>
+                          <li><a  href="todo_list.html">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>Extra Pages</span>
+                      </a>
+                      <ul class="sub">
+                          <li class="active"><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="login.html">Login</a></li>
+                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Forms</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> Module xxxxxxxx</h3>
+
+
+
+      <div id="moduleGeneral"></div>
+
+              
+
+
+      <div id="moduleclick">
+                  <div id="modulelecture" class="moduleblank">
+                 <a href="#" id="lecturetxt">Lectures</a>
+            </div>
+            <div id="modulelab" class="moduleblank">
+                 <a href="#" id="labtxt">Lab/Tutorials</a>
+            </div>
+            <div id="moduleass" class="moduleblank">
+                 <a href="#" id="asstxt">Assessments</a>
+            </div>
+            <div id="moduleforum" class="moduleblank">
+                <a href="#" id="forumtxt">Forum</a>
+            </div>
+            <div id="modulepoll" class="moduleblank">
+                <a href="#" id="polltxt">VotingPoll</a>
+            </div>
+      </div>
+
+      <div id="modulecontent">
+
+
+
+           <div id="lecturecontent" class="modulecontentblock">
+           <span id="moduletabletitle">Lecture slides</span>
+               <table class="moduletable">
+                 <tbody>
+                   <tr>
+                     <td class="moduletable-col"> # </td>
+                     <td class="moduletable-col">Title</td>
+                     <td class="moduletable-col">Slides</td>
+                   </tr>
+                   <tr>
+                     <td class="moduletable-col-1">1</td>
+                     <td class="moduletable-col-title">Introduction</td>
+                     <td class="moduletable-col-1"><div id="slidesurl" class="fa fa-book"></div></td>
+                   </tr>
+                 </tbody>
+               </table>             
+           </div>
+
+
+
+
+           <div id="labcontent" class="modulecontentblock">
+           <span id="moduletabletitle">Lab slides</span>
+               <table class="moduletable">
+                 <tbody>
+                   <tr>
+                     <td class="moduletable-col"> # </td>
+                     <td class="moduletable-col">Title</td>
+                     <td class="moduletable-col">Slides</td>
+                   </tr>
+                     <td class="moduletable-col-1">1</td>
+                     <td class="moduletable-col-title">Lab1</td>
+                     <td class="moduletable-col-1"><div id="laburl" class="fa fa-book"></div></div></td>
+                 </tbody>
+               </table>             
+           </div>
+
+
+
+
+           <div id="asscontent" class="modulecontentblock">
+           <span id="moduletabletitle">Assessments</span>
+               <table class="moduletable">
+                 <tbody>
+                   <tr>
+                     <td class="moduletable-col"> # </td>
+                     <td class="moduletable-col">Title</td>
+                     <td class="moduletable-col">Deadline</td>
+                     <td class="moduletable-col">Slides</td>
+                     <td class="moduletable-col">Submit</td>
+                   </tr>
+                     <td class="moduletable-col-1">1</td>
+                     <td class="moduletable-col-title">Assessment1</td>
+                     <td class="moduletable-col-1">2017.2.1</td>
+                     <td class="moduletable-col-1"><div id="assurl" class="fa fa-file-text-o"></div></td>
+                     <td class="moduletable-col-1"><div id="submiturl" class="fa fa-paper-plane-o"></div></td>
+                 </tbody>
+               </table>             
+           </div>
+
+
+
+
+           <div id="forumcontent" class="modulecontentblock">
+           
+             <ul id="forumicon">
+               <li><a href="#createpost"><img class="posticon" src="assets/img/post.png"/></a></li>
+               <li><a href="#"><img class="posticon" src="assets/img/refresh.png"/></a></li>
+               <li><a href="#moduleGeneral"><img class="posticon" src="assets/img/backtop.png"/></a></li>
+             </ul>           
+             <table class="forumchoice">
+               <tbody>
+                 <tr>
+                   <td id="g-forumtxt" class="forumtablechoice">General Forum</td>
+                   <td id="a-forumtxt" class="forumtablechoice">Assessment Forum</td>
+                 </tr>
+               </tbody>
+             </table>
+             <ul id="g-forum" class="forumpost">
+               
+             </ul>
+             <ul id="a-forum" class="forumpost">
+               <li>a-forumtxt</li>
+             </ul>
+             
+
+
+             <div class="page">
+              <ul>
+                <li class="forum-votingpoll-page"><div id="arrow-left" class="fa fa-angle-left"></div></li>
+                <li class="forum-votingpoll-page"><a href="#page=1"><span>1</span></a></li>
+                <li class="forum-votingpoll-page"><span>2</span></li>
+                <li class="forum-votingpoll-page"><span>3</span></li>
+                <li class="forum-votingpoll-page"><span>4</span></li>
+                <li class="forum-votingpoll-page"><span>5</span></li>
+                <li class="forum-votingpoll-page"><span>6</span></li>
+                <li class="forum-votingpoll-page"><div id="arrow-right" class="fa fa-angle-right"></div></li>
+              </ul>
+             </div>
+
+
+             <div id="createpost">
+             <div id="create-post-icon" class="fa fa-pencil-square-o"></div>
+             <div id="create-post-txt">CREATE POST</div>
+              <form action="" method="post" id="postsubmit">
+                <p class="create-post-input"><input id="post-title-input" type="text" name="post-title" maxlength="80" value="Title" onfocus="if(this.value=='Title') this.value=''" onblur="if(this.value=='') this.value='Title'" /></p>
+                <p class="create-post-input"><center><textarea id="post-content-input" name="post-content" cols="150" rows="10"></textarea></center></p>
+                <center>
+                <div id="choose-forum">
+                <label class="forum-type"><input type="radio" name="choose-forum" value="g">General Forum</label>
+
+                <label class="forum-type"><input type="radio" name="choose-forum" value="a">Assessment Forum</label>
+                </div>
+                </center>
+              </form>
+              <button id="post-submit-botton" type="button" class="btn btn-theme" name="post-submit">Submit</button>
+              
+             </div>
+
+
+
+           </div>
+           
+
+
+
+
+           <div id="pollcontent" class="modulecontentblock">
+             <ul id="forumicon">
+               <li><a data-toggle="modal" href="blank.html#myModal"><img class="posticon" src="post.png"/></a></li>
+               <li><a href="#"><img class="posticon" src="refresh.png"/></a></li>
+               <li><a href="#moduleGeneral"><img class="posticon" src="backtop.png"/></a></li>
+             </ul>  
+             <span id="moduletabletitle">VotingPoll</span>
+               <table class="moduletable">
+                 <tbody>
+                   <tr>
+                     <td class="moduletable-col">Poll</td>
+                     <td class="moduletable-col">Creator</td>
+                     <td class="moduletable-col">Time</td>
+                   </tr>
+                   </tbody>
+               </table>  
+               <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title">Forgot Password ?</h4>
+                          </div>
+                          <div class="modal-body">
+                              <p>Enter your e-mail address below to reset your password.</p>
+                              <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+    
+                          </div>
+                          <div class="modal-footer">
+                              <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                              <button class="btn btn-theme" type="button">Submit</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+           </div>
+
+
+
+           
+      </div>
+      
+    </section><! --/wrapper -->
+      </section><!-- /MAIN CONTENT -->
+    
+
+      <!--main content end-->
+      <!--footer start-->
+      <div>
+      <footer class="site-footer">
+          <div class="text-center">
+              2014 - Alvarez.is
+              <a href="blank.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      </div>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    
+  <script>
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+  </script>
+
+  </body>
 </html>
+
