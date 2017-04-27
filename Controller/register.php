@@ -17,7 +17,7 @@ $email=$_REQUEST["email"];
 $pass=$_REQUEST["password"];
 $give=$_REQUEST["givenname"];
 $sur=$_REQUEST["surname"];
-$level=$_REQUEST["level"];                           //teacher post 1, student post 0;
+$level=$_REQUEST["level"]||0;                           //teacher post 1, student post 0;
 if(!isset($level)){
     $level = 0;
 }

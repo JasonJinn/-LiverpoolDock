@@ -16,7 +16,16 @@ function generateToken($mail){
     $dao = getQuery("User");
     $dao->update(array("token"=>$token),array("email"=>$mail));
     setcookie("token",$token,time()+1800,"/",$domain);
+    setcookie("mail",$mail,time()+1800,"/",$domain);
     return $token;
+}
+
+function decrptToken($token){
+    $dao = getQuery('User');
+    $des = new DES('1996');
+    $arr = explode('^&*', ($des->passport_decrypt($token)));
+    $email = $arr[0];
+    return $email;
 }
 
 ?>

@@ -111,4 +111,5 @@
 //$result = $dao->getDistinct("poll_option",array("poll_id"=>1));
 //print_r($result);
 //echo date("Y-m-d H:i:s",time());
+print_r($_COOKIE);
 ?>
