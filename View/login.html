@@ -1,159 +1,150 @@
-<!-- 1. need a hash function for password   2. need js check more on the input    3. handle the failed login (get param   "pass=false")-->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <title>Login-DOCK Liverpool</title>
+<script src="assets/js/jquery.js"></script>
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+<script src="jquery-3.2.1.min.js"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
+<script >
+$(document).ready(function(){
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+});
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
 
-  
-  
-  </head>
-  <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
-  <script>
-	  function login1(){
-	      var temp = document.getElementById("loginpassword").value;
-	      document.getElementById("loginpassword").value = md5(md5(temp)+md5(temp));
+$(document).ready(function(){
+			$(".veen .rgstr-btn button").click(function(){
+				$('.veen .wrapper').addClass('move');
+				$('.body').css('background','#68dff0');
+			});
+			$(".veen .login-btn button").click(function(){
+				$('.veen .wrapper').removeClass('move');
+				$('.body').css('background','#e0b722');
+			});
+		});
+
+$(window).on("load", function() { // makes sure the whole site is loaded
+    //preloader
+    $("#status").fadeOut(); // will first fade out the loading animation
+    $("#preloader").delay(450).fadeOut("slow"); // will fade out the white DIV that covers the website.
+    
+    //masonry
+    $('.grid').masonry({
+      itemSelector: '.grid-item'
+      
+    });    
+  });
+
+function login1(){
+        temp = document.getElementById('loginpassword').value;
+        document.getElementById('loginpassword').value = md5(md5(temp)+md5(temp));
 	      document.form1.action = "../Controller/login.php";
 	      document.form1.submit();
 	  }
 	  function register(){
-	      document.form1.action = "../Controller/register.php";
-	      document.form1.submit();
+	     
+        document.form2.action = "../Controller/register.php";
+	      document.form2.submit();
 	  }
-	  function forgetpass(){
-          document.form1.action = "../Controller/reset.php";
-          document.form1.submit();
-	  }
-  </script>
-  <body>
+	  //function forgetpass(){
+          //document.form1.action = "../Controller/reset.php";
+          //document.form1.submit();
+	  //}
+</script>
+<div id="preloader">
+      <div id="status">
+        
+      </div>
+    </div>
 
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-
-	  <div id="login-page">
-	  	<div class="container">
-	  	
-		      <form class="form-login" name="form1" method="post" action="../Controller/login.php"><!-- Add PHP code here -->
-			  
-		        <h2 class="form-login-heading">sign in now</h2>
-		        <div class="login-wrap">
-		            <input type="text" name ="loginemail" class="form-control" placeholder="Email" autofocus>
-		            <br>
-		            <input type="password" id="loginpassword" name="loginpassword"class="form-control" placeholder="Password">
-		            <label class="checkbox">
-		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#forgetpassword"> Forgot Password?</a>
-		
-		                </span>
-		            </label>
-		            <button class="btn btn-theme btn-block" id="login" value="123" href="index.html" onclick="login1();"><i class="fa fa-lock"></i> SIGN IN</button>
-		            <br />
-					<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-GUEST"></i> VIEW AS A GUEST</button>
-					<hr>
-		            
-		          
-		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" data-toggle="modal" href="login.html#Createaccount">
-		                    Create an account
-		                </a>
-		            </div>
-		
-		        </div>
-		
-		          <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="forgetpassword" class="modal fade">
-		              <div class="modal-dialog">
-		                  <div class="modal-content">
-		                      <div class="modal-header">
-		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Forgot Password ?</h4>
-		                      </div>
-		                      <div class="modal-body">
-		                          <p>Enter your e-mail address below to reset your password.</p>
-		                          <input type="text" name="forget" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
-		                      </div>
-		                      <div class="modal-footer">
-		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" id="forget" type="button" onclick="forgetpass();">Submit</button>
-		                      </div>
-		                  </div>
-		              </div>
-		          </div>
-		          <!-- modal -->
-				  
-				  
-				  
-				  <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="Createaccount" class="modal fade">
-		              <div class="modal-dialog">
-		                  <div class="modal-content">
-		                      <div class="modal-header">
-		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Create an account</h4>
-		                      </div>
-		                      <div class="modal-body">
-		                          <p>Please enter your given name</p>
-		                          <input type="text" id="reg-givenname" name="givenname" placeholder="Given name" autocomplete="off" class="form-control placeholder-no-fix" onblur="GivennameCheck()" style="">
-								  <p>Please enter your surn name</p>
-		                          <input type="text" id="reg-surnname" name="surname" placeholder="Surn name" autocomplete="off" class="form-control placeholder-no-fix" onblur="SurnnameCheck()" style="">
-								  <p>Please enter your e-mail address</p>
-		                          <input type="text" id="reg-email" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix" onblur="EmailCheck()" style="">
-								  <p>Please enter your password </p>
-		                          <input type="text" id="reg-password" name="password" placeholder="password" autocomplete="off" class="form-control placeholder-no-fix" onblur="PasswordCheck()" style="">
-		                          <p>Please comfirme your password</p>
-		                          <input type="text"  id="reg-confirmpassword" placeholder="re-enter password" autocomplete="off" class="form-control placeholder-no-fix" onblur="PasswordConfirm()" style="">
-		                      					  
-							  </div>
-		                      <div class="modal-footer">
-		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" onclick="register();">Submit</button>
-		                      </div>
-		                  </div>
-		              </div>
-		          </div>
-		          <!-- modal -->
-				  		
-		      </form>	  	
-	  	
-	  	</div>
-	  </div>
-
-	<!-- js for login -->
-	<script type="text/javascript" src="assets/js/login.js"></script>	 
-	  
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!--BACKSTRETCH-->
-    <!--This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch(["assets/img/login-bg.jpg","assets/img/login1.jpg","assets/img/login2.jpg","assets/img/login3.jpg"], {duration: 3000, fade: 750});
-		
-    </script>
+  <section id="container" >
 
 
-  </body>
-</html>
+<div class="body">
+
+
+  <div class="veen">
+
+
+
+
+    <div class="login-btn splits">
+      <p>Already an user?</p>
+      <button>Login</button>
+    </div>
+
+
+
+
+    <div class="rgstr-btn splits">
+      <p>Don't have an account?</p>
+      <button>Register</button>
+    </div>
+
+
+
+
+    <div class="wrapper">
+
+
+
+
+      <div id="login">
+        <h3>Login</h3>
+        <div id="login-input" class="inputinfo">
+      <div class="col-md-9 content-right">
+                <form name="form1" method="post" action="../Controller/login.php">
+                  <div class="group">
+                    <input required="" type="text" name="loginemail"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                  </div>
+                  <div class="group">
+                    <input id ="loginpassword" required="" type="password" name="loginpassword"><span class="highlight"></span><span class="bar"></span><label>Password</label>
+                  </div>
+                </form>
+                <div class="submit">
+          <button class="dark" onclick="login1()">Login</button>
+        </div>
+              </div>
+              </div>      
+      </div>
+
+
+
+
+      <div id="register">
+        <h3>Register</h3>
+        <div id="register-input" class="inputinfo">
+        <div class="col-md-9 content-right">
+                <form name="form2" method="post" action="../Controller/login.php">
+                <div id="registername">
+                  <div id="givennameinput" class="group">
+                    <input required="" type="text" name="givenname" onblur="GivennameCheck()"><span class="highlight"></span><span class="bar"></span><label>Given Name</label>
+                  </div>
+                  <div id="surnameinput" class="group">
+                    <input required="" type="text" name="surname" onblur="SurnnameCheck()"><span class="highlight"></span><span class="bar"></span><label>Surname</label>
+                  </div>
+                  </div>
+                  <div id="emailinput" class="group">
+                    <input required="" type="text" name="email" onblur="EmailCheck()"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="password" name="password" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label>Password</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="password"><span class="highlight" onblur="PasswordConfirm()"></span><span class="bar"></span><label>Re-enter Password</label>
+                  </div>
+                </form>
+                <div class="submit">
+          <button class="dark" onclick="register();">Register</button>
+        </div>
+        </div>
+              </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="assets/js/login.js"></script>	 
