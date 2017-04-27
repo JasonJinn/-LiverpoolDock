@@ -2,177 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0942c862-50e1-4345-afd1-d508efab31a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resource/default.jpg" afterPath="$PROJECT_DIR$/Resource/default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/View/assets/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/blog-bg.jpg" afterPath="$PROJECT_DIR$/View/assets/img/blog-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/checkbox-gray.png" afterPath="$PROJECT_DIR$/View/assets/img/checkbox-gray.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-01.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-02.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-03.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-04.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-04.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-05.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-05.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-06.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-06.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-07.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-07.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-08.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-08.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-09.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-09.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-10.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/friends/fr-11.jpg" afterPath="$PROJECT_DIR$/View/assets/img/friends/fr-11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/instagram.jpg" afterPath="$PROJECT_DIR$/View/assets/img/instagram.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/login-bg.jpg" afterPath="$PROJECT_DIR$/View/assets/img/login-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/login1.jpg" afterPath="$PROJECT_DIR$/View/assets/img/login1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/login2.jpg" afterPath="$PROJECT_DIR$/View/assets/img/login2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/login3.jpg" afterPath="$PROJECT_DIR$/View/assets/img/login3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/lorde.jpg" afterPath="$PROJECT_DIR$/View/assets/img/lorde.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/mask.png" afterPath="$PROJECT_DIR$/View/assets/img/mask.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ny.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ny.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port01.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port02.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port03.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port04.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port04.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port05.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port05.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/portfolio/port06.jpg" afterPath="$PROJECT_DIR$/View/assets/img/portfolio/port06.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/product.jpg" afterPath="$PROJECT_DIR$/View/assets/img/product.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/product.png" afterPath="$PROJECT_DIR$/View/assets/img/product.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/profile-01.jpg" afterPath="$PROJECT_DIR$/View/assets/img/profile-01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/profile-02.jpg" afterPath="$PROJECT_DIR$/View/assets/img/profile-02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/radio-gray.png" afterPath="$PROJECT_DIR$/View/assets/img/radio-gray.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/stark2.png" afterPath="$PROJECT_DIR$/View/assets/img/stark2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/stars2.png" afterPath="$PROJECT_DIR$/View/assets/img/stars2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ui-danro.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ui-danro.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ui-divya.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ui-divya.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ui-sam.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ui-sam.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ui-sherman.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ui-sherman.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/ui-zac.jpg" afterPath="$PROJECT_DIR$/View/assets/img/ui-zac.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/weather.jpg" afterPath="$PROJECT_DIR$/View/assets/img/weather.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/img/zoom.png" afterPath="$PROJECT_DIR$/View/assets/img/zoom.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter-light.png" afterPath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter-light.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter-long.png" afterPath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter-long.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter.png" afterPath="$PROJECT_DIR$/View/assets/js/gritter/images/gritter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/images/ie-spacer.gif" afterPath="$PROJECT_DIR$/View/assets/js/gritter/images/ie-spacer.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.eot" afterPath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.ttf" afterPath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.woff" afterPath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/-LiverpoolDock.iml" afterPath="$PROJECT_DIR$/.idea/-LiverpoolDock.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getOption.php" afterPath="$PROJECT_DIR$/API/getOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getProfile.php" afterPath="$PROJECT_DIR$/API/getProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getfile.php" afterPath="$PROJECT_DIR$/API/getfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/gethomepage.php" afterPath="$PROJECT_DIR$/API/gethomepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/getpost.php" afterPath="$PROJECT_DIR$/API/getpost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/module.php" afterPath="$PROJECT_DIR$/API/module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/moduleList.php" afterPath="$PROJECT_DIR$/API/moduleList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/news.php" afterPath="$PROJECT_DIR$/API/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/notification.php" afterPath="$PROJECT_DIR$/API/notification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/response.php" afterPath="$PROJECT_DIR$/API/response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/search.php" afterPath="$PROJECT_DIR$/API/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/searchModule.php" afterPath="$PROJECT_DIR$/API/searchModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/topic.php" afterPath="$PROJECT_DIR$/API/topic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/topicMax.php" afterPath="$PROJECT_DIR$/API/topicMax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/verifyToken.php" afterPath="$PROJECT_DIR$/API/verifyToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/votingOption.php" afterPath="$PROJECT_DIR$/API/votingOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/votingpoll.php" afterPath="$PROJECT_DIR$/API/votingpoll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/wholeModule.php" afterPath="$PROJECT_DIR$/API/wholeModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/calendarOperation.php" afterPath="$PROJECT_DIR$/Controller/calendarOperation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createResponse.php" afterPath="$PROJECT_DIR$/Controller/createResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createTopic.php" afterPath="$PROJECT_DIR$/Controller/createTopic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/createpoll.php" afterPath="$PROJECT_DIR$/Controller/createpoll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/deleteResponse.php" afterPath="$PROJECT_DIR$/Controller/deleteResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/deleteTopic.php" afterPath="$PROJECT_DIR$/Controller/deleteTopic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/deletepoll.php" afterPath="$PROJECT_DIR$/Controller/deletepoll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/login.php" afterPath="$PROJECT_DIR$/Controller/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/logout.php" afterPath="$PROJECT_DIR$/Controller/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/mailActivate.php" afterPath="$PROJECT_DIR$/Controller/mailActivate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/DES.php" afterPath="$PROJECT_DIR$/Controller/method/DES.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/fileHandler.php" afterPath="$PROJECT_DIR$/Controller/method/fileHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/smtp.php" afterPath="$PROJECT_DIR$/Controller/method/smtp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/token.php" afterPath="$PROJECT_DIR$/Controller/method/token.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/tokenVerify.php" afterPath="$PROJECT_DIR$/Controller/method/tokenVerify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/urlCatcher.php" afterPath="$PROJECT_DIR$/Controller/method/urlCatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/method/variable.php" afterPath="$PROJECT_DIR$/Controller/method/variable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/moduleOperation.php" afterPath="$PROJECT_DIR$/Controller/moduleOperation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/passwordForget.php" afterPath="$PROJECT_DIR$/Controller/passwordForget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/post.php" afterPath="$PROJECT_DIR$/Controller/post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/postFeedback.php" afterPath="$PROJECT_DIR$/Controller/postFeedback.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/register.php" afterPath="$PROJECT_DIR$/Controller/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/reset.php" afterPath="$PROJECT_DIR$/Controller/reset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/test.php" afterPath="$PROJECT_DIR$/Controller/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/upload.php" afterPath="$PROJECT_DIR$/Controller/upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/uploadProfile.php" afterPath="$PROJECT_DIR$/Controller/uploadProfile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/voting.php" afterPath="$PROJECT_DIR$/Controller/voting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/Database.php" afterPath="$PROJECT_DIR$/DAO/Database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resource/dock.sql" afterPath="$PROJECT_DIR$/Resource/dock.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/client.html" afterPath="$PROJECT_DIR$/Server/client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/server.php" afterPath="$PROJECT_DIR$/Server/server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/View/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/style-responsive.css" afterPath="$PROJECT_DIR$/View/assets/css/style-responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/style.css" afterPath="$PROJECT_DIR$/View/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/table-responsive.css" afterPath="$PROJECT_DIR$/View/assets/css/table-responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/to-do.css" afterPath="$PROJECT_DIR$/View/assets/css/to-do.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/css/zabuto_calendar.css" afterPath="$PROJECT_DIR$/View/assets/css/zabuto_calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/View/assets/font-awesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/View/assets/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/View/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js" afterPath="$PROJECT_DIR$/View/assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/bootstrap-switch.js" afterPath="$PROJECT_DIR$/View/assets/js/bootstrap-switch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/View/assets/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/calendar-conf-events.js" afterPath="$PROJECT_DIR$/View/assets/js/calendar-conf-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/chart-master/Chart.js" afterPath="$PROJECT_DIR$/View/assets/js/chart-master/Chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/chartjs-conf.js" afterPath="$PROJECT_DIR$/View/assets/js/chartjs-conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/common-scripts.js" afterPath="$PROJECT_DIR$/View/assets/js/common-scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/easy-pie-chart.js" afterPath="$PROJECT_DIR$/View/assets/js/easy-pie-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/fancybox/jquery.fancybox.css" afterPath="$PROJECT_DIR$/View/assets/js/fancybox/jquery.fancybox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/fancybox/jquery.fancybox.js" afterPath="$PROJECT_DIR$/View/assets/js/fancybox/jquery.fancybox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/form-component.js" afterPath="$PROJECT_DIR$/View/assets/js/form-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/fullcalendar/bootstrap-fullcalendar.css" afterPath="$PROJECT_DIR$/View/assets/js/fullcalendar/bootstrap-fullcalendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/fullcalendar/fullcalendar.min.js" afterPath="$PROJECT_DIR$/View/assets/js/fullcalendar/fullcalendar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter-conf.js" afterPath="$PROJECT_DIR$/View/assets/js/gritter-conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/css/jquery.gritter.css" afterPath="$PROJECT_DIR$/View/assets/js/gritter/css/jquery.gritter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/css/jquery.gritter0.css" afterPath="$PROJECT_DIR$/View/assets/js/gritter/css/jquery.gritter0.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/gritter/js/jquery.gritter.js" afterPath="$PROJECT_DIR$/View/assets/js/gritter/js/jquery.gritter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery-1.8.3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterPath="$PROJECT_DIR$/View/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery-ui-1.9.2.custom.min.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery-ui-1.9.2.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.backstretch.min.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.backstretch.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.dcjqaccordion.2.7.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.dcjqaccordion.2.7.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.nicescroll.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.nicescroll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.scrollTo.min.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.scrollTo.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.sparkline.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.sparkline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.tagsinput.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.tagsinput.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/View/assets/js/jquery.ui.touch-punch.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/login.js" afterPath="$PROJECT_DIR$/View/assets/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/morris-conf.js" afterPath="$PROJECT_DIR$/View/assets/js/morris-conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/sparkline-chart.js" afterPath="$PROJECT_DIR$/View/assets/js/sparkline-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/tasks.js" afterPath="$PROJECT_DIR$/View/assets/js/tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/js/zabuto_calendar.js" afterPath="$PROJECT_DIR$/View/assets/js/zabuto_calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.svg" afterPath="$PROJECT_DIR$/View/assets/lineicons/fonts/linecons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/index.html" afterPath="$PROJECT_DIR$/View/assets/lineicons/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/lte-ie7.js" afterPath="$PROJECT_DIR$/View/assets/lineicons/lte-ie7.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/assets/lineicons/style.css" afterPath="$PROJECT_DIR$/View/assets/lineicons/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/feedback.html" afterPath="$PROJECT_DIR$/View/feedback.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/homepage.html" afterPath="$PROJECT_DIR$/View/homepage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/login.html" afterPath="$PROJECT_DIR$/View/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/module.html" afterPath="$PROJECT_DIR$/View/module.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/post.html" afterPath="$PROJECT_DIR$/View/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/profile.html" afterPath="$PROJECT_DIR$/View/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/register.html" afterPath="$PROJECT_DIR$/View/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/registerSuccess.html" afterPath="$PROJECT_DIR$/View/registerSuccess.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/repository.html" afterPath="$PROJECT_DIR$/View/repository.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/reset.html" afterPath="$PROJECT_DIR$/View/reset.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/uploadTest.html" afterPath="$PROJECT_DIR$/View/uploadTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/votingpoll.html" afterPath="$PROJECT_DIR$/View/votingpoll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new requirement.txt" afterPath="$PROJECT_DIR$/new requirement.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -184,21 +15,110 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mailActivate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/mailActivate.php">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controller/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="411">
+              <caret line="29" column="137" lean-forward="false" selection-start-line="29" selection-start-column="137" selection-end-line="29" selection-end-column="137" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/register.php">
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="404">
+              <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+              <folding>
+                <marker date="1493327951000" expanded="true" signature="1031:1045" ph="select * fro... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="1251:1282" ph="select DISTI... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="1473:1487" ph="select * fro... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="1688:1709" ph="select count... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="1905:1927" ph="select max($... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="2129:2143" ph="select * fro... ${$this-&gt;_table}" />
+                <marker date="1493327951000" expanded="true" signature="2859:2917" ph="insert into ${$this-&gt;_table}... " />
+                <marker date="1493327951000" expanded="true" signature="3757:3769" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="repository.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/repository.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/homepage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/reset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -244,7 +164,6 @@
         <option value="$PROJECT_DIR$/Controller/deletepoll.php" />
         <option value="$PROJECT_DIR$/Controller/deleteTopic.php" />
         <option value="$PROJECT_DIR$/Controller/deleteResponse.php" />
-        <option value="$PROJECT_DIR$/DAO/Database.php" />
         <option value="$PROJECT_DIR$/Server/client.html" />
         <option value="$PROJECT_DIR$/Controller/upload.php" />
         <option value="$PROJECT_DIR$/API/getOption.php" />
@@ -282,6 +201,7 @@
         <option value="$PROJECT_DIR$/API/moduleList2.php" />
         <option value="$PROJECT_DIR$/API/moduleList.php" />
         <option value="$PROJECT_DIR$/API/getMessage.php" />
+        <option value="$PROJECT_DIR$/DAO/Database.php" />
         <option value="$PROJECT_DIR$/Controller/register.php" />
       </list>
     </option>
@@ -294,8 +214,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="211" />
-    <option name="y" value="30" />
+    <option name="x" value="-32" />
+    <option name="y" value="27" />
     <option name="width" value="1106" />
     <option name="height" value="785" />
   </component>
@@ -315,7 +235,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +244,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-LiverpoolDock" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DAO" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,6 +305,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,14 +440,15 @@
       <workItem from="1493221917384" duration="20781000" />
       <workItem from="1493308856219" duration="34000" />
       <workItem from="1493309103945" duration="785000" />
+      <workItem from="1493310276459" duration="1932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145797000" />
+    <option name="totallyTimeSpent" value="147729000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="211" y="30" width="1106" height="785" extended-state="0" />
+    <frame x="-32" y="27" width="1106" height="785" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22694394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -535,53 +484,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controller/moduleOperation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/passwordForget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/postFeedback.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/voting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/assets/js/jquery-ui-1.9.2.custom.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="5" column="116856" lean-forward="false" selection-start-line="5" selection-start-column="116856" selection-end-line="5" selection-end-column="116856" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/uploadProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -606,26 +508,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/reset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -820,19 +707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="46" lean-forward="false" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resource/dock.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4455">
           <caret line="297" column="50" lean-forward="false" selection-start-line="297" selection-start-column="50" selection-end-line="297" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,39 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/votingpoll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/reset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,10 +776,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/View/votingpoll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/uploadTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/reset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6589">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/repository.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/reset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding>
+            <marker date="1493327951000" expanded="true" signature="1031:1045" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="1251:1282" ph="select DISTI... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="1473:1487" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="1688:1709" ph="select count... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="1905:1927" ph="select max($... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="2129:2143" ph="select * fro... ${$this-&gt;_table}" />
+            <marker date="1493327951000" expanded="true" signature="2859:2917" ph="insert into ${$this-&gt;_table}... " />
+            <marker date="1493327951000" expanded="true" signature="3757:3769" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="411">
+          <caret line="29" column="137" lean-forward="false" selection-start-line="29" selection-start-column="137" selection-end-line="29" selection-end-column="137" />
           <folding />
         </state>
       </provider>

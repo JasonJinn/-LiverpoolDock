@@ -17,17 +17,17 @@ $email=$_REQUEST["email"];
 $pass=$_REQUEST["password"];
 $give=$_REQUEST["givenname"];
 $sur=$_REQUEST["surname"];
-$level=$_REQUEST["level"]||0;                           //teacher post 1, student post 0;
+$level=$_REQUEST["level"];                           //teacher post 1, student post 0;
 if(!isset($level)){
     $level = 0;
 }
-
+echo $level;
+print_r($_REQUEST);
 $dao = getQuery("User");
 $result = $dao->get(array("email"=>$email));
 $num = count($result);
-$cnt = $dao->insert(array("surname"=>$sur,"username"=>$give." ".$sur,"email"=>$email,"level_of_security"=>$level,"password"=>$pass));
-
 if($num==0){
+    $cnt = $dao->insert(array("surname"=>$sur,"username"=>$give." ".$sur,"email"=>$email,"level_of_security"=>$level,"password"=>$pass));
     if($level==1){
         maketeacherdir($give." ".$sur,$repositoryUrl);
     }
