@@ -1,9 +1,8 @@
-<script src="assets/js/jquery.js"></script>
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="assets/css/login.css">
-<script src="jquery-3.2.1.min.js"></script>
+<script src="assets/js/jquery-1.8.3.min.js"></script>
 <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
-<script >
+<script>
 $(document).ready(function(){
 
 });
@@ -31,8 +30,7 @@ $(window).on("load", function() { // makes sure the whole site is loaded
       
     });    
   });
-
-function login1(){
+  function login1(){
         temp = document.getElementById('loginpassword').value;
         document.getElementById('loginpassword').value = md5(temp));
 	      document.form1.action = "../Controller/login.php";
@@ -117,20 +115,24 @@ function login1(){
                 <form name="form2" method="post" action="../Controller/login.php">
                 <div id="registername">
                   <div id="givennameinput" class="group">
-                    <input required="" type="text" name="givenname" onblur="GivennameCheck()"><span class="highlight"></span><span class="bar"></span><label>Given Name</label>
+                    <input id="reg-givenname" required="" type="text" name="givenname" onblur="GivennameCheck()"><span class="highlight"></span><span class="bar"></span><label id="givenname-txt">Given Name</label>
                   </div>
                   <div id="surnameinput" class="group">
-                    <input required="" type="text" name="surname" onblur="SurnnameCheck()"><span class="highlight"></span><span class="bar"></span><label>Surname</label>
+                    <input id="reg-surnname" required="" type="text" name="surname" onblur="SurnnameCheck()"><span class="highlight"></span><span class="bar"></span><label id="surname-txt">Surname</label>
                   </div>
                   </div>
                   <div id="emailinput" class="group">
-                    <input required="" type="text" name="email" onblur="EmailCheck()"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                    <input id="reg-email" required="" type="text" name="email" onblur="EmailCheck()"><span class="highlight"></span><span class="bar"></span><span id="email-half">liverpool.ac.uk</span><label id="email-txt">Email</label>
                   </div>
                   <div class="group">
+<<<<<<< HEAD
+                    <input id="reg-password" required="" type="password" name="password" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label id="password-txt">Password</label>
+=======
                     <input required="" type="password" name="password" id="registerPassword" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label>Password</label>
+>>>>>>> origin/master
                   </div>
                   <div class="group">
-                    <input required="" type="password"><span class="highlight" onblur="PasswordConfirm()"></span><span class="bar"></span><label>Re-enter Password</label>
+                    <input id="reg-confirmpassword" required="" type="password" onblur="PasswordConfirm()"><span class="highlight"></span><span class="bar"></span><label id="re-password-txt">Re-enter Password</label>
                   </div>
                 </form>
                 <div class="submit">
@@ -150,3 +152,14 @@ function login1(){
 
 
 <script type="text/javascript" src="assets/js/login.js"></script>	 
+<script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
