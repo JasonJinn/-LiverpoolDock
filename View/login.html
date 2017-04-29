@@ -34,13 +34,15 @@ $(window).on("load", function() { // makes sure the whole site is loaded
 
 function login1(){
         temp = document.getElementById('loginpassword').value;
-        document.getElementById('loginpassword').value = md5(md5(temp)+md5(temp));
+        document.getElementById('loginpassword').value = md5(temp));
 	      document.form1.action = "../Controller/login.php";
 	      document.form1.submit();
 	  }
 	  function register(){
-	     
-        document.form2.action = "../Controller/register.php";
+	     temp = document.getElementById('registerPassword').value;
+          document.getElementById('registerPassword').value = md5(temp);
+
+          document.form2.action = "../Controller/register.php";
 	      document.form2.submit();
 	  }
 	  //function forgetpass(){
@@ -125,7 +127,7 @@ function login1(){
                     <input required="" type="text" name="email" onblur="EmailCheck()"><span class="highlight"></span><span class="bar"></span><label>Email</label>
                   </div>
                   <div class="group">
-                    <input required="" type="password" name="password" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label>Password</label>
+                    <input required="" type="password" name="password" id="registerPassword" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label>Password</label>
                   </div>
                   <div class="group">
                     <input required="" type="password"><span class="highlight" onblur="PasswordConfirm()"></span><span class="bar"></span><label>Re-enter Password</label>

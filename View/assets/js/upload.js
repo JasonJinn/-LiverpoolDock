@@ -23,15 +23,28 @@ function fileObjectToArrayIndex(file){
 flow.on('fileSuccess', function(file,message){
 	var index = fileObjectToArrayIndex(file);
 	console.log(file,message+index);
+	//getProgress();
 	$('#file-title-'+index).css('color', 'green');
 });
 flow.on('filesSubmitted', function(array) {
 	reDrawFiles();
 });
+flow.on('fileAdded',function(file,event){
+	console.log(file,event);
+});
 
 function submitUpload(){
 	flow.upload();
 }
+
+function submitStop(){
+	flow.pause();
+}
+function getProgress(){
+	console.log(flow.progress());
+	return flow.progress();
+}
+
 
 function reDrawFiles(){
 	totalFiles = 0;
