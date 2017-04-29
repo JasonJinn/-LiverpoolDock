@@ -13,7 +13,7 @@ class Database
 
     public function Database(){
         if($this->con == null) {
-            $this->_con = new mysqli("localhost", "root", "password", "dock");
+            $this->_con = new mysqli("db.r4ge.ro", "antr", "wRQ1CvniLpqDZ2gT", "antr");
 
             if ($this->_con == FALSE) {
                 echo("Database connection failed");
