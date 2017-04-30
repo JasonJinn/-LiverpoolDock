@@ -17,7 +17,7 @@ if(isset($user)){
     $hash =array();
     for($i=0;$i<$num&&$i<5;$i++)
     {
-        $hash[$result[$i]["email"]] = $result[$i]["username"];
+        $hash[] = array("username"=>$result[$i]["username"],"email"=>$result[$i]["email"]);
     }
 }
 echo json_encode($hash);

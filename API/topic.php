@@ -39,7 +39,7 @@ if(isset($moduleList["$code"])) {
 
             $dao->table("topic_response");
             $result2 = $dao->get(array("module_code"=>$code,"forum"=>$type,
-                "isReport"=>'0',"floor_number"=>$hash["floor"]));
+                "isReport"=>'0',"floor_number"=>$hash["floor"],"topic_id"=>$hash["topic_id"]));
             $hash["lastUser"] = $result2[0]["Username"];
 
             $total[]=$hash;

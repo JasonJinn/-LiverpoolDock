@@ -12,7 +12,7 @@ $token = $_COOKIE["token"];
 
 $code = $_REQUEST["code"];
 $type = $_REQUEST["type"];
-$topic = $_REQUEST["topic"];
+$topic = $_REQUEST["topic_id"];
 
 $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList.php?token=".urlencode($token)),true);
 
