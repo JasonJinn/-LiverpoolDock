@@ -8,15 +8,14 @@
 //unfinished
 
 function makedir($mail,$repositoryUrl){
-    mkdir($repositoryUrl."/".$mail."/"."private",0777,true);
-    mkdir($repositoryUrl."/".$mail."/"."public",0777,true);
-    mkdir($repositoryUrl."/../".md5(md5($mail).md5($mail)),0777,true); //need configure
+    mkdir($repositoryUrl."/".urlencode($mail)."/"."private",0777,true);
+    mkdir($repositoryUrl."/".urlencode($mail)."/"."public",0777,true);
+    //mkdir($repositoryUrl."/../".md5($mail),0777,true); //need configure
 }
 
 function maketeacherdir($name,$repositoryUrl){
-    mkdir($repositoryUrl."/../".$name."/"."lecture",0777,true);
-    mkdir($repositoryUrl."/../".$name."/"."lab",0777,true);
-    mkdir($repositoryUrl."/../".$name."/"."assessment",0777,true);
-
+    mkdir($repositoryUrl."/lecture",0777,true);
+    mkdir($repositoryUrl."/lab",0777,true);
+    mkdir($repositoryUrl."/assessment",0777,true);
 }
 ?>

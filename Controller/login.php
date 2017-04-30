@@ -16,7 +16,7 @@ $result = $dao->get(array("email"=>$mail));
 //print_r(array_values($result));                                        //need test.
 //echo $password."<br/>";
 //echo md5(md5($result[0]["password"]).md5($result[0]["password"]));
-if($password==md5(md5($result[0]["password"]).md5($result[0]["password"]))) {
+if($result[0]["password"]==md5($password.$result[0]["salt"])) {
     if ($result && $result[0]["is_active"]) {
         generateToken($mail);
         header("Location: ../View/homepage.html");

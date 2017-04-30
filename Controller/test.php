@@ -113,8 +113,7 @@
 //echo date("Y-m-d H:i:s",time());
 include "../DAO/Database.php";
 
-$dao = getQuery("message");
-$cnt = $dao->insert(array("from_user"=>"Jeffer","to_user"=>"Je",
-    "content"=>"hello","time"=>date("Y-m-d H:i:s",time()),"isRead"=>"1"));
-print_r($cnt);
+$dao = getQuery("file");
+print_r($dao->getSum("size",array("Repo"=>"public")));
+
 ?>

@@ -21,14 +21,16 @@ if(isset($moduleList["$code"])) {
     $result = $dao->getByOrder("time", array("module_code" => $code, "forum" => $type,"topic_id"=>$topic,"isReport"=>'0'));
     $num=count($result);
     $hash=array();
+    $total = array();
     for($i=0;$i<$num;$i++)
     {
-        $hash[$result[$i]["floor_number"]] = array("time"=>$result[$i]["time"],
-                                        "name"=>$result[$i]["Username"],
-                                        "content"=>$result[$i]["response_content"],
-                                        "mail"=>$result[$i]["email"]);
+        $total[] = array("time"=>$result[$i]["time"],
+                        "name"=>$result[$i]["Username"],
+                        "content"=>$result[$i]["response_content"],
+                        "mail"=>$result[$i]["email"],
+                        "floor"=> $result[$i]["floor_number"]);
     }
-    echo json_encode($hash);
+    echo json_encode($total);
 
 }else{
     echo "token invalid or no module access";

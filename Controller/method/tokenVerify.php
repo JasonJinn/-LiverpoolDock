@@ -26,6 +26,7 @@ function verifyToken($token)
     $flag = $result[0]['token'] == $token ? $flag : false;
     $flag = $diff > 60 * 30 ? false : $flag;
 
+
     if ($flag) {
         return "true";
     } else {

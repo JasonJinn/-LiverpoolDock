@@ -13,7 +13,7 @@ class Database
 
     public function Database(){
         if($this->con == null) {
-            $this->_con = new mysqli("db.r4ge.ro", "antr", "wRQ1CvniLpqDZ2gT", "antr");
+            $this->_con = new mysqli("localhost", "root", "password", "dock");
 
             if ($this->_con == FALSE) {
                 echo("Database connection failed");
@@ -59,6 +59,12 @@ class Database
     public function getLike($where,$like){
         $sql = "select * from ".$this->_table;
         $sql = $sql." where ".$where." like '%".$like."%';";
+        //echo $sql;
+        return $this->query($sql);
+    }
+    public function getSum($sum,$where){
+        $sql = "select sum($sum) from ".$this->_table;
+        $sql = $sql.$this->_getWhereString($where);
         //echo $sql;
         return $this->query($sql);
     }

@@ -17,6 +17,9 @@ $dao = getQuery("User");
 
 $mail = $des->passport_decrypt($encrypt_mail);
 $result = $dao->update(array("is_active"=>1),array("email"=>$mail));
+$dao->table("User_profile");
+$dao->insert(array("email"=>$mail));
+
 
 if($result){
     echo "activate success";

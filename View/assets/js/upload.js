@@ -1,5 +1,6 @@
 var flow = new Flow({
-    target:'../Controller/upload.php'
+    target:'../Controller/upload.php',
+	query: {'Repotype': 'private'}										//need to change the repotype, 1 for public
 });
 
 var totalFiles = 0;

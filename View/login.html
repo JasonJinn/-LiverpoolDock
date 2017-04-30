@@ -32,13 +32,13 @@ $(window).on("load", function() { // makes sure the whole site is loaded
   });
   function login1(){
         temp = document.getElementById('loginpassword').value;
-        document.getElementById('loginpassword').value = md5(temp));
+        document.getElementById('loginpassword').value = md5(temp);
 	      document.form1.action = "../Controller/login.php";
 	      document.form1.submit();
 	  }
 	  function register(){
-	     temp = document.getElementById('registerPassword').value;
-          document.getElementById('registerPassword').value = md5(temp);
+	     temp = document.getElementById('reg-password').value;
+          document.getElementById('reg-password').value = md5(temp);
 
           document.form2.action = "../Controller/register.php";
 	      document.form2.submit();
@@ -125,11 +125,7 @@ $(window).on("load", function() { // makes sure the whole site is loaded
                     <input id="reg-email" required="" type="text" name="email" onblur="EmailCheck()"><span class="highlight"></span><span class="bar"></span><span id="email-half">liverpool.ac.uk</span><label id="email-txt">Email</label>
                   </div>
                   <div class="group">
-<<<<<<< HEAD
                     <input id="reg-password" required="" type="password" name="password" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label id="password-txt">Password</label>
-=======
-                    <input required="" type="password" name="password" id="registerPassword" onblur="PasswordCheck()"><span class="highlight"></span><span class="bar"></span><label>Password</label>
->>>>>>> origin/master
                   </div>
                   <div class="group">
                     <input id="reg-confirmpassword" required="" type="password" onblur="PasswordConfirm()"><span class="highlight"></span><span class="bar"></span><label id="re-password-txt">Re-enter Password</label>

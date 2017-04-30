@@ -18,7 +18,7 @@ if(isset($token)&&verifyToken($token)=="false"){
     echo "token invalid";
 }else {
 //echo $token.'<br>';
-    if(isset($token)){
+    if(!isset($email)){
         $arr = explode('^&*', ($des->passport_decrypt($token)));
         $email = $arr[0];
     }

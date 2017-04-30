@@ -12,7 +12,7 @@ include "../Controller/method/variable.php";
 
     $code = $_REQUEST["code"];
     $type = $_REQUEST["type"];
-    $page = $_REQUEST["p"]||1;
+    $page = $_REQUEST["p"];
 
     $moduleList=json_decode(file_get_contents($baseUrl."API/moduleList.php?token=".urlencode($token)),true);
 //print_r($moduleList);
