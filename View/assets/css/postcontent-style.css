@@ -12,7 +12,7 @@ Premium: http://www.gridgum.com
 /* BASIC THEME CONFIGURATION */
 body {
     color: #797979;
-    background: #f2f2f2;
+	background: #f2f2f2;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -44,41 +44,41 @@ a, a:hover, a:focus {
 
 /* Bootstrap Modifications */
 .modal-header {
-    background: #68dff0;
+	background: #68dff0;
 }
 
 .modal-title {
-    color: white;
+	color: white;
 }
 
 .btn-round {
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
 }
 
 .accordion-heading .accordion-toggle {
-    display: block;
-    cursor: pointer;
-    border-top: 1px solid #F5F5F5;
-    padding: 5px 0px;
-    line-height: 28.75px;
-    text-transform: uppercase;
-    color: #1a1a1a;
-    background-color: #ffffff;
-    outline: none !important;
-    text-decoration: none;
-}   
+	display: block;
+	cursor: pointer;
+	border-top: 1px solid #F5F5F5;
+	padding: 5px 0px;
+	line-height: 28.75px;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background-color: #ffffff;
+	outline: none !important;
+	text-decoration: none;
+}	
 
 
 
 /*Theme Backgrounds*/
 
 .bg-theme {
-    background-color: #68dff0;
+	background-color: #68dff0;
 }
 
 .bg-theme02 {
-    background-color: #ac92ec;
+	background-color: #ac92ec;
 }
 
 .bg-theme03 {
@@ -151,13 +151,13 @@ a, a:hover, a:focus {
 }
 
 .btn-clear-g {
-    color: #48bcb4;
-    background: transparent;
-    border-color: #48bcb4;
+	color: #48bcb4;
+	background: transparent;
+	border-color: #48bcb4;
 }
 
 .btn-clear-g:hover {
-    color: white;
+	color: white;
 }
 
 hr {
@@ -172,57 +172,57 @@ hr {
 /*Helpers*/
 
 .centered {
-    text-align: center;
+	text-align: center;
 }
 
 .goleft {
-    text-align: left;
+	text-align: left;
 }
 
 .goright {
-    text-align: right;
+	text-align: right;
 }
 
 .mt {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
 .mb {
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .ml {
-    margin-left: 5px;
-    }
+	margin-left: 5px;
+	}
 
 .no-padding {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .no-margin {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 
 /*Exclusive Theme Colors Configuration*/
 
 .label-theme {
-    background-color: #68dff0;
+	background-color: #68dff0;
 }
 
 .bg-theme {
-    background-color: #68dff0;
+	background-color: #68dff0;
 }
 
 ul.top-menu > li > .logout {
-    color: #f2f2f2;
-    font-size: 12px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border: 1px solid #64c3c2 !important;
-    padding: 5px 15px;
-    margin-right: 15px;
-    background: #68dff0;
-    margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 12px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #64c3c2 !important;
+	padding: 5px 15px;
+	margin-right: 15px;
+	background: #68dff0;
+	margin-top: 15px;
 }
 
 
@@ -237,8 +237,8 @@ ul.top-menu > li > .logout {
 }
 
 #sidebar h5 {
-    color: #f2f2f2;
-    font-weight: 700;
+	color: #f2f2f2;
+	font-weight: 700;
 }
 
 #sidebar ul li {
@@ -321,8 +321,8 @@ ul.sidebar-menu li ul.sub li a {
 }
 
 ul.sidebar-menu li ul.sub li a:hover {
-    color: white;
-    background: transparent;
+	color: white;
+	background: transparent;
 }
 
 ul.sidebar-menu li ul.sub li.active a {
@@ -398,9 +398,9 @@ ul.sidebar-menu li a.active i {
 
 /* MAIN CONTENT CONFIGURATION */
 #main-content {
-    position: relative;
-    min-height: 100%;
-    height: auto !important;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
     margin-left: 210px;
 }
 
@@ -422,7 +422,7 @@ ul.sidebar-menu li a.active i {
 }
 
 .wrapper {
-    min-height: 900px;
+	min-height: 900px;
     display: inline-block;
     margin-top: 60px;
     padding-left: 15px;
@@ -770,114 +770,114 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* Dash Side */
 
 .ds {
-    background: #ffffff;
-    padding-top: 20px;
+	background: #ffffff;
+	padding-top: 20px;
 }
 
 .ds h4 {
-    font-size: 14px;
-    font-weight: 700;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .ds h3 {
-    color: #ffffff;
-    font-size: 16px;
-    padding: 0 10px;
-    line-height: 60px;
-    height: 60px;
-    margin: 0;
-    background: #ff865c;
-    text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 0 10px;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+	background: #ff865c;
+	text-align: center;
 }
 
 .ds i {
-    font-size: 12px;
-    line-height: 16px;
+	font-size: 12px;
+	line-height: 16px;
 }
 
 .ds .desc {
-    border-bottom: 1px solid #eaeaea;
-    display: inline-block;
-    padding: 15px 0;
-    width: 100%;
+	border-bottom: 1px solid #eaeaea;
+	display: inline-block;
+	padding: 15px 0;
+	width: 100%;
 }
 
 .ds .desc:hover {
-    background: #f2f2f2;
+	background: #f2f2f2;
 }
 
 .ds .thumb {
-    width: 30px;
-    margin: 0 10px 0 20px;
-    display: block;
-    float: left;
+	width: 30px;
+	margin: 0 10px 0 20px;
+	display: block;
+	float: left;
 }
 
 .ds .details {
-    width: 170px;
-    float: left;
+	width: 170px;
+	float: left;
 }
 
 .ds > .desc p {
-    font-size: 11px;
+	font-size: 11px;
 }
 
 .ds p > muted {
-    font-size: 9px;
-    text-transform: uppercase;
-    font-style: italic;
-    color: #666666
+	font-size: 9px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #666666
 }
 
 .ds a {
-    color: #68dff0;
+	color: #68dff0;
 }
 
 /* LINE ICONS CONFIGURATION */
 
 .mtbox {
-    margin-top: 80px;
-    margin-bottom: 40px;
+	margin-top: 80px;
+	margin-bottom: 40px;
 }
 
 .box1 {
-    padding: 15px;
-    text-align: center;
-    color: #989898;
-    border-bottom: 1px solid #989898;
+	padding: 15px;
+	text-align: center;
+	color: #989898;
+	border-bottom: 1px solid #989898;
 }
 
 .box1 span {
-    font-size: 50px;
+	font-size: 50px;
 
 }
 
 .box1 h3 {
-    text-align: center;
+	text-align: center;
 }
 
 .box0:hover .box1 {
-    border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
 }
 
 .box0 p {
-    text-align: center;
-    font-size: 12px;
-    color: #f2f2f2;
+	text-align: center;
+	font-size: 12px;
+	color: #f2f2f2;
 }
 
 .box0:hover p {
-    color: #ff865c;
+	color: #ff865c;
 }
 
 .box0:hover {
-    background: #ffffff;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	background: #ffffff;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* MAIN CHART CONFIGURATION */
 .main-chart {
-    padding-top: 20px;
+	padding-top: 20px;
 }
 
 .mleft {
@@ -886,7 +886,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .border-head h3 {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 15px;  
+	margin-left: 15px;	
     padding-bottom: 5px;
     font-weight: normal;
     font-size: 18px;
@@ -974,13 +974,13 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 /*Donut Chart Main Page Conf*/
 .donut-main {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .donut-main h4 {
-    font-weight: 700;
-    font-size: 16px;
+	font-weight: 700;
+	font-size: 16px;
 }
 
 /* *************************************************************************************
@@ -990,123 +990,123 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-    height: 250px;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	height: 250px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .pn:hover {
-    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-    
+	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+	
 }
 
 /*Grey Panel*/
 
 .grey-panel {
-    text-align: center;
-    background: #dfdfe1;
+	text-align: center;
+	background: #dfdfe1;
 }
 .grey-panel .grey-header {
-    background: #ccd1d9;
-    padding: 3px;
-    margin-bottom: 15px;
+	background: #ccd1d9;
+	padding: 3px;
+	margin-bottom: 15px;
 }
 .grey-panel h5 {
-    font-weight: 200;
-    margin-top: 10px;
+	font-weight: 200;
+	margin-top: 10px;
 }
 .grey-panel p {
-    margin-left: 5px;
+	margin-left: 5px;
 }
 /* Specific Conf for Donut Charts*/
 .donut-chart p {
-    margin-top: 5px;
-    font-weight: 700;
-    margin-left: 15px;
+	margin-top: 5px;
+	font-weight: 700;
+	margin-left: 15px;
 }
 .donut-chart h2 {
-    font-weight: 900;
-    color: #FF6B6B;
-    font-size: 38px;
+	font-weight: 900;
+	color: #FF6B6B;
+	font-size: 38px;
 }
 
 /* Dark Blue*/
 
 .darkblue-panel {
-    text-align: center;
-    background: #444c57;
+	text-align: center;
+	background: #444c57;
 }
 .darkblue-panel .darkblue-header {
-    background: transparent;
-    padding: 3px;
-    margin-bottom: 15px;
+	background: transparent;
+	padding: 3px;
+	margin-bottom: 15px;
 }
 .darkblue-panel h1 {
-    color: #f2f2f2;
+	color: #f2f2f2;
 }
 .darkblue-panel h5 {
-    font-weight: 200;
-    margin-top: 10px;
-    color: white;
+	font-weight: 200;
+	margin-top: 10px;
+	color: white;
 }
 .darkblue-panel footer {
-    color: white;
+	color: white;
 }
 .darkblue-panel footer h5 {
-    margin-left:10px; 
-    margin-right: 10px;
-    font-weight: 700;
+	margin-left:10px; 
+	margin-right: 10px;
+	font-weight: 700;
 }
 
 /*Green Panel*/
 .green-panel {
-    text-align: center;
-    background: #68dff0;
+	text-align: center;
+	background: #68dff0;
 }
 .green-panel .green-header {
-    background: #43b1a9;
-    padding: 3px;
-    margin-bottom: 15px;
+	background: #43b1a9;
+	padding: 3px;
+	margin-bottom: 15px;
 }
 .green-panel h5 {
-    color: white;
-    font-weight: 200;
-    margin-top: 10px;
+	color: white;
+	font-weight: 200;
+	margin-top: 10px;
 }
 .green-panel h3 {
-    color: white;
-    font-weight: 100;
+	color: white;
+	font-weight: 100;
 }
 .green-panel p {
-    color: white;
+	color: white;
 }
 
 /*White Panel */
 .white-panel {
-    text-align: center;
-    background: #ffffff;
-    color: #ccd1d9;
+	text-align: center;
+	background: #ffffff;
+	color: #ccd1d9;
 }
 
 .white-panel p {
-    margin-top: 5px;
-    font-weight: 700;
-    margin-left: 15px;
+	margin-top: 5px;
+	font-weight: 700;
+	margin-left: 15px;
 }
 .white-panel .white-header {
-    background: #f4f4f4;
-    padding: 3px;
-    margin-bottom: 15px;
-    color: #c6c6c6;
+	background: #f4f4f4;
+	padding: 3px;
+	margin-bottom: 15px;
+	color: #c6c6c6;
 }
 .white-panel .small {
-    font-size: 10px;
-    color: #ccd1d9;
+	font-size: 10px;
+	color: #ccd1d9;
 }
 
 .white-panel i {
-    color: #68dff0;
-    padding-right: 4px;
-    font-size: 14px;
+	color: #68dff0;
+	padding-right: 4px;
+	font-size: 14px;
 }
 
 /*STOCK CARD Panel*/
@@ -1138,7 +1138,7 @@ PANELS CONFIGURATIONS
     text-align: right; 
 }
 .stock .changes .up {
-    color: #4fd98b
+	color: #4fd98b
 }
 .stock .current-price .changes .value {
       font-size: 1.8em;
@@ -1149,185 +1149,185 @@ PANELS CONFIGURATIONS
     display: block;
     background: #f2f2f2;
     padding: 10px;
-    text-align: center;
+	text-align: center;
 }
 .stock .summary strong {
-    font-weight: 900;
-    font-size: 14px;
+	font-weight: 900;
+	font-size: 14px;
 }
 
 /*Content Panel*/
 .content-panel {
-    background: #ffffff;
-    box-shadow: 0px 3px 2px #aab2bd;
-    padding-top: 15px;
-    padding-bottom: 5px;
+	background: #ffffff;
+	box-shadow: 0px 3px 2px #aab2bd;
+	padding-top: 15px;
+	padding-bottom: 5px;
 }
 .content-panel h4 {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 /*WEATHER PANELS*/
 
 /* Weather 1 */
 .weather {
-    background: url(../img/weather.jpg) no-repeat center top;
-    text-align: center;
-    background-position: center center;
+	background: url(../img/weather.jpg) no-repeat center top;
+	text-align: center;
+	background-position: center center;
 }
 .weather i {
-    color: white;
-    margin-top: 45px;
+	color: white;
+	margin-top: 45px;
 }
 .weather h2 {
-    color: white;
-    font-weight: 900;
+	color: white;
+	font-weight: 900;
 }
 .weather h4 {
-    color: white;
-    font-weight: 900;
-    letter-spacing: 1px;
+	color: white;
+	font-weight: 900;
+	letter-spacing: 1px;
 }
 
 /* Weather 2 */
 .weather-2 {
-    background: #e9f0f4;
+	background: #e9f0f4;
 }
 .weather-2 .weather-2-header {
-    background: #54bae6;
-    padding-top: 5px;
-    margin-bottom: 5px;
+	background: #54bae6;
+	padding-top: 5px;
+	margin-bottom: 5px;
 }
 .weather-2 .weather-2-header p {
-    color: white;
-    margin-left: 5px;
-    margin-right: 5px;
+	color: white;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 .weather-2 .weather-2-header p small {
-    font-size: 10px;
+	font-size: 10px;
 }
 .weather-2 .data {
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #272b34;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: #272b34;
 }
 .weather-2 .data h5 {
-    margin-top: 0px;
-    font-weight: lighter;
+	margin-top: 0px;
+	font-weight: lighter;
 }
 .weather-2 .data h1{
-    margin-top: 2px;
+	margin-top: 2px;
 }
 
 /* Weather 3 */
 .weather-3 {
-    background: #ffcf00;
+	background: #ffcf00;
 }
 
 .weather-3 i {
-    color: white;
-    margin-top: 30px;
-    font-size: 70px;
+	color: white;
+	margin-top: 30px;
+	font-size: 70px;
 }
 .weather-3 h1 {
-    margin-top: 10px;
-    color: white;
-    font-weight: 900;
+	margin-top: 10px;
+	color: white;
+	font-weight: 900;
 }
 .weather-3 .info {
-    background: #f2f2f2;
+	background: #f2f2f2;
 }
 .weather-3 .info i {
-    font-size: 15px;
-    color: #c2c2c2;
-    margin-bottom: 0px;
-    margin-top: 10px;
+	font-size: 15px;
+	color: #c2c2c2;
+	margin-bottom: 0px;
+	margin-top: 10px;
 }
 .weather-3 .info h3 {
-    font-weight: 900;
-    margin-bottom: 0px;
+	font-weight: 900;
+	margin-bottom: 0px;
 }
 .weather-3 .info p {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 16px;
-    color: #c2c2c2;
-    font-size: 15px;
-    font-weight: 700;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 16px;
+	color: #c2c2c2;
+	font-size: 15px;
+	font-weight: 700;
 }
 
 
 /*Twitter Panel*/
 .twitter-panel {
-    background: #4fc1e9;
-    text-align: center;
+	background: #4fc1e9;
+	text-align: center;
 }
 .twitter-panel i {
-    color: white;
-    margin-top: 40px;
+	color: white;
+	margin-top: 40px;
 }
 .twitter-panel p {
-    color: #f5f5f5;
-    margin: 10px;
+	color: #f5f5f5;
+	margin: 10px;
 }
 .twitter-panel .user {
-    color: white;
-    font-weight: 900;
+	color: white;
+	font-weight: 900;
 }
 
 
 /* Instagram Panel*/
 .instagram-panel {
-    background: url(../img/instagram.jpg) no-repeat center top;
-    text-align: center;
-    background-position: center center;
+	background: url(../img/instagram.jpg) no-repeat center top;
+	text-align: center;
+	background-position: center center;
 }
 .instagram-panel i {
-    color: white;
-    margin-top: 35px;
+	color: white;
+	margin-top: 35px;
 }
 .instagram-panel p {
-    margin: 5px;
-    color: white;
+	margin: 5px;
+	color: white;
 }
 
 /* Product Panel */
 .product-panel {
-    background: #dadad2;
-    text-align: center;
-    padding-top: 50px;
-    height: 100%;
+	background: #dadad2;
+	text-align: center;
+	padding-top: 50px;
+	height: 100%;
 }
 
 /* Product Panel 2*/
 .product-panel-2 {
-    background: #dadad2;
-    text-align: center;
+	background: #dadad2;
+	text-align: center;
 }
 .product-panel-2 .badge {
-    position: absolute;
-    top: 20px;
-    left: 35px;
+	position: absolute;
+	top: 20px;
+	left: 35px;
 }
 .badge-hot {
-    background: #ed5565;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
+	background: #ed5565;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	border-radius: 100%;
 }
 
 /* Soptify Panel */
 #spotify {
-    background: url(../img/lorde.jpg) no-repeat center top;
-    margin-top: -15px;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 220px;
-    width: 100%;
+	background: url(../img/lorde.jpg) no-repeat center top;
+	margin-top: -15px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 220px;
+	width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -1338,40 +1338,40 @@ PANELS CONFIGURATIONS
     background-size: cover;
 }
 #spotify .btn-clear-g {
-    top: 15%;
-    right: 10px;
-    position: absolute;
-    margin-top: 5px;
+	top: 15%;
+	right: 10px;
+	position: absolute;
+	margin-top: 5px;
 }
 #spotify .sp-title {
-    bottom: 15%;
-    left: 25px;
-    position: absolute;
-    color: #efefef;
+	bottom: 15%;
+	left: 25px;
+	position: absolute;
+	color: #efefef;
 }
 #spotify .sp-title h3 {
-    font-weight: 900;
+	font-weight: 900;
 }
 #spotify .play{
-    bottom: 18%;
-    right: 25px;
-    position: absolute;
-    color: #efefef;
-    font-size: 20px
+	bottom: 18%;
+	right: 25px;
+	position: absolute;
+	color: #efefef;
+	font-size: 20px
 }
 .followers {
-    margin-left: 5px;
-    margin-top: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
 }
 
 /* BLOG PANEL */
 #blog-bg {
-    background: url(../img/blog-bg.jpg) no-repeat center top;
-    margin-top: -15px;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 150px;
-    width: 100%;
+	background: url(../img/blog-bg.jpg) no-repeat center top;
+	margin-top: -15px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 150px;
+	width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -1382,44 +1382,44 @@ PANELS CONFIGURATIONS
     background-size: cover;
 }
 #blog-bg .badge {
-    position: absolute;
-    top: 20px;
-    left: 35px;
+	position: absolute;
+	top: 20px;
+	left: 35px;
 }
 .badge-popular {
-    background: #3498db;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 13px;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
+	background: #3498db;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	border-radius: 100%;
 }
 .blog-title {
-    background: rgba(0,0,0,0.5);
-    bottom: 100px;
-    padding: 6px;
-    color: white;
-    font-weight: 700;
-    position: absolute;
-    display: block;
-    width: 120px;
+	background: rgba(0,0,0,0.5);
+	bottom: 100px;
+	padding: 6px;
+	color: white;
+	font-weight: 700;
+	position: absolute;
+	display: block;
+	width: 120px;
 }
 .blog-text {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 15px;
-    font-size: 12px;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 15px;
+	font-size: 12px;
 }
 
 /* Calendar Configuration */
 #calendar {
-    color: white;
-    padding: 0px !important;
+	color: white;
+	padding: 0px !important;
 }
 .calendar-month-header {
-    background: #43b1a9;
+	background: #43b1a9;
 }
 
 /* TODO PANEL */
@@ -1491,12 +1491,12 @@ PANELS CONFIGURATIONS
 /* PROFILE PANELS */
 /* Profile 01*/
 #profile-01 {
-    background: url(../img/profile-01.jpg) no-repeat center top;
-    margin-top: -15px;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 150px;
-    width: 100%;
+	background: url(../img/profile-01.jpg) no-repeat center top;
+	margin-top: -15px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 150px;
+	width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -1507,23 +1507,23 @@ PANELS CONFIGURATIONS
     background-size: cover;
 }
 #profile-01 h3 {
-    color: white;
-    padding-top: 50px;
-    margin: 0px;
-    text-align: center;
+	color: white;
+	padding-top: 50px;
+	margin: 0px;
+	text-align: center;
 }
 #profile-01 h6 {
-    color: white;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: 900;
+	color: white;
+	text-align: center;
+	margin-bottom: 0px;
+	font-weight: 900;
 }
 .profile-01 {
-    background: #68dff0;
-    height: 50px;
+	background: #68dff0;
+	height: 50px;
 }
 .profile-01:hover {
-    background: #2f2f2f;
+	background: #2f2f2f;
   -webkit-transition: background-color 0.6s;
   -moz-transition: background-color 0.6s;
   -o-transition: background-color 0.6s;
@@ -1531,20 +1531,20 @@ PANELS CONFIGURATIONS
   cursor: pointer;
 }
 .profile-01 p {
-    color: white;
-    padding-top: 15px;
-    font-weight: 400;
-    font-size: 15px;
+	color: white;
+	padding-top: 15px;
+	font-weight: 400;
+	font-size: 15px;
 }
 
 /* Profile 02*/
 #profile-02 {
-    background: url(../img/profile-02.jpg) no-repeat center top;
-    margin-top: -15px;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 200px;
-    width: 100%;
+	background: url(../img/profile-02.jpg) no-repeat center top;
+	margin-top: -15px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 200px;
+	width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -1555,24 +1555,24 @@ PANELS CONFIGURATIONS
     background-size: cover;
 }
 #profile-02 .user {
-    padding-top: 40px;
-    text-align: center;
+	padding-top: 40px;
+	text-align: center;
 }
 #profile-02 h4 {
-    color: white;
-    margin:0px;
-    padding-top: 8px;
+	color: white;
+	margin:0px;
+	padding-top: 8px;
 }
 .pr2-social a {
-    color: #cdcdcd;
+	color: #cdcdcd;
 }
 .pr2-social a:hover {
-    color: #68dff0;
+	color: #68dff0;
 }
 .pr2-social i {
-    margin-top: 15px;
-    margin-right: 12px;
-    font-size: 20px;
+	margin-top: 15px;
+	margin-right: 12px;
+	font-size: 20px;
 }
 
 
@@ -1642,35 +1642,35 @@ PANELS CONFIGURATIONS
 
 /* showcase background */
 .showback {
-    background: #ffffff;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0px 3px 2px #aab2bd;
+	background: #ffffff;
+	padding: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0px 3px 2px #aab2bd;
 }
 
 
 
 /* Calendar Events - Calendar.html*/
 .external-event {
-    cursor: move;
-    display: inline-block !important;
-    margin-bottom: 7px !important;
-    margin-right: 7px !important;
-    padding: 10px;
+	cursor: move;
+	display: inline-block !important;
+	margin-bottom: 7px !important;
+	margin-right: 7px !important;
+	padding: 10px;
 }
 
 .drop-after {
-    padding-top: 15px;
-    margin-top: 15px;
-    border-top: 1px solid #ccc;
+	padding-top: 15px;
+	margin-top: 15px;
+	border-top: 1px solid #ccc;
 }
 
 .fc-state-default, .fc-state-default .fc-button-inner {
-    background: #f2f2f2;
+	background: #f2f2f2;
 }
 
 .fc-state-active .fc-button-inner {
-    background: #FFFFFF;
+	background: #FFFFFF;
 }
 
 /* Gallery Configuration */
@@ -1699,14 +1699,14 @@ PANELS CONFIGURATIONS
 
 .project:hover .photo-wrapper {
   background-color: #68dff0;
-    background-image:url(../img/zoom.png);
-    background-repeat:no-repeat;
-    background-position:center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: relative;
+	background-image:url(../img/zoom.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: relative;
 }
 .project:hover .photo {
   opacity: 10;
@@ -1725,12 +1725,12 @@ PANELS CONFIGURATIONS
 
 /* EZ Checklist */
 .ez-checkbox {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 .ez-checkbox, .ez-radio {
-    height: 20px;
-    width: 20px;
+	height: 20px;
+	width: 20px;
 }
 
 .brand-highlight {
@@ -1740,48 +1740,48 @@ background: #fffbcc !important;
 
 /* FORMS CONFIGURATION */
 .form-panel {
-    background: #ffffff;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 0px 3px 2px #aab2bd;
-    text-align: left;
+	background: #ffffff;
+	margin: 10px;
+	padding: 10px;
+	box-shadow: 0px 3px 2px #aab2bd;
+	text-align: left;
 }
 
 label {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .form-horizontal.style-form .form-group {
-    border-bottom: 1px solid #eff2f7;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+	border-bottom: 1px solid #eff2f7;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .round-form {
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
 }
 
 @media (min-width: 768px) {
-        .form-horizontal .control-label {
-        text-align: left;
-    }
+		.form-horizontal .control-label {
+		text-align: left;
+	}
 }
 
 #focusedInput {
-    border: 1px solid #ed5565;
-    box-shadow: none;
+	border: 1px solid #ed5565;
+	box-shadow: none;
 }
 
 .add-on {
-    float: right;
-    margin-top: -37px;
-    padding: 3px;
-    text-align: center;
+	float: right;
+	margin-top: -37px;
+	padding: 3px;
+	text-align: center;
 }
 
 .add-on .btn {
-    height: 34px;
+	height: 34px;
 }
 
 /* TOGGLE CONFIGURATION */
@@ -1930,73 +1930,73 @@ label {
 
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
-    max-width: 330px;
-    margin: 100px auto 0;
-    background: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+	max-width: 330px;
+	margin: 100px auto 0;
+	background: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 .form-login h2.form-login-heading {
-    margin: 0;
-    padding: 25px 20px;
-    text-align: center;
-    background: #68dff0;
-    border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
-    color: #fff;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 300;
+	margin: 0;
+	padding: 25px 20px;
+	text-align: center;
+	background: #68dff0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 .login-wrap {
-    padding: 20px;
+	padding: 20px;
 }
 .login-wrap .registration {
-    text-align: center;
+	text-align: center;
 }
 .login-social-link {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 15px;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 
 /*LOCK SCREEN CONF*/
 #showtime {
-    width: 100%;
-    color: #fff;
-    font-size: 90px;
-    margin-bottom: 30px;
-    margin-top: 250px;
-    display: inline-block;
-    text-align: center;
-    font-weight: 400;
+	width: 100%;
+	color: #fff;
+	font-size: 90px;
+	margin-bottom: 30px;
+	margin-top: 250px;
+	display: inline-block;
+	text-align: center;
+	font-weight: 400;
 }
 
 .lock-screen {
-    text-align: center;
+	text-align: center;
 }
 
 .lock-screen a {
-    color: white;
+	color: white;
 }
 
 .lock-screen a:hover {
-    color: #48cfad
+	color: #48cfad
 }
 
 .lock-screen i {
-    font-size: 60px;
+	font-size: 60px;
 }
 
 .lock-screen .modal-content {
-    position: relative;
-    background-color: #f2f2f2;
-    background-clip: padding-box;
-    border: 1px solid #999;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 5px;
+	position: relative;
+	background-color: #f2f2f2;
+	background-clip: padding-box;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 5px;
 }
 
 
@@ -2221,7 +2221,7 @@ label {
 
 /*footer*/
 .site-footer {
-    
+	
     background: #68dff0;
     color: #fff;
     padding: 10px;
@@ -2251,339 +2251,104 @@ label {
 }
 
 
-/*module*/
 #moduleGeneral{
     height: 200px;
 }
 
-
-#moduleclick {
+#forum-title{
     height: 60px;
-    width: 74%;
-    min-width:911px;
-    text-align: center;
-    cursor:pointer;
-    margin-left: 12%;  
+    width: 1100px;
+    margin-left: 20%;
+    margin-bottom: 20px;
 }
 
-
-.moduleblank {
-    width: 19.75%;
-    height: 60px;
+#forum-icon{
     float: left;
-    background-color: #ccc;
+    font-size: 400%;
+    color: black;
 }
 
 
+.forum-title-txt{
+    float: left;
+    font-size: xx-large;
+    margin-top: 5px;
+    margin-left: 10px;
 
-.moduleblank a {
-   line-height: 60px;
-   font-size:180%;
-   color: white;
-   opacity: 0.4;
 }
 
-#modulecontent{
-    margin-left: 12%;
-    width:73%;
-    min-width: 800px;
+
+#post-title{
+    min-height: 100px;
+    height: auto;
+    width: 1100px;
+    margin-left: 10%;
+    padding-top: 30px;
+    padding-left: 180px;
+    font-size: x-large;
+    border-top: 1px;
+    border-top-style: solid;
+
+}
+
+
+#post-response-ul{
     min-height: 1600px;
     height: auto;
-    min-width: 900px;
-    background-color: white;
-    margin-bottom: 50px;
-}
-
-.modulecontentblock{
-    display: none;
-    width:74%;
-    min-height: 1600px;
-    height: auto;
-    background-color: white;   
-}
-
-
-
-
-/*modulelecture*/
-
-#moduletabletitle{
-    display: block;
-    font-size: 160%;
-    margin-left: 20px;
-    padding: 50px;
-}
-
-.moduletable{
-    width: 135.2%;
-    text-align: center;
-    font-size: 140%;
-}
-
-.moduletable-col{
-    padding: 8px;
-    background-color: #fcf8e3;
-}
-
-.moduletable-col-1{
-    font-weight: 800;
-    padding: 8px;
-    background-color: white;
-}
-
-.moduletable-col-title{
-    width: 500px;
-    font-weight: 800;
-    padding: 8px;
-    background-color: white;
-}
-
-#slidesurl{
-    font-size: 35px;
-    display: block !important;
-}
-
-#laburl{
-    font-size: 35px;
-    display: block !important;
-}
-
-
-#assurl{
-   font-size: 32px;
-   display: block !important;
-}
-
-
-#submiturl{
-    font-size: 32px;
-   display: block !important;
-}
-
-#forumcontent{
-    padding-top: 60px;
-}
-
-#forumicon{
-    width: 100%;
-    float: right;
-    position: fixed;
-    top: 500px;
-    margin-left: 56%;
-    line-height: 100px;
-    
-    z-index: 1;
-}
-
-
-.posticon{
-    width: 30px;
-    height: 30px;
-}
-
-.forumchoice{
-    display: block;
-    margin-left: 33%;
-    width: 70%;
-    text-align: center;
-    font-size: large;
-    cursor:pointer;
-}
-
-.forumtablechoice{
-    background-color: #fcf8e3;
-    opacity: 0.5;
-    padding: 8px;
-    width: 300px;
-}
-
-.forumpost{
-    display: none;
-    z-index: 0;
-    width: 127%;
-    min-height: 1400px;
-    height: auto;
-    background-color: white;
+    width: 1100px;
+    margin-left: 10%;
     list-style: none;
     padding: 0;
-    margin-left: 4%;
     
 }
 
 
-.postcontent{
-    width: 90%;
-    height: 10%;
-    
+.post-respose-container{
+    height: 250px;
+    width: 1100px;
 }
 
-.replynum{
-    display: block;
-    position: absolute;
-    margin-top: 28px;
-    margin-left: 3%;
-    font-size: medium;
-    font-weight: 500;
-}
-
-.postblank{
-    background-color: white;
-}
-
-
-.postreply{
-    width: 120px;
-    height: 70px;
-}
-
-
-.postreplyicon{
-    width: 75%;
+.post-response-left{
+    float: left;
     height: 100%;
-    padding-top: 15%;
-    padding-left: 15%;
-}
-
-.posttitle{
-    width: 540px;
-    height: 70px;
-}
-
-.posttitle a{
-    font-weight: 400;
-    font-size: x-large;
-    color: black;
-    text-decoration: none;
-    text-decoration-color: white;
-}
-
-.postcreator{
-    width: 140px;
-    height: 70px; 
-}
-
-.postcreatoricon{
-    width: 10%;
-    height: 25%;
-}
-
-.postreplytime{
-    width: 140px;
-    height: 70px;
-}
-
-.postreply-col-2{
-    width: 120px;
-    height: 30px;
-}
-
-.posttitle-col-2{
-    width: 540px;
-    height: 30px;
-}
-
-.postbrief{
-    width: 540px;
-    height: 30px;
-    display: block !important;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.postcreator-col-2{
-    width: 140px;
-    height: 30px;
+    width: 15%;
+    border: 1px;
 }
 
 
-.postreplyicon-2{
-    width: 10%;
-    height: 60%;
+.post-response-head{
+    height: 45%;
+    width: 100%;
+    text-align: center;
 }
 
 
-.postreplytime-col-2{
-    width: 140px;
-    height: 30px;
+.post-response-head img{
+    margin-top: 35%;
 }
 
-.page{
-    display: block !important;
-    width: 350px;
-    height: 70px;
-    background-color: white;
-    margin-left: 60%;
-}
-
-.page div{
-    display: block !important;
-}
-
-#postsubmit{
-    width:74%;
-    min-width:900px;
-}
-
-.forum-votingpoll-page{
-    display:inline-block;
-    float: left;
-    margin-right: 5%;
-    font-size: 200%;
-}
-
-#create-post-icon{
-    float: left;
-    margin-left: 50px;
-    margin-top: 20px;
-    display: block !important;
-    font-size: 35px;
-}
-
-#create-post-txt{
-    display: block !important;
-    margin-top: 20px;
-    float: left;
-    font-size: 25px;
-}
-
-#createpost{    
-    display: block !important;
-    width: 74%;
-  min-width:900px;
-    height: 450px;
-    background-color: white;
-    
-}
-
-
-.forum-type{
-    font-size: medium;
-    padding-left: 50px;
-}
-
-#post-title-input{
-    margin-top: 50px;
-    width: 600px;
-    height: 35px;
-    border-radius:5px;
-    border-style: solid;
+.post-response-name{
+    height: 15%;
+    text-align: center;
+    margin-top: 3%;
+    font-size: large;
     font-weight: 500;
+}
+
+.post-response-right{
+    float: left;
+    height: 70%;
+    width: 85%;
     font-size: x-large;
+    word-break: break-all;
+    padding: 25px 30px 25px 30px;
+    line-height: 45px;
 }
 
 
-#post-content-input{
-  width:90%;
-    border-width: 2px;
-    border-radius:5px;
-    resize: none;
+.post-response-opreation{
+	float: right;
+    height: 20%;
+    width: 15%;
+    font-size: medium;
 }
-
-
-#post-submit-botton{
-    margin-left: 100px;
-}
-
-
-

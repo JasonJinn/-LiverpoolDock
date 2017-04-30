@@ -17,48 +17,49 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/module-style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-  <script src="assets/js/jquery-1.8.3.min.js"></script>
+	<script src="assets/js/jquery-1.8.3.min.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <script>
+	<script>
 
-  $token = location.search;
-  reg = /token=(.+)/g;
-  //$token = reg.exec($token)[1];
+	$code = location.search;
+	reg = /code=(.+)/g;
+	$code = reg.exec($code)[1];
  
  
   var numPost;
-  var forumtype;
+  $forumtype="G";
   var numPostcurrent;
 
 
-   $(document).ready(function(){
+	 $(document).ready(function(){
+   $("#modulename").append(" "+$code);
    
-            $.get("http://www.shoujiafeng.com/LiverpoolDock/API/topicMax.php",{code: "comp211", type: "G"},function(data){
+            $.get("http://www.shoujiafeng.com/LiverpoolDock/API/topicMax.php",{code: $code, type: $forumtype},function(data){
                 numPost = data;
        
-        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: "COMP211", type: "G", page: "1"},function(data){
+        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: $code, type: $forumtype, page: "1"},function(data){
         var post = data;
         numPostcurrent = getJsonLength(data)-1;
  
         for(var i=numPostcurrent;i>=0;i--){
-          $("#g-forum").append("<li class='postblank'><span class='replynum'>"+post[i].floor+"</span>"+
+        	$("#g-forum").append("<li class='postblank'><span class='replynum'>"+post[i].floor+"</span>"+
           "<table class='postcontent'>"+
                   "<tbody>"+
                      "<tr>"+
                        "<td class='postreply'><img  class='postreplyicon' src='assets/img/reply.png'></td>"+
-                       "<td class='posttitle'><a href='#'>"+post[i].name+"</a></td>"+
+                       '<td class="posttitle"><a href="post.html?code='+$code+'&topic_id='+post[i].topic_id+'&'+'type=G'+'">'+post[i].name+"</a></td>"+
                        "<td class='postcreator'><img class='postcreatoricon' src='assets/img/user.png'>    "+post[i].user+"</td>"+
                        "<td class='postreplytime'></td>"+
                      "</tr>"+
                      "<tr>"+
                        "<td class='postreply-col-2'></td>"+
                        "<td class='posttitle-col-2'><div class='postbrief'>"+post[i].content+"</div></td>"+
-                       "<td class='postcreator-col-2'><img class='postreplyicon-2' src='assets/img/reply2.png'>     Jason222</td>"+
+                       "<td class='postcreator-col-2'><img class='postreplyicon-2' src='assets/img/reply2.png'>     "+post[i].lastUser+"</td>"+
                        "<td class='postreplytime-col-2'>"+post[i].time+"</td>"+
                      "</tr>"+
                    "</tbody>"+
@@ -95,7 +96,7 @@
 
 
 
-      $(document).ready(function(){
+	    $(document).ready(function(){
            $(".moduleblank").click(function(){
            $(".moduleblank").css("background-color","#ccc");
            $(".moduleblank a").css("opacity",0.4);
@@ -203,22 +204,22 @@
 
       $(document).ready(function(){
            $(document).on('mouseenter','.postblank',function(){
-            $(this).css("background-color","#fcf8e3");
+           	$(this).css("background-color","#fcf8e3");
             $(".posttitle a").css("text-decoration-color","#fefcf1");
            })
 
            $(document).on('mouseleave','.postblank',function(){
-            $(this).css("background-color","white");
+           	$(this).css("background-color","white");
             $(".posttitle a").css("text-decoration-color","white");
            })
 
            $(document).on('mouseenter','.posttitle a',function(){
-            $(this).css("text-decoration","underline");
+           	$(this).css("text-decoration","underline");
             $(this).css("text-decoration-color","black");
            })
 
            $(document).on('mouseleave','.posttitle a',function(){
-            $(this).css("text-decoration","none");
+           	$(this).css("text-decoration","none");
             $(this).css("text-decoration-color","#fefcf1");
            })
 });
@@ -226,18 +227,18 @@
 
 
       $(document).ready(function(){
-        $("#post-submit-botton").click(function(){
-          $.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/createTopic.php",{code: "COMP211", type: $('input[name="choose-forum"]:checked').val(), topicname: $('input[name="post-title"]').val(), content: $("#post-content-input").val()},function(status){
-            alert(status);
-          })
-        })
+      	$("#post-submit-botton").click(function(){
+      		$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/createTopic.php",{code: $code, type: $('input[name="choose-forum"]:checked').val(), topicname: $('input[name="post-title"]').val(), content: $("#post-content-input").val()},function(status){
+      			alert(status);
+      		})
+      	})
       })
 
  
 
 
 
-  </script>
+	</script>
   </head>
 
   <body>
@@ -395,9 +396,9 @@
                 <!--  notification end -->
             </div>
             <div class="top-menu">
-              <ul class="nav pull-right top-menu">
+            	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Logout</a></li>
-              </ul>
+            	</ul>
             </div>
         </header>
       <!--header end-->
@@ -411,9 +412,9 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-                  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Marcel Newman</h5>
-                    
+              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Marcel Newman</h5>
+              	  	
                   <li class="mt">
                       <a href="index.html">
                           <i class="fa fa-dashboard"></i>
@@ -498,32 +499,32 @@
       
       <section id="main-content">
           <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> Module xxxxxxxx</h3>
+          	<h3 id="modulename"><i class="fa fa-angle-right"></i> Module</h3>
 
 
 
-      <div id="moduleGeneral"></div>
+			<div id="moduleGeneral"></div>
 
               
 
 
-      <div id="moduleclick">
-                  <div id="modulelecture" class="moduleblank">
-                 <a href="#" id="lecturetxt">Lectures</a>
-            </div>
-            <div id="modulelab" class="moduleblank">
+			<div id="moduleclick">
+          	      <div id="modulelecture" class="moduleblank">
+			           <a href="#" id="lecturetxt">Lectures</a>
+			      </div>
+			      <div id="modulelab" class="moduleblank">
                  <a href="#" id="labtxt">Lab/Tutorials</a>
-            </div>
-            <div id="moduleass" class="moduleblank">
-                 <a href="#" id="asstxt">Assessments</a>
-            </div>
-            <div id="moduleforum" class="moduleblank">
-                <a href="#" id="forumtxt">Forum</a>
-            </div>
-            <div id="modulepoll" class="moduleblank">
-                <a href="#" id="polltxt">VotingPoll</a>
-            </div>
-      </div>
+			      </div>
+			      <div id="moduleass" class="moduleblank">
+			           <a href="#" id="asstxt">Assessments</a>
+			      </div>
+			      <div id="moduleforum" class="moduleblank">
+			          <a href="#" id="forumtxt">Forum</a>
+			      </div>
+			      <div id="modulepoll" class="moduleblank">
+			          <a href="#" id="polltxt">VotingPoll</a>
+			      </div>
+			</div>
 
       <div id="modulecontent">
 
@@ -595,9 +596,9 @@
            <div id="forumcontent" class="modulecontentblock">
            
              <ul id="forumicon">
-               <li><a href="#createpost"><img class="posticon" src="post.png"/></a></li>
-               <li><a href="#"><img class="posticon" src="refresh.png"/></a></li>
-               <li><a href="#moduleGeneral"><img class="posticon" src="backtop.png"/></a></li>
+               <li><a href="#createpost"><img class="posticon" src="assets/img/post.png"/></a></li>
+               <li><a href="#"><img class="posticon" src="assets/img/refresh.png"/></a></li>
+               <li><a href="#moduleGeneral"><img class="posticon" src="assets/img/backtop.png"/></a></li>
              </ul>           
              <table class="forumchoice">
                <tbody>
@@ -617,33 +618,33 @@
 
 
              <div class="page">
-              <ul>
-                <li class="forum-votingpoll-page"><div id="arrow-left" class="fa fa-angle-left"></div></li>
-                <li class="forum-votingpoll-page"><a href="#page=1"><span>1</span></a></li>
-                <li class="forum-votingpoll-page"><span>2</span></li>
-                <li class="forum-votingpoll-page"><span>3</span></li>
-                <li class="forum-votingpoll-page"><span>4</span></li>
-                <li class="forum-votingpoll-page"><span>5</span></li>
-                <li class="forum-votingpoll-page"><span>6</span></li>
-                <li class="forum-votingpoll-page"><div id="arrow-right" class="fa fa-angle-right"></div></li>
-              </ul>
+             	<ul>
+             		<li class="forum-votingpoll-page"><div id="arrow-left" class="fa fa-angle-left"></div></li>
+             		<li class="forum-votingpoll-page"><a href="#page=1"><span>1</span></a></li>
+             		<li class="forum-votingpoll-page"><span>2</span></li>
+             		<li class="forum-votingpoll-page"><span>3</span></li>
+             		<li class="forum-votingpoll-page"><span>4</span></li>
+             		<li class="forum-votingpoll-page"><span>5</span></li>
+             		<li class="forum-votingpoll-page"><span>6</span></li>
+             		<li class="forum-votingpoll-page"><div id="arrow-right" class="fa fa-angle-right"></div></li>
+             	</ul>
              </div>
 
 
              <div id="createpost">
              <div id="create-post-icon" class="fa fa-pencil-square-o"></div>
              <div id="create-post-txt">CREATE POST</div>
-              <form action="" method="post" id="postsubmit">
-                <p class="create-post-input"><input id="post-title-input" type="text" name="post-title" maxlength="80" value="Title" onfocus="if(this.value=='Title') this.value=''" onblur="if(this.value=='') this.value='Title'" /></p>
-                <p class="create-post-input"><center><textarea id="post-content-input" name="post-content" cols="150" rows="10"></textarea></center></p>
-                <center>
-                <label class="forum-type"><input type="radio" name="choose-forum" value="G">General Forum</label>
+             	<form action="" method="post" id="postsubmit">
+             		<p class="create-post-input"><input id="post-title-input" type="text" name="post-title" maxlength="80" value="Title" onfocus="if(this.value=='Title') this.value=''" onblur="if(this.value=='') this.value='Title'" /></p>
+             		<p class="create-post-input"><center><textarea id="post-content-input" name="post-content" cols="120" rows="10"></textarea></center></p>
+             		<center>
+             		<label class="forum-type"><input type="radio" name="choose-forum" value="G">General Forum</label>
 
-                <label class="forum-type"><input type="radio" name="choose-forum" value="A">Assessment Forum</label>
-                </center>
-              </form>
-              <button id="post-submit-botton" type="button" class="btn btn-theme" name="post-submit">Submit</button>
-              
+             		<label class="forum-type"><input type="radio" name="choose-forum" value="A">Assessment Forum</label>
+             		</center>
+             	</form>
+             	<button id="post-submit-botton" type="button" class="btn btn-theme" name="post-submit">Submit</button>
+             	
              </div>
 
 
@@ -656,9 +657,9 @@
 
            <div id="pollcontent" class="modulecontentblock">
              <ul id="forumicon">
-               <li><a data-toggle="modal" href="blank.html#myModal"><img class="posticon" src="post.png"/></a></li>
-               <li><a href="#"><img class="posticon" src="refresh.png"/></a></li>
-               <li><a href="#moduleGeneral"><img class="posticon" src="backtop.png"/></a></li>
+               <li><a data-toggle="modal" href="blank.html#myModal"><img class="posticon" src="assets/img/post.png"/></a></li>
+               <li><a href="#"><img class="posticon" src="assets/img/refresh.png"/></a></li>
+               <li><a href="#moduleGeneral"><img class="posticon" src="assets/img/backtop.png"/></a></li>
              </ul>  
              <span id="moduletabletitle">VotingPoll</span>
                <table class="moduletable">
@@ -668,37 +669,42 @@
                      <td class="moduletable-col">Creator</td>
                      <td class="moduletable-col">Time</td>
                    </tr>
+                   <tr>
+                     <td class="moduletable-col-1">1</td>
+                     <td class="moduletable-col-title">liverpool is championship</td>
+                     <td class="moduletable-col-1">12:05</div></td>
+                   </tr>
                    </tbody>
                </table>  
                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                              <h4 class="modal-title">Forgot Password ?</h4>
-                          </div>
-                          <div class="modal-body">
-                              <p>Enter your e-mail address below to reset your password.</p>
-                              <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-    
-                          </div>
-                          <div class="modal-footer">
-                              <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                              <button class="btn btn-theme" type="button">Submit</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+		              <div class="modal-dialog">
+		                  <div class="modal-content">
+		                      <div class="modal-header">
+		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                          <h4 class="modal-title">Forgot Password ?</h4>
+		                      </div>
+		                      <div class="modal-body">
+		                          <p>Enter your e-mail address below to reset your password.</p>
+		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		
+		                      </div>
+		                      <div class="modal-footer">
+		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+		                          <button class="btn btn-theme" type="button">Submit</button>
+		                      </div>
+		                  </div>
+		              </div>
+		          </div>
            </div>
 
 
 
            
       </div>
-      
-    </section><! --/wrapper -->
+			
+		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
-    
+	  
 
       <!--main content end-->
       <!--footer start-->
