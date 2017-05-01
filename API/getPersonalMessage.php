@@ -7,12 +7,13 @@
  */
 include "../DAO/Database.php";
 include_once '../Controller/method/tokenVerify.php';
-include "../Controller/method/variable.php";
+include_once '../Controller/method/variable.php';
+
 $timestamp = $_REQUEST["timestamp"];                        //timestamp should -1
 
 $token = $_COOKIE['token'];
-$name = $_COOKIE['mail'];
-$email = $_COOKIE['mail'];
+$name1 = $_COOKIE['mail'];
+$name2 = $_REQUEST['user2_email'];
 
 if(verifyToken($token)=="false"){
     echo "token invalid";
@@ -23,7 +24,8 @@ if(verifyToken($token)=="false"){
     if(!isset($timestamp))
         $timestamp = date("Y-m-d H:i:s",time());
     //echo $timestamp;
-    $result = $dao->query("select * from message where isRead=0 and to_user = '$name'order by time desc");
+    $result = $dao->query("select * from message where time<='$timestamp' and ((from_user= '$name1' and
+to_user = '$name2') or (from_user= '$name2' and to_user = '$name1'))order by time desc limit 10");
     //print_r($result);
     $num = count($result);
     $total = array();
@@ -60,12 +62,11 @@ if(verifyToken($token)=="false"){
         $hash["content"] = $result[$i]["content"];
         $hash["time"] = $result[$i]["time"];
 
-
         $total[] = $hash;
     }
     $leastTimeStamp = $result[$num-1]["time"];
     $result = $dao->query("UPDATE message set isRead = 1 where time>='$leastTimeStamp' and time<='$timestamp'
-    and (from_user= '$name' or to_user='$name')");
+    and ((from_user= '$name1' and to_user = '$name2') or (from_user= '$name2' and to_user = '$name1'))");
     echo json_encode($total,JSON_UNESCAPED_SLASHES);
 }
 ?>

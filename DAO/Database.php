@@ -87,6 +87,7 @@ class Database
         $sql = $sql.$this->_getWhereString($where);
         //echo $sql;
         $sql = $sql."order by $order";
+        //echo $sql;
         return $this->query($sql);
     }
 

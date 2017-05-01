@@ -22,15 +22,29 @@ if(isset($moduleList["$code"])) {
     $num=count($result);
     $hash=array();
     $total = array();
+    $dao->table("topic");
+    $result2 = $dao->get(array("module_code"=>$code,"forum"=>$type,"topic_id"=>$topic));
     for($i=0;$i<$num;$i++)
     {
+        $dao->table("User_profile");
+        $cnt = $dao->get(array("email"=>$email));
+        $path = $cnt[0]["photoname"];
+        //echo isset($path);
+        if(isset($path))
+            $path = $repositoryUrl1."/../".md5(md5($email).md5($email))."/".$path;
+        else
+            $path = $repositoryUrl1."/../default.jpg";
+
         $total[] = array("time"=>$result[$i]["time"],
                         "name"=>$result[$i]["Username"],
                         "content"=>$result[$i]["response_content"],
                         "mail"=>$result[$i]["email"],
-                        "floor"=> $result[$i]["floor_number"]);
+                        "floor"=> $result[$i]["floor_number"],
+                        "topic"=>$result2[0]["topic_name"],
+                        "photo"=>$path);
+
     }
-    echo json_encode($total);
+    echo json_encode($total,JSON_UNESCAPED_SLASHES);
 
 }else{
     echo "token invalid or no module access";
