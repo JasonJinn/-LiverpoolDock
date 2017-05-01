@@ -9,7 +9,7 @@ include "method/DES.php";
 include_once "../DAO/Database.php";
 include_once "method/tokenVerify.php";
 
-$token=$_REQUEST["token"];
+$token=$_COOKIE["token"];
 $code=$_REQUEST["code"];
 $floor=$_REQUEST["floor"];
 $topic_id =$_REQUEST["id"];

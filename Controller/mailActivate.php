@@ -23,7 +23,7 @@ $dao->insert(array("email"=>$mail));
 
 if($result){
     echo "activate success";
-    makedir($mail,$repositoryUrl);
+    makedir($mail,$repositoryUrl,$studentPhoto);
 }else{
     echo "The account has been activated";
 }

@@ -6,6 +6,7 @@
  * Time: 8:23 PM
  */
 include "../DAO/Database.php";
+include_once "../Controller/method/variable.php";
 
 $user = $_REQUEST["name"];
 if(isset($user)){
@@ -17,8 +18,16 @@ if(isset($user)){
     $hash =array();
     for($i=0;$i<$num&&$i<5;$i++)
     {
-        $hash[] = array("username"=>$result[$i]["username"],"email"=>$result[$i]["email"]);
+        $dao->table("User_profile");
+        $cnt = $dao->get(array("email"=>$result[$i]["email"]));
+        $path = $cnt[0]["photoname"];
+
+        if(isset($path))
+            $path = $repositoryUrl1."/../".md5(md5($email).md5($email))."/".$path;
+        else
+            $path = $repositoryUrl1."/../default.jpg";
+        $hash[] = array("username"=>$result[$i]["username"],"email"=>$result[$i]["email"],"photo"=>$path);
     }
 }
-echo json_encode($hash);
+echo json_encode($hash,JSON_UNESCAPED_SLASHES);
 ?>
