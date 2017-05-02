@@ -21,6 +21,7 @@ if(isset($input)){
         //$code = $result[$i]["Module_code"];
         $hash["code"] = $result[$i]["Module_code"];
         $hash["name"] = $result[$i]["module_name"];
+        $hash["description"] = $result[$i]["module_description"];
 
         $total[] = $hash;
     }
@@ -32,6 +33,8 @@ if(isset($input)){
         //$code = $result[$i]["Module_code"];
         $hash["code"] = $result[$i]["Module_code"];
         $hash["name"] = $result[$i]["module_name"];
+        $hash["description"] = $result[$i]["module_description"];
+
 
         $total[] = $hash;
     }
