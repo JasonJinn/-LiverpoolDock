@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>Profile-Docker Liverpool</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -24,22 +24,154 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
  <script src="assets/js/jquery.js"></script>
- <script>
- /*
- var token = location.search;
- reg = /token=(.+)/g;
- token = reg.exec(token)[1];
- */
- var token = "BTICNwcwCQpScg4nADACMlpnB2BTZQdsAD8AZFZpWmA%3D";
-  $(document).ready(function(){
-  $.get("http://www.shoujiafeng.com/LiverpoolDock/API/gethomepage.php?token="+token,function(data,Status){
-  //$(."#portrait").html(data);
-  alert(Status);
-  });
-  });
+ <script type="text/javascript">
  
- 
- 
+
+ //fetch data for header. Portrait and name is included
+ $(document).ready(function () {
+ 	//fetch data from API
+ 	$.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/gethomepage.php", function (data, Status) {
+
+ 		var gethomepage = [data]; //store data in string gethomepage
+
+ 		$("#portrait").attr('src', gethomepage[0].path);
+ 		$("#name").html(gethomepage[0].name);
+ 		$("#ownportrait").attr('src', gethomepage[0].path);
+ 		$("#ownname").html(gethomepage[0].name);
+
+ 	});
+
+ 	//getch data for content. Profile, Contect, Education, and Experience is included
+ 	$.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/getProfile.php", function (data, Status) {
+
+ 		var getprofile = [data]; //store data from API
+
+ 		//$("#rofile").attr('src',gethomepage[0].path);
+ 		$("#serverprofile").html(getprofile[0].profile);
+ 		$("#servereducation").html(getprofile[0].education);
+ 		$("#serverexperience").html(getprofile[0].experience);
+ 		//$("#serveremail").html(getprofile[0].email);
+ 		$("#serverfacebook").html("<a class='fa fa-facebook-square'></a> Facebook:  " + getprofile[0].facebook);
+ 		$("#servergoogle").html("<a class='fa fa-google-plus'></a> Google+:  " + getprofile[0].google);
+ 		$("#servertwitter").html("<a class='fa fa-twitter'></a> Twitter:  " + getprofile[0].twitter);
+ 	});
+
+ 	//every time clean update indicator
+ 	$("#profilebutton").click(function () {
+ 		$("#profileindicator").html("");
+ 	});
+ 	$("#contectbutton").click(function () {
+ 		$("#contectindicator").html("");
+ 	});
+ 	$("#educationbutton").click(function () {
+ 		$("#educationindicator").html("");
+ 	});
+ 	$("#experiencebutton").click(function () {
+ 		$("#experienceindicator").html("");
+ 	});
+
+ 	//update data
+ 	$("#updateprofile").click(function () {
+ 		$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 			
+ 			profile: $("#profile").val()
+ 		}, function (data, status) {
+ 			//alert(data);
+ 			if (data == 1) {
+ 				$("#profileindicator").html("Update successful!");
+ 				$("#serverprofile").html($("#profile").val());
+ 			} else {
+ 				$("#profileindicator").html("Update failed!");
+ 			}
+ 		});
+ 	});
+
+ 	$("#updateeducation").click(function () { 		
+ 		$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 		
+ 			education: $("#education").val()
+ 		}, function (data, status) {
+ 			//alert(data);
+ 			if (data == 1) {
+ 				$("#educationindicator").html("Update successful!");
+ 				$("#servereducation").html($("#education").val());
+ 			} else {
+ 				$("#educationindicator").html("Update failed!");
+ 			}
+ 		});
+ 	});
+
+ 	$("#updateexperience").click(function () {
+ 		$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 			
+ 			experience: $("#experience").val()
+ 		}, function (data, status) {
+ 			if (data == 1) {
+ 				$("#experienceindicator").html("Update successful!");
+ 				$("#serverexperience").html($("#experience").val());
+ 			} else {
+ 				$("#experienceindicator").html("Update failed!");
+ 			}
+ 		});
+ 	});
+
+ 	$("#updatecontect").click(function () {
+ 		if ($("#email").val() != "") {
+ 			$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 				
+ 				email: $("#email").val()
+ 			}, function (data, status) {
+ 				if (data == 1) {
+ 					$("#contectindicator").html("Update successful!");
+ 					$("#serveremail").html($("#email").val());
+ 				} else {
+ 					$("#contectindicator").html("Update failed!");
+ 				}
+ 			});
+ 		} else if ($("#facebook").val() != "") {
+ 			$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", {			
+ 				facebook: $("#facebook").val()
+ 			}, function (data, status) {
+ 				if (data == 1) {
+ 					$("#contectindicator").html("Update successful!");
+ 					$("#serverfackbook").html($("#facebook").val());
+ 				} else {
+ 					$("#contectindicator").html("Update failed!");
+ 				}
+ 			});
+ 		} else if ($("#google").val() != "") {
+ 			$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", {				
+ 				google: $("#google").val()
+ 			}, function (data, status) {
+ 				if (data == 1) {
+ 					$("#contectindicator").html("Update successful!");
+ 					$("#servergoogle").html($("#google").val());
+ 				} else {
+ 					$("#contectindicator").html("Update failed!");
+ 				}
+ 			});
+ 		} else if ($("#linkedin").val() != "") {
+ 			$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 			
+ 				linkedin: $("#linkedin").val()
+ 			}, function (data, status) {
+ 				if (data == 1) {
+ 					$("#contectindicator").html("Update successful!");
+ 					$("#serverlinkedin").html($("#linkedin").val());
+ 				} else {
+ 					$("#contectindicator").html("Update failed!");
+ 				}
+ 			});
+ 		} else if ($("#twitter").val() != "") {
+ 			$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/uploadProfile.php", { 				
+ 				twitter: $("#twitter").val()
+ 			}, function (data, status) {
+ 				if (data == 1) {
+ 					$("#contectindicator").html("Update successful!");
+ 					$("#servertwitter").html($("#twitter").val());
+ 				} else {
+ 					$("#contectindicator").html("Update failed!");
+ 				}
+ 			});
+ 		}
+ 	});
+
+ });
  </script>
   
   
@@ -235,11 +367,11 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">T15-Tricycle</h5>
+              	  <p class="centered"><a href="profile.html"><img id="ownportrait" src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 id ="ownname" class="centered">T15-Tricycle</h5>
               	  	
                   <li class="mt">
-                      <a class="" href="index.html">
+                      <a class="" href="http://www.shoujiafeng.com/LiverpoolDock/View/homepage.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -247,7 +379,7 @@
 			
 
                    	  <li class="singlemt">
-                      <a class="active" href="profile2.html">
+                      <a class="active" href="http://www.shoujiafeng.com/LiverpoolDock/View/profile.html">
                           <i class="fa fa-smile-o"></i>
                           <span>Profile</span>
                       </a>
@@ -260,11 +392,11 @@
                       </a>
                       <ul class="sub">
                           
-                          <li><a  href="module.html#lectures">Lectures</a></li>
-                          <li><a  href="module.html#lab">Lab/Tutorials</a></li>
-						  <li><a  href="module.html#assessment">Assessments</a></li>
-						  <li><a  href="module.html#forum">Forum</a></li>
-						  <li><a  href="module.html#votingpoll">Votingpoll</a></li>
+                          <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Lectures</a></li>
+                          <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Lab/Tutorials</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Assessments</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Forum</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Votingpoll</a></li>
                       </ul>
                   </li>
 				  
@@ -286,8 +418,8 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                          <li><a  href="login.html">6666</a></li>
+                          <li><a  href="lock_screen.html">5555</a></li>
                       </ul>
                   </li>
                  
@@ -321,8 +453,8 @@
 			<!-- Header-->
 			<div class="row mt">
           		<div class="col-lg-12">
-          			<p class="centered"><a  data-toggle="modal" href="profile2#editheader"><img id="portrait" src="assets/img/ui-sam.jpg" class="img-circle" width="100"></a></p>
-              	  <h4 class="centered">T15-Tricycle</h5>		
+          			<p class="centered"><a  data-toggle="modal" href="profile2#editheader"><img id="portrait" src="" class="img-circle" width="100"></a></p>
+              	  <h4 id="name" class="centered">T15-Tricycle</h5>		
           		</div>
           	</div>
 			
@@ -336,26 +468,27 @@
           		<div class="white-panel profilepn" style="overflow-x: hidden;">
                       			<div class="blue-header">
 						  	   
-								<a id="profilebutton" class="fa fa-cog" data-toggle="modal" href="profile2#editprofile"></a><h4 style="fload:left;">Profile</h4>
+								<a id="profilebutton" class="fa fa-cog" data-toggle="modal" href="profile#editprofile"></a><h4 style="fload:left;">Profile</h4>
                      			</div>
 								<div class="row" style="font-size:15px;color:#797979;">
-							<p id="profile">4654546546565465</p>		
+							<p id="serverprofile"></p>		
 							
 	                   </div>          		
                     </div>				
           		</div>
-          	<div class="col-lg-5">
+          	
+            <div class="col-lg-5">
           		<div class="white-panel profilepn" style="overflow-x: hidden;">
                       			<div class="blue-header" >
-						  			<a class="fa fa-cog" data-toggle="modal" href="profile2#editcontect"></a><h4>Contect</h4>
+						  			<a id="contectbutton" class="fa fa-cog" data-toggle="modal" href="profile2#editcontect"></a><h4>Contect</h4>
                       			</div>
 							<div class="row" style="color:#797979;">
 							<ul class="social-icons">
-							<li><a class="fa fa-envelope"></a> Email: </li>
-							<li><a class="fa fa-facebook"></a> Facebook: </li>
-							<li><a class="fa fa-google-plus"></a> Google+: </li>
-							<li><a class="fa fa-linkedin"></a> Linkedin: </li>
-							<li><a class="fa fa-twitter"></a> Twitter: </li>
+							<li id = "serveremail"><a class="fa fa-envelope"></a> Email: </li>
+							<li id = "serverfacebook"><a class="fa fa-facebook-square"></a> Facebook: </li>
+							<li id = "servergoogle"><a class="fa fa-google-plus"></a> Google+: </li>
+							<li id = "serverlinkedin"><a class="fa fa-linkedin"></a> Linkedin: </li>
+							<li id = "servertwitter"><a class="fa fa-twitter"></a> Twitter: </li>
 						 </ul>
 	                   </div>          		
                     </div>				
@@ -371,10 +504,10 @@
           		<div class="col-lg-5">
           		<div class="white-panel profilepn" style="overflow-x: hidden;">
                       			<div class="blue-header">
-						  			<a class="fa fa-cog" data-toggle="modal" href="profile2#editeducation"></a><h4>Education</h4>
+						  			<a id="educationbutton" class="fa fa-cog" data-toggle="modal" href="profile2#editeducation"></a><h4>Education</h4>
                       			</div>
 								<div class="row" style="font-size:15px;color:#797979;">
-							<p id="education">4654546546565465</p>		
+							<p id="servereducation"></p>		
 							
 	                   </div>          		
                     </div>				
@@ -382,10 +515,10 @@
           	<div class="col-lg-7">
           		<div class="white-panel profilepn" style="overflow-x: hidden;">
                       			<div class="blue-header" >
-						  			<a class="fa fa-cog" data-toggle="modal" href="profile2#editexperiences"></a><h4>Experiences and Skills</h4>
+						  			<a id="experiencebutton" class="fa fa-cog" data-toggle="modal" href="profile2#editexperiences"></a><h4>Experiences and Skills</h4>
                       			</div>
 								<div class="row" style="font-size:15px;color:#797979;">
-							<p id="experience">4654546546565465</p>		
+							<p id="serverexperience"></p>		
 							
 	                   </div>          		
                     </div>				
@@ -396,52 +529,35 @@
 			
 			</div>
 			
-			
-			  <!-- Modal -->
-		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="editprofile" class="modal fade">
- <form  id ="profileform" action= "?" href="#">		             
-					 <div class="modal-dialog">
-		                  <div class="modal-content">
-		                      <div class="modal-header">
-		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Edit Profile</h4>
-		                      </div>
-		                      <div class="modal-body">
-		                          <p>Please edit your profile below</p>
-		                         
-								  <textarea type="text" id="profilemodal" class="form-control placeholder-no-fix">6666666</textarea>
-		                          
-		                      </div>
-		                      <div class="modal-footer">
-		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
-		                      </div>
-		                  </div>
-		              </div>
-		          </form>
-				  </div>
-		          <!-- modal -->
+
 				  
-				    <!-- Modal -->
+				    				    <!-- Modal -->
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="editcontect" class="modal fade">
-		              <div class="modal-dialog">
+		               <form  id ="headerform" action= "?" href="#">
+					  <div class="modal-dialog">
 		                  <div class="modal-content">
 		                      <div class="modal-header">
 		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		                          <h4 class="modal-title">Edit Contect</h4>
 		                      </div>
 		                      <div class="modal-body">
-		                          <p>Enter your e-mail address below to reset your password.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
+		                          <p>Edit your contect below:</p>
+		                          
+				   <a class="fa fa-envelope" style="font-size:25px;color:#797979;float:left;padding-top:5px;"></a><input type="text" id="email" name="email" placeholder="Email" class="form-control placeholder-no-fix" style="width:95%;resize: none;"></input><br></br>
+           <a class="fa fa-facebook-square" style="font-size:25px;color:#797979;float:left;padding-top:5px;"></a><input type="text" id="facebook" name="facebook" placeholder="Facebook" class="form-control placeholder-no-fix" style="width:95%;resize: none;"></input><br></br>
+           <a class="fa fa-google-plus" style="font-size:25px;color:#797979;float:left;padding-top:5px;"></a><input type="text" id="google" name="google" placeholder="Google" class="form-control placeholder-no-fix" style="width:95%;resize: none;"></input><br></br>
+           <a class="fa fa-linkedin" style="font-size:25px;color:#797979;float:left;padding-top:5px;"></a><input type="text" id="linkedin" name="linkedin" placeholder="Linkedin" class="form-control placeholder-no-fix" style="width:95%;resize: none;"></input><br></br>
+           <a class="fa fa-twitter" style="font-size:25px;color:#797979;float:left;padding-top:5px;"></a><input type="text" id="twitter" name="twitter" placeholder="Twitter" class="form-control placeholder-no-fix" style="width:95%;resize: none;"></input><br></br>
+		                   <p id="contectindicator"></p>        
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button id="updatecontect" class="btn btn-theme" type="button">Submit</button>
 		                      </div>
 		                  </div>
 		              </div>
-		          </div>
+</form>		         
+				 </div>
 		          <!-- modal -->
 				  
 				    <!-- Modal -->
@@ -456,12 +572,12 @@
 		                      <div class="modal-body">
 		                          <p>Enter your edeucation below:</p>
 		                          
-								   <textarea type="text" id="educationmodal"  class="form-control placeholder-no-fix"></textarea>
-		                           
+								   <textarea type="text" id="education" name="education" class="form-control placeholder-no-fix" style="resize: none;"></textarea>
+		                   <p id="educationindicator"></p>        
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button id="updateeducation" class="btn btn-theme" type="button">Submit</button>
 		                      </div>
 		                  </div>
 		              </div>
@@ -481,12 +597,12 @@
 		                      <div class="modal-body">
 		                          <p>Edit your experiences and skills below:</p>
 		                         
-								  <textarea type="text" id="experiencemodal"  class="form-control placeholder-no-fix"></textarea>
-		                         
+								  <textarea type="text" id="experience" name="experience" class="form-control placeholder-no-fix" style="resize: none;"></textarea>
+		                 <p id="experienceindicator"></p>        
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+		                          <button id="updateexperience" class="btn btn-theme" type="button">Submit</button>
 		                      </div>
 		                  </div>
 		              </div>
@@ -563,19 +679,20 @@
 
 <!-- fetch data from origianl information-->  
  <script>
- 
-var profile = document.getElementById("profile").innerHTML;
-document.getElementById("profilemodal").value= profile; 
+$("#profilebutton").click(function(){ 
+var profile = document.getElementById("serverprofile").innerHTML;
+document.getElementById("profile").value= profile; 
+});
 
-var profile = document.getElementById("profile").innerHTML;
-document.getElementById("profilemodal").value= profile; 
+$("#educationbutton").click(function(){ 
+var education = document.getElementById("servereducation").innerHTML;
+document.getElementById("education").value= education; 
+});
 
-var education = document.getElementById("education").innerHTML;
-document.getElementById("educationmodal").value= education; 
-
-var experience = document.getElementById("experience").innerHTML;
-document.getElementById("experiencemodal").value= experience; 
-
+$("#experiencebutton").click(function(){ 
+var experience = document.getElementById("serverexperience").innerHTML;
+document.getElementById("experience").value= experience; 
+});
 </script> 
 
 

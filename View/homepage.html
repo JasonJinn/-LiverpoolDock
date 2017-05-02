@@ -26,6 +26,90 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="assets/js/jquery.js"></script>
+    <script>
+	 var baseurl = "http://www.shoujiafeng.com/LiverpoolDock/";
+	 $(document).ready(function () {
+	 	$.getJSON(baseurl + "API/gethomepage.php", function (data, Status) {
+	 		var gethomepage = [data]; //store data in string gethomepage
+	 		$("#ownportrait").attr('src', gethomepage[0].path);
+	 		$("#ownname").html(gethomepage[0].name);
+
+	 	});
+
+	 	$.getJSON(baseurl + "API/moduleList2.php", function (data, Status) {
+	 		var getmodulelist = data; //store data in string gethomepage
+	 		for (index = 0; index < 9; index++) {
+	 			$("#module" + index).html(getmodulelist[index].code + " - " + getmodulelist[index].name);
+	 			$("#module" + index).attr('href', "module.html?code=" + getmodulelist[index].code);
+	 		}
+
+	 	});
+
+	 	$.getJSON(baseurl + "API/notification.php", function (data, Status) {
+	 		var getnotificationbody = data; //store data in string gethomepage
+
+
+	 		for (index = 0; index < 8; index++) {
+	 			var getnotificationtopic = getnotificationbody[index].topic;
+	 			var forumindicator = "";
+	 			if (getnotificationtopic.forum == "G") {
+	 				forumindicator = "General";
+	 			} else {
+	 				forumindicator = "Assessment";
+	 			}
+	 			$("#notibody" + index).html("<muted>" + getnotificationbody[index].time + "</muted><br/><a href='#'>" + getnotificationbody[index].name + "</a> " + getnotificationbody[index].type + " at forum: " + getnotificationtopic.code + " " + forumindicator + ". Topic id: " + getnotificationtopic.id);
+	 			//$("#notibody"+index).attr('href',"profile.html?code="+getmodulelist[index].code);
+	 		}
+
+	 	});
+
+	 });
+    
+    
+    
+    </script>
+    
+    <script>   
+   
+    $.getJSON(baseurl + "API/getMessage.php", function (data, Status) {
+	 		var getmessage = data; //store data in string gethomepage
+	 		for (index = 0; index < 4; index++) {
+	 			$("#msgfrom" + index).html(getmessage[index].from);
+	 			$("#msgtime" + index).html(getmessage[index].time);
+        $("#msgcontent" + index).html(getmessage[index].content);
+        
+        
+    	$.getJSON(baseurl + "API/gethomepage.php?email="+, function (data, Status) {
+	 		var getphoto = [data]; //store data in string gethomepage	 	     	
+	 			$("#msgphoto"+index).attr('src', getphoto[index].path);
+	 	});
+        
+        
+        
+        
+        
+         
+	 		}
+
+	 	});
+    </script>
+    
+    
+    
+    
+ <script language="javascript" type="text/javascript"> 
+function searchingclick(){
+ var searchingcontent = document.getElementById("searchingcontent").value;
+ var searchingurl = "http://www.shoujiafeng.com/LiverpoolDock/View/searchingresult.html?name="+searchingcontent;
+ window.location.href=searchingurl; 
+ }
+</script> 
+    
+    
+    
+    
   </head>
 
   <body>
@@ -123,52 +207,52 @@
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 5 new messages</p>
+                                <p id="messagesnumber" class="green">You have 5 new messages</p>
                             </li>
                             <li>
                                 <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="photo"><img id="msgphoto0" alt="avatar" src="assets/img/ui-zac.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
+                                    <span id="msgfrom0" class="from">Zac Snider</span>
+                                    <span id="msgtime0" class="time">Just now</span>
                                     </span>
-                                    <span class="message">
+                                    <span id="msgcontent0" class="message">
                                         Hi mate, how is everything?
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="photo"><img id="msgphoto1" alt="avatar" src="assets/img/ui-divya.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
+                                    <span id="msgfrom1" class="from">Divya Manian</span>
+                                    <span id="msgtime1" class="time">40 mins.</span>
                                     </span>
-                                    <span class="message">
+                                    <span id="msgcontent1" class="message">
                                      Hi, I need your help with this.
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="photo"><img id="msgphoto2" alt="avatar" src="assets/img/ui-danro.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
+                                    <span id="msgfrom2" class="from">Dan Rogers</span>
+                                    <span if="msgtime2" class="time">2 hrs.</span>
                                     </span>
-                                    <span class="message">
+                                    <span id="msgcontent2" class="message">
                                         Love your new Dashboard.
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="photo"><img id="msgphoto3" alt="avatar" src="assets/img/ui-sherman.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
+                                    <span id="msgfrom3" class="from">Dj Sherman</span>
+                                    <span id="msgtime3" class="time">4 hrs.</span>
                                     </span>
-                                    <span class="message">
+                                    <span id="msgcontent3" class="message">
                                         Please, answer asap.
                                     </span>
                                 </a>
@@ -198,10 +282,10 @@
             	<ul class="nav pull-right top-menu">
                     
 	<li><div class="search d7">
-	<form name="searchform" method="post" action="">
-	  <input type="text" placeholder="Search..." name="searchcontent">
-	  <button type="submit"></button>
+	<form name="searchform" action="">
+	  <input id="searchingcontent" type="text" placeholder="Search..." name="searchcontent">	  
 	</form>
+	<button onclick="searchingclick()"></button>
 </div></li>
 					<li><a class="logout" href="login.html">Logout</a></li>
             	</ul>
@@ -218,8 +302,8 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">T15-Tricycle</h5>
+              	  <p class="centered"><a href="profile.html"><img id="ownportrait" src="" class="img-circle" width="60"></a></p>
+              	  <h5 id="ownname" class="centered"></h5>
               	  	
                   <li class="mt">
                       <a class="active" href="index.html">
@@ -230,7 +314,7 @@
 			
 
                    	  <li class="singlemt">
-                      <a class="" href="profile2.html">
+                      <a class="" href="http://www.shoujiafeng.com/LiverpoolDock/View/profile.html">
                           <i class="fa fa-smile-o"></i>
                           <span>Profile</span>
                       </a>
@@ -243,11 +327,11 @@
                       </a>
                       <ul class="sub">
                           
-                          <li><a  href="module.html#lectures">Lectures</a></li>
-                          <li><a  href="module.html#lab">Lab/Tutorials</a></li>
-						  <li><a  href="module.html#assessment">Assessments</a></li>
-						  <li><a  href="module.html#forum">Forum</a></li>
-						  <li><a  href="module.html#votingpoll">Votingpoll</a></li>
+                          <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Lectures</a></li>
+                          <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Lab/Tutorials</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Assessments</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Forum</a></li>
+						  <li><a  href="http://www.shoujiafeng.com/LiverpoolDock/View/module.html">Votingpoll</a></li>
                       </ul>
                   </li>
 				  
@@ -307,32 +391,61 @@
                       	<div class="col-md-12 col-sm-12 mb">
                       		<div class="white-panel pn" style="overflow-x: hidden;">
                       			<div class="white-header">
-						  			<h5>MODULE LIST</h5>
+						  			<h5 >MODULE LIST<a href="modulesearch.html" style="float:right;font-size:20px;" class="fa fa-plus-square"></a> </h5>
                       			</div>
 								<div class="row">
 									
 									<div class="col-sm-6 col-xs-6" style="height:265px;border-right:solid 1.27px #ccc;">
 									<div style="font-size:20px ;padding:5% 10% 5% 20%; text-align: left;">
-									<a href="#">COMP201-SOFTWARE ENGINEERING 1</a></br>
-									<a href="#">COMP207-DATABASE DEVELOPMENT</a></br>
-									<a href="#">COMP208-GROUP SOFTWARE PROJECT</a></br>
-									<a href="#">COMP211-INTERNET PRINCIPLES</a></br>
-									<a href="#">COMP212-DISTRIBUTED SYSTEMS</a></br>
+									<a id="module0" href=""></a></br>
+									<a id="module1" href=""></a></br>
+									<a id="module2" href=""></a></br>
+									<a id="module3" href=""></a></br>
+									<a id="module4" href=""></a></br>
 									</div>
 									</div>
 									<div class="col-sm-6 col-xs-6">
 									<div style="font-size:20px ;padding:5% 10% 10% 20%;text-align: left;">
-									<a href="#">COMP213-ADVANCED OBJECT-ORIENTED PROGRAMMING</a></br>
-									<a href="#">COMP220-SOFTWARE DEVELOPMENT TOOLS</a></br>
-									<a href="#">COMP283-APPLIED DATABASE MANAGEMENT</a></br>
-									<a href="#">COMP284-SCRIPTING LANGUAGES</a></br>
-									<a href="#">COMPXXX-XXXXXXXXXXXXXXX</a></br>
+									<a id="module5" href=""></a></br>
+									<a id="module6" href=""></a></br>
+									<a id="module7" href=""></a></br>
+									<a id="module8" href=""></a></br>
+									<a id="module9" href=""></a></br>
 									</div>
 									</div>
 	                      		</div>
 	                      		
                       		</div>
                       	</div><!-- /col-md-4 -->
+						
+				<!-- Modal -->
+		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="addmodule" class="modal fade">
+		                   <form  id ="headerform" action= "?" href="#">
+					  <div class="modal-dialog">
+		                  <div class="modal-content">
+		                      <div class="modal-header">
+		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                          <h4 class="modal-title">Edit header</h4>
+		                      </div>
+		                      <div class="modal-body">
+		                          <p>Upload your new header</p>
+		                     
+								  <input type="file" name="header" id="header" class="form-control placeholder-no-fix" />
+		                         
+		                      </div>
+		                      <div class="modal-footer">
+		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+		                          <button id="headersubmmit" class="btn btn-theme" type="button">Submit</button>
+		                      </div>
+		                  </div>
+		              </div>
+ </form>		         
+				 </div>
+		          <!-- modal -->
+						
+						
+						
+						
 						
 						<!-- SERVER STATUS PANELS -->
                       	<div class="col-md-4 col-sm-4 mb">
@@ -544,8 +657,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                      		<p id="notibody0"><muted></muted><br/>
+                      		   <a href="#"></a> <br/>
                       		</p>
                       	</div>
                       </div>
@@ -555,8 +668,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+                      		<p id="notibody1"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -566,8 +679,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
+                      		<p id="notibody2"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -577,8 +690,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
+                      		<p id="notibody3"><muted></muted><br/>
+                      		   <a href="#"></a>.<br/>
                       		</p>
                       	</div>
                       </div>
@@ -588,8 +701,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
+                      		<p id="notibody4"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -599,8 +712,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                      		<p id="notibody5"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -610,8 +723,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                      		<p id="notibody6"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -621,8 +734,8 @@
                       		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                       	</div>
                       	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                      		<p id="notibody7"><muted></muted><br/>
+                      		   <a href="#"></a><br/>
                       		</p>
                       	</div>
                       </div>
@@ -750,8 +863,8 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    
+   
     <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
