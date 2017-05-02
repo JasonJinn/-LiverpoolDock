@@ -17,7 +17,8 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/postcontent-style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-	<script src="assets/js/jquery-1.8.3.min.js"></script>
+	  <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,60 +27,75 @@
     <![endif]-->
 	
     <script>
-
-    $query = location.search;
-    var name = new Array();
-    var content = new Array();
-    var time = new Array();
-    var mail = new Array();
-    var floor=1;
-    $numFloor = 0;
-
-
-    $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/response.php"+$query,function(data){
-      var postcontent = data;
-      $numFloor = getJsonLength(data);
-      $("#post-title").append(postcontent[0].name);
     
-      for(var i=0;i<$numFloor;i++){
-      name[i] = postcontent[i].name;
-      content[i] = postcontent[i].content;
-      time[i] = postcontent[i].time;
-      mail[i] = postcontent[i].mail;
-            }          
-            
-            })
+    function checkToken(){
+    $.get("http://www.shoujiafeng.com/LiverpoolDock/API/verifyToken.php",function(status){ 
+    if($.trim(status)=="false"){ window.location.href="login.html";}
+    })
+    setInterval("checkToken()", 10000)
+    }
+    
+    checkToken();
+    
+    
+    $query = location.search;
+    reg = /type=(.+)/g;
+    $type = reg.exec($query)[1];
+    reg = /code=(.+)&topic/g;
+    $code = reg.exec($query)[1];
+    reg = /topic_id=(.+)&type/g;
+    $topicid = reg.exec($query)[1];
+    
+    
+    
+    
+    $(document).ready(function(){
+    $("#modulecode").append(" "+$code);
+    if($type=="G"){$("#forum-title-txt").append("General Forum");}
+    if($type=="A"){$("#forum-title-txt").append("Assessment Forum");}
+    })
+    
+    
 
-          alert(mail);
-          /*
-           for(var i=0;i<numFloor;i++){
-           alert(mail);
-        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/gethomepage.php?eamil=213",function(data,status){
-        alert(mail);
-        var photopath = [data];
-        
-        $("#post-response-ul").append(
+     $(document).ready(function(){
+      $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/response.php"+$query,function(data){
+      var postcontent = data;
+      var numFloor = getJsonLength(data);
+      var floor=0;
+      $("#post-title").append(postcontent[0].topic);
+    
+      for(var i=0;i< numFloor;i++){
+      floor++;
+      $("#post-response-ul").append(
             "<li>"+
               "<div class='post-respose-container'>"+
                 "<div class='post-response-left'>"+
-                  "<div class='post-response-head'><img src="+ photopath[0].path+" class='img-circle' width='40'></div>"+
-                  "<div class='post-response-name'>"+name[i]+"</div>"+
+                  "<div class='post-response-head'><img id='"+i+"photo' src='"+postcontent[i].photo+"' class='img-circle-response' width='40'></div>"+
+                  "<div class='post-response-name'><a class='linkuser' href='otherprofile.html?mail="+postcontent[i].mail+"'>"+postcontent[i].name+"</a></div>"+
                 "</div>"+
-                "<div class='post-response-right'>"+content[i]+"</div>"+
-                "<div class='post-response-opreation'>"+time[i]+"   #floor "+floor+"</div>"+
+                "<div class='post-response-right'>"+postcontent[i].content+"</div>"+
+                "<div id='e' class='post-response-opreation'>"+postcontent[i].time+"   #floor "+floor+"</div>"+
               "</div>"+
             "</li>");
+            }                    
             })
-            }
-
-*/
-
-
-
-
-
-
-
+            })
+            
+            
+            $(document).ready(function(){
+      	$("#reply-submit-botton").click(function(){
+       if($("#reply-content-input").val()!=null){
+      		$.post("http://www.shoujiafeng.com/LiverpoolDock/Controller/createResponse.php",{code: $code, type: $type, topicID: $topicid, content: $("#reply-content-input").val()},function(status){
+      			alert(status);     
+      		})
+         }else{
+         alert("Content can not be empty");  
+         }
+         
+      	})
+      })
+      
+      
 
     function getJsonLength(json){
                 var jsonLength=0;
@@ -88,13 +104,9 @@
                 }
                 return jsonLength;
             }
-
-
-
-
-
-      
-
+            
+            
+            
 
 
 	</script>
@@ -357,7 +369,7 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Module xxxxxxxx</h3>
+          	<h3 id="modulecode"><i class="fa fa-angle-right"></i> Module</h3>
 
 
             <div id="moduleGeneral"></div>
@@ -366,8 +378,7 @@
 
             <div id="forum-title">
               <div id="forum-icon" class="fa fa-cube"></div>
-              <div id="g-forum" class="forum-title-txt">General Forum</div>
-              <div id="a-forum" class="forum-title-txt">Assessment Forum</div>
+              <div id="forum-title-txt"></div>
             </div>
 
 
@@ -377,6 +388,21 @@
             <ul id="post-response-ul">
 
             </ul>
+            
+            <div id="createreply">
+             <div id="create-post-icon" class="fa fa-pencil-square-o"></div>
+             <div id="create-post-txt">Reply</div>
+              <form action="" method="post" id="replysubmit">
+              
+                <p class="create-post-input">
+                <center>
+                <textarea id="reply-content-input" name="reply-content" cols="120" rows="10" onclick="this.innerHTML='';" onblur="if(this.value.length==0){this.innerHTML='Write reply here';}">Write reply here</textarea>
+                </center>
+                </p>
+              </form>
+              <button id="reply-submit-botton" type="button" class="btn btn-theme" name="reply-submit">Submit</button>
+              
+             </div>
 
 
 
@@ -400,7 +426,7 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
+    
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
     <script src="assets/js/jquery.ui.touch-punch.min.js"></script>

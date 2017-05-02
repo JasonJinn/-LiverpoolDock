@@ -38,21 +38,25 @@
 
 	 $(document).ready(function(){
    $("#modulename").append(" "+$code);
+   });  
    
-            $.get("http://www.shoujiafeng.com/LiverpoolDock/API/topicMax.php",{code: $code, type: $forumtype},function(data){
+            refresh($code, $forumtype);
+            
+            function refresh($code, $forumtype){
+            $("#g-forum").empty();
+                $.get("http://www.shoujiafeng.com/LiverpoolDock/API/topicMax.php",{code: $code, type: $forumtype},function(data){
                 numPost = data;
        
-        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: $code, type: $forumtype, page: "1"},function(data){
-        var post = data;
-        numPostcurrent = getJsonLength(data)-1;
- 
+        $.getJSON("http://www.shoujiafeng.com/LiverpoolDock/API/topic.php",{code: $code, type: $forumtype, p: "1"},function(data){
+        var post = data;   
+        numPostcurrent = getJsonLength(data)-1;      
         for(var i=numPostcurrent;i>=0;i--){
         	$("#g-forum").append("<li class='postblank'><span class='replynum'>"+post[i].floor+"</span>"+
           "<table class='postcontent'>"+
                   "<tbody>"+
                      "<tr>"+
                        "<td class='postreply'><img  class='postreplyicon' src='assets/img/reply.png'></td>"+
-                       '<td class="posttitle"><a href="post.html?code='+$code+'&topic_id='+post[i].topic_id+'&'+'type=G'+'">'+post[i].name+"</a></td>"+
+                       '<td class="posttitle"><a href="post.html?code='+$code+'&topic_id='+post[i].topic_id+'&'+'type='+$forumtype+'">'+post[i].name+"</a></td>"+
                        "<td class='postcreator'><img class='postcreatoricon' src='assets/img/user.png'>    "+post[i].user+"</td>"+
                        "<td class='postreplytime'></td>"+
                      "</tr>"+
@@ -64,13 +68,12 @@
                      "</tr>"+
                    "</tbody>"+
                  "</table></li>") 
-                
-
         }
+        })       
         })
-            });     
-            
-        });
+        }
+        
+        
         function getJsonLength(json){
                 var jsonLength=0;
                 for (var i in json) {
@@ -138,7 +141,7 @@
           }
            })
 });
-
+     
 
 
       $(document).ready(function(){
@@ -182,22 +185,22 @@
        
 
        $(document).ready(function(){
-            $("#g-forum").css("display","block");
+            $(".forumpost").css("display","block");
 });
 
 
 
        $(document).ready(function(){
            $("#g-forumtxt").click(function(){
-            $(".forumpost").css("display","none");
-            $("#g-forum").css("display","block");
-            forumtype ="G";
+            $(".forumpost").css("display","block");
+            $forumtype ="G";
+            refresh($code, $forumtype);
            })
 
            $("#a-forumtxt").click(function(){
-            $(".forumpost").css("display","none");
-            $("#a-forum").css("display","block");
-            forumtype ="A";
+            $(".forumpost").css("display","block");;
+            $forumtype ="A";
+            refresh($code, $forumtype);
            })
 });
 
@@ -597,7 +600,7 @@
            
              <ul id="forumicon">
                <li><a href="#createpost"><img class="posticon" src="assets/img/post.png"/></a></li>
-               <li><a href="#"><img class="posticon" src="assets/img/refresh.png"/></a></li>
+               <li><a style="cursor:pointer" onclick="refresh($code, $forumtype)"><img class="posticon" src="assets/img/refresh.png"/></a></li>
                <li><a href="#moduleGeneral"><img class="posticon" src="assets/img/backtop.png"/></a></li>
              </ul>           
              <table class="forumchoice">
@@ -608,12 +611,9 @@
                  </tr>
                </tbody>
              </table>
-             <ul id="g-forum" class="forumpost">
+             <ul id="g-forum" class="forumpost"></ul>
                
-             </ul>
-             <ul id="a-forum" class="forumpost">
-               <li>a-forumtxt</li>
-             </ul>
+             
              
 
 
