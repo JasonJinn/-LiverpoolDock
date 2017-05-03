@@ -2320,15 +2320,18 @@ label {
     font-size: 140%;
 }
 
+
 .moduletable-col{
     padding: 8px;
     background-color: #fcf8e3;
+    
 }
 
 .moduletable-col-1{
     font-weight: 800;
     padding: 8px;
     background-color: white;
+    
 }
 
 .moduletable-col-title{
@@ -2336,6 +2339,11 @@ label {
     font-weight: 800;
     padding: 8px;
     background-color: white;
+    
+}
+
+.votingpolllink{
+    color: black;
 }
 
 #slidesurl{
@@ -2372,7 +2380,7 @@ label {
     margin-left: 56%;
     line-height: 100px;
     
-    z-index: 1;
+    z-index: 3;
 }
 
 
@@ -2520,9 +2528,14 @@ label {
     display: block !important;
 }
 
+.create-post-input{
+    display: block !important;
+    }
+
 #postsubmit{
     width:74%;
     min-width:900px;
+    height:35%;
 }
 
 .forum-votingpoll-page{
@@ -2533,7 +2546,6 @@ label {
 }
 
 #create-post-icon{
-    float: left;
     margin-left: 50px;
     margin-top: 20px;
     display: block !important;
@@ -2541,16 +2553,13 @@ label {
 }
 
 #create-post-txt{
-    display: block !important;
-    margin-top: 20px;
-    float: left;
     font-size: 25px;
 }
 
 #createpost{    
     display: block !important;
     width: 74%;
-  min-width:900px;
+    min-width:900px;
     height: 450px;
     background-color: white;
     
@@ -2563,7 +2572,8 @@ label {
 }
 
 #post-title-input{
-    margin-top: 50px;
+    margin-top: 2%;
+    margin-left:15%;
     width: 600px;
     height: 35px;
     border-radius:5px;
@@ -2574,7 +2584,7 @@ label {
 
 
 #post-content-input{
-  width:90%;
+    width:90%;
     border-width: 2px;
     border-radius:5px;
     resize: none;
@@ -2582,8 +2592,33 @@ label {
 
 
 #post-submit-botton{
-    margin-left: 100px;
+    margin-top:3%;
+    margin-left: 15%;
 }
+
+#poll-submit-botton{
+    margin-top:3%;
+    margin-left: 15%;
+}
+
+
+#createvotingpoll{    
+    display: block !important;
+    width: 74%;
+    min-width:900px;
+    height: 450px;
+    background-color: white;
+    margin-top: 1000px;
+    
+}
+
+.input-group{
+    display: table !important;
+    width:60%;
+    margin-top: 2%;
+    margin-left: 14%;
+}
+
 
 
 

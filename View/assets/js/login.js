@@ -18,8 +18,8 @@ function PasswordCheck(){
         }
 
 function EmailCheck(){
-             var email=document.getElementById("reg-email").value;
-			 var pattern = /^[\w\.]+@[\w\.]+(\.\w+)+$/;
+       var email=document.getElementById("reg-email").value;
+			 var pattern = /^[0-9a-zA-Z]+$/;
 			 if(email=""||!pattern.test(email)){   
              $("#reg-email").attr('style','border-color:red');
              }else{

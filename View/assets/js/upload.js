@@ -1,16 +1,13 @@
 var flow = new Flow({
     target:'../Controller/upload.php',
+    chunkSize: 1*1024*528,
+    forceChunkSize: true,
 	query: {'Repotype': 'private',
-    		'staff': 'teacher',
-			'type': 'assessment',
-			'code': 'COMP211',
-			'deadline': "2017-04-09 18:09:30"}										//need to change the repotype, 1 for public
-});																		//change it by flow.opts.query.Repotype
-//student only need staff  and Repotype
-//teacher only needs staff, code, type, deadline(optional)
+          'staff': 'student'}										//need to change the repotype, 1 for public
+});
+
 var totalFiles = 0;
 var arrFiles = new Array();
-//flow.opts.query.type="s";
 
 flow.assignBrowse(document.getElementById('file-browse-button'));
 flow.assignDrop(document.getElementById('file-drop-zone'));
